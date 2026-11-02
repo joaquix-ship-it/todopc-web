@@ -68,8 +68,8 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 }
 /* Vidriera de celulares */
 .vidriera { position: relative; border-radius: 24px; background: var(--vbg, var(--navy)); color: #FFFFFF; padding: 16px 16px 14px 18px; overflow: hidden; isolation: isolate; transition: background-color 0.7s ease; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
-.vidriera .vsol { position: absolute; z-index: -1; width: 196px; height: 196px; border-radius: 50%; background: var(--gold); right: -52px; top: -30px; transition: transform 0.9s cubic-bezier(.2,.8,.2,1); }
-.vidriera .vsol::after { content: ""; position: absolute; inset: -22px; border-radius: 50%; border: 2px dashed rgba(255, 255, 255, 0.28); animation: vgira 26s linear infinite; }
+.vidriera .vsol { position: absolute; left: 50%; top: 50%; width: var(--sol, 156px); height: var(--sol, 156px); margin: calc(var(--sol, 156px) / -2) 0 0 calc(var(--sol, 156px) / -2); border-radius: 50%; background: var(--gold); transition: transform 0.9s cubic-bezier(.2,.8,.2,1); }
+.vidriera .vsol::after { content: ""; position: absolute; inset: -16px; border-radius: 50%; border: 2px dashed rgba(255, 255, 255, 0.28); animation: vgira 26s linear infinite; }
 .vidriera.cambia .vsol { transform: scale(1.12) rotate(18deg); }
 .vidriera .vbar { display: flex; gap: 4px; margin: 0 4px 12px 0; position: relative; z-index: 3; }
 .vidriera .vbar i { flex: 1 1 0; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, 0.28); overflow: hidden; }
@@ -85,8 +85,8 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .vidriera h2 .vrol span.entra { animation: ventra 0.55s cubic-bezier(.2,.9,.25,1.15) both; }
 .vidriera h2 .vrol span.sale { animation: vsale 0.4s ease-in both; }
 .vidriera .vver { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 700; color: rgba(255, 255, 255, 0.86); }
-.vidriera .vimg { position: relative; height: 128px; margin: -10px -4px 0 0; }
-.vidriera .vimg img { position: absolute; inset: 0; margin: auto; max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 14px 12px rgba(5, 12, 25, 0.42)); }
+.vidriera .vimg { position: relative; height: 140px; margin: -6px 0 0; }
+.vidriera .vimg img { position: absolute; inset: 0; margin: auto; z-index: 1; max-width: 86%; max-height: 82%; object-fit: contain; filter: drop-shadow(0 14px 12px rgba(5, 12, 25, 0.42)); }
 .vidriera .vimg img.entra { animation: vimgin 0.7s cubic-bezier(.2,.9,.25,1.1) both, vflota 3.6s ease-in-out 0.7s infinite; }
 .vidriera .vimg img.sale { animation: vimgout 0.45s ease-in both; }
 .vidriera .vbot { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 12px; min-height: 46px; }
@@ -105,7 +105,7 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 @keyframes vbotin { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes vgira { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .vidriera *, .vidriera *::after { animation: none !important; transition: none !important; } .vidriera .vbar i.ya b { width: 100%; } }
-@media (min-width: 700px) { .vidriera { padding: 22px 28px 20px; } .vidriera h2 { font-size: 36px; } .vidriera .vcuerpo { grid-template-columns: minmax(0, 1fr) 300px; min-height: 160px; } .vidriera .vimg { height: 170px; } .vidriera .vbot { grid-template-columns: repeat(4, minmax(0, 160px)); } .vidriera .vsol { width: 280px; height: 280px; right: -40px; top: -60px; } }
+@media (min-width: 700px) { .vidriera { padding: 22px 28px 20px; } .vidriera h2 { font-size: 36px; } .vidriera .vcuerpo { grid-template-columns: minmax(0, 1fr) 300px; min-height: 160px; } .vidriera .vimg { height: 190px; --sol: 210px; } .vidriera .vbot { grid-template-columns: repeat(4, minmax(0, 160px)); }  }
 .rban { position: relative; min-height: 132px; border-radius: 24px; background: var(--tint); padding: 18px 16px 16px; display: flex; align-items: flex-end; overflow: hidden; isolation: isolate; }
 .rban::before { content: ""; position: absolute; z-index: -1; width: 170px; height: 170px; border-radius: 50%; background: rgba(255, 255, 255, 0.5); right: -20px; bottom: -60px; }
 .rban .rbt { max-width: 58%; }
@@ -406,11 +406,10 @@ function vidriera() {
   const sl = vidSlides();
   if (!sl.length) return '';
   return `<section class="vidriera" id="vid" aria-label="Destacados" aria-roledescription="carrusel" style="--vbg:${sl[0].fondo}">
-    <span class="vsol" aria-hidden="true"></span>
     <div class="vbar" aria-hidden="true">${sl.map((_, i) => `<i><b></b></i>`).join('')}</div>
     <div class="vcuerpo">
       <a class="vt" id="vid-link" href="#${sl[0].rubro}"><h2><span id="vid-art">${sl[0].art}</span><span class="vrol" id="vid-rol"><span>${esc(sl[0].palabra)}</span></span></h2><span class="vver" id="vid-ver"></span></a>
-      <span class="vimg" id="vid-img" aria-hidden="true"><img src="${sl[0].img}" alt="" class="entra"></span>
+      <span class="vimg" id="vid-img" aria-hidden="true"><span class="vsol"></span><img src="${sl[0].img}" alt="" class="entra"></span>
     </div>
     <div class="vbot" id="vid-bot" role="group"></div>
   </section>`;
