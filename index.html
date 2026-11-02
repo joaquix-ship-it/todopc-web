@@ -62,18 +62,20 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .tile .go { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--night); color: #FFFFFF; display: flex; align-items: center; justify-content: center; }
 .tile:active { transform: scale(0.985); }
 /* Vidriera de celulares */
-.vidriera { position: relative; display: flex; flex-direction: column; border-radius: 26px; background: var(--navy); color: #FFFFFF; padding: 22px 20px 0; overflow: hidden; isolation: isolate; }
-.vidriera::before { content: ""; position: absolute; z-index: -1; width: 340px; height: 340px; border-radius: 50%; background: var(--gold); left: 50%; bottom: -230px; transform: translateX(-50%); }
-.vidriera::after { content: ""; position: absolute; z-index: -1; width: 210px; height: 210px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.13); right: -70px; top: -80px; }
-.vidriera h2 { margin: 0; font-size: 30px; font-weight: 900; font-stretch: 118%; line-height: 1; letter-spacing: -0.6px; text-wrap: balance; }
-.vidriera p { margin: 8px 0 0; max-width: 32ch; font-size: 14.5px; font-weight: 500; line-height: 1.35; color: rgba(255, 255, 255, 0.82); }
-.vidriera .vbtn { align-self: flex-start; justify-self: start; margin-top: 14px; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 999px; background: #FFFFFF; color: var(--night); font-weight: 800; font-size: 15px; }
-.vidriera .fones { position: relative; display: flex; justify-content: center; align-items: flex-end; min-height: 150px; margin-top: 10px; pointer-events: none; }
-.vidriera .fones img { width: 34%; height: auto; margin: 0 -3%; filter: drop-shadow(0 16px 14px rgba(10, 20, 35, 0.4)); }
-.vidriera .fones img:nth-child(1) { transform: rotate(-8deg) translateY(6px); }
-.vidriera .fones img:nth-child(2) { width: 46%; position: relative; z-index: 2; }
-.vidriera .fones img:nth-child(3) { transform: rotate(8deg) translateY(6px); }
-@media (min-width: 700px) { .vidriera { display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 34px 36px 0; min-height: 300px; } .vidriera h2 { font-size: 42px; } .vidriera .fones { grid-column: 2; grid-row: 1 / span 3; height: 280px; } .vidriera .fones { padding-top: 10px; } .vidriera::before { left: 75%; } }
+.vidriera { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 42%; grid-template-rows: auto auto; column-gap: 8px; border-radius: 24px; background: var(--navy); color: #FFFFFF; padding: 18px 16px 16px 18px; overflow: hidden; isolation: isolate; }
+.vidriera::before { content: ""; position: absolute; z-index: -1; width: 190px; height: 190px; border-radius: 50%; background: var(--gold); right: -46px; top: -34px; }
+.vidriera .vt { grid-column: 1; grid-row: 1; align-self: center; display: flex; flex-direction: column; gap: 6px; }
+.vidriera h2 { margin: 0; font-size: 25px; font-weight: 900; font-stretch: 116%; line-height: 1.02; letter-spacing: -0.5px; text-wrap: balance; }
+.vidriera .vver { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 700; color: rgba(255, 255, 255, 0.85); }
+.vidriera .fones { grid-column: 2; grid-row: 1; position: relative; display: flex; justify-content: center; align-items: flex-end; height: 118px; margin: -6px -6px 0 0; pointer-events: none; }
+.vidriera .fones img { width: 62%; height: auto; margin: 0 -9%; filter: drop-shadow(0 12px 10px rgba(10, 20, 35, 0.4)); }
+.vidriera .fones img:nth-child(1) { transform: rotate(-9deg) translateY(4px); }
+.vidriera .fones img:nth-child(2) { width: 72%; position: relative; z-index: 2; }
+.vidriera .marcas { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 14px; }
+.vidriera .marcas button { height: 46px; border: 0; border-radius: 14px; background: rgba(255, 255, 255, 0.12); color: #FFFFFF; font-size: 14px; font-weight: 800; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; cursor: pointer; line-height: 1.1; }
+.vidriera .marcas button small { font-size: 11.5px; font-weight: 600; color: rgba(255, 255, 255, 0.7); }
+.vidriera .marcas button:active { background: rgba(255, 255, 255, 0.24); }
+@media (min-width: 700px) { .vidriera { padding: 24px 28px 22px; grid-template-columns: minmax(0, 1fr) 260px; } .vidriera h2 { font-size: 34px; } .vidriera .fones { height: 150px; } .vidriera .marcas { grid-column: 1; grid-template-columns: repeat(4, minmax(0, 150px)); } .vidriera .fones { grid-row: 1 / span 2; } }
 .rban { position: relative; min-height: 132px; border-radius: 24px; background: var(--tint); padding: 18px 16px 16px; display: flex; align-items: flex-end; overflow: hidden; isolation: isolate; }
 .rban::before { content: ""; position: absolute; z-index: -1; width: 170px; height: 170px; border-radius: 50%; background: rgba(255, 255, 255, 0.5); right: -20px; bottom: -60px; }
 .rban .rbt { max-width: 58%; }
@@ -281,7 +283,7 @@ const RUBRO = Object.fromEntries(DATA.rubros.map(r => [r.id, r]));
 const pref = { get(k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
 let vistaModo = pref.get('tp-vista', 'lista');
 let orden = 'precio-asc';
-let subSel = 'Todos';
+let subSel = 'Todos', marcaPend = null;
 
 const wa = t => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
 const linkProd = p => location.href.split('#')[0] + '#p-' + p.id;
@@ -344,11 +346,15 @@ const LOCAL = {
 };
 const SUGERENCIAS = ['mouse', 'cargador', 'iPhone', 'tinta Epson', 'pendrive', 'parlante JBL', 'router', 'Samsung'];
 function vidriera() {
-  const n = DATA.productos.filter(p => p.rubro === 'celulares').length;
-  if (!n) return '';
-  const fs = (DATA.vidriera || []).slice(0, 3);
-  const orden = fs.length === 3 ? [fs[1], fs[0], fs[2]] : fs;
-  return `<a class="vidriera" href="#celulares"><h2>Celulares nuevos y usados</h2><p>iPhone, Samsung, Motorola y Xiaomi. Contado o en cuotas con tarjeta.</p><span class="vbtn">Ver los ${n} celulares ${ico('chev', 16, 2.6)}</span><span class="fones" aria-hidden="true">${orden.map(f => `<img src="${f.rec}" alt="">`).join('')}</span></a>`;
+  const cel = DATA.productos.filter(p => p.rubro === 'celulares');
+  if (!cel.length) return '';
+  const fs = (DATA.vidriera || []).slice(0, 2).reverse();
+  const marcas = ['iPhone', 'Samsung', 'Motorola', 'Xiaomi'].map(m => [m, cel.filter(p => p.sub === m).length]).filter(x => x[1]);
+  return `<section class="vidriera" aria-label="Celulares">
+    <a class="vt" href="#celulares"><h2>Tu próximo celular</h2><span class="vver">Ver los ${cel.length} modelos ${ico('chev', 14, 2.6)}</span></a>
+    <span class="fones" aria-hidden="true">${fs.map(f => `<img src="${f.rec}" alt="">`).join('')}</span>
+    <div class="marcas" role="group" aria-label="Elegí la marca">${marcas.map(([m, n]) => `<button type="button" data-marca="${esc(m)}">${esc(m)}<small>${n} ${n === 1 ? 'modelo' : 'modelos'}</small></button>`).join('')}</div>
+  </section>`;
 }
 function sugerencias() {
   const ok = SUGERENCIAS.filter(q => { const w = norm(q).split(/\s+/); return DATA.productos.some(p => w.every(x => norm(p.nombre + ' ' + (p.sub || '') + ' ' + (p.det || '')).includes(x))); }).slice(0, 6);
@@ -377,6 +383,7 @@ function vInicio() {
     ${infoLocal()}
     ${nuevos.length ? `<section><p class="label">Recién ingresados</p><div class="recent">${nuevos.map(itemLista).join('')}</div></section>` : ''}`;
   vista.querySelectorAll('.recent .item').forEach((el, i) => el.style.borderTop = i ? '' : '0');
+  vista.querySelectorAll('.marcas button').forEach(b => b.onclick = () => { marcaPend = b.dataset.marca; location.hash = '#celulares'; });
   vista.querySelectorAll('.sugs button').forEach(b => b.onclick = () => { buscar.value = b.dataset.q; buscar.dispatchEvent(new Event('input')); buscar.focus(); });
 }
 
@@ -473,7 +480,7 @@ buscar.addEventListener('input', () => {
   tq = setTimeout(() => { if (q.length >= 2) { vBuscar(q); window.scrollTo(0, 0); } else if (!q) router(); }, 150);
 });
 $('limpiar').onclick = () => { buscar.value = ''; $('limpiar').hidden = true; router(); buscar.focus(); };
-window.addEventListener('hashchange', () => { subSel = 'Todos'; router(); });
+window.addEventListener('hashchange', () => { subSel = marcaPend || 'Todos'; marcaPend = null; router(); });
 router();
 </script>
 
