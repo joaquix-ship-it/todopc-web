@@ -125,6 +125,17 @@
   {
    "rubro": "celulares",
    "sub": "Samsung",
+   "nombre": "Galaxy A27",
+   "det": "128 GB",
+   "precio": 499000,
+   "tag": null,
+   "foto": "fotos/cel-galaxy-a27-128-gb.jpg",
+   "id": "galaxy-a27-128-gb",
+   "nuevo": false
+  },
+  {
+   "rubro": "celulares",
+   "sub": "Samsung",
    "nombre": "Galaxy A37",
    "det": "256 GB",
    "precio": 699000,
@@ -201,6 +212,17 @@
   },
   {
    "rubro": "celulares",
+   "sub": "Motorola",
+   "nombre": "Moto G86 Power",
+   "det": "256 GB",
+   "precio": 499000,
+   "tag": null,
+   "foto": "fotos/cel-moto-g86-power-256-gb.jpg",
+   "id": "moto-g86-power-256-gb",
+   "nuevo": false
+  },
+  {
+   "rubro": "celulares",
    "sub": "Xiaomi",
    "nombre": "Redmi A5 / POCO C71",
    "det": "64 GB · 3 GB RAM · a elección",
@@ -245,6 +267,17 @@
   },
   {
    "rubro": "celulares",
+   "sub": "Xiaomi",
+   "nombre": "Redmi Note 15 Pro",
+   "det": "256 GB · 8 GB RAM",
+   "precio": 529000,
+   "tag": null,
+   "foto": "fotos/cel-redmi-note-15-pro-256-gb.jpg",
+   "id": "redmi-note-15-pro-256-gb",
+   "nuevo": false
+  },
+  {
+   "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 13",
    "det": "128 GB · Black · batería 87 %",
@@ -264,6 +297,17 @@
    "foto": "fotos/cel-iphone-14-128-gb-usado.jpg",
    "id": "iphone-14-128-gb-usado",
    "nuevo": false
+  },
+  {
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 14 Plus",
+   "det": "128 GB · Black · batería 100 % · Batería reemplazada original",
+   "precio": 729000,
+   "tag": "usado",
+   "foto": "fotos/cel-iphone-14-plus-128-gb-usado.jpg",
+   "id": "iphone-14-plus-128-gb-usado",
+   "nuevo": true
   },
   {
    "rubro": "celulares",
