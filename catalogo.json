@@ -8,7 +8,7 @@
    "det": "128 GB · Nuevo sellado",
    "precio": 899000,
    "tag": null,
-   "foto": "fotos/cel-iphone-13-128-gb.png",
+   "foto": "fotos/cel-iphone-13-128-gb.jpg",
    "id": "iphone-13-128-gb",
    "nuevo": false
   },
@@ -19,7 +19,7 @@
    "det": "128 GB · Nuevo sellado",
    "precio": 1269000,
    "tag": null,
-   "foto": "fotos/cel-iphone-15-128-gb.png",
+   "foto": "fotos/cel-iphone-15-128-gb.jpg",
    "id": "iphone-15-128-gb",
    "nuevo": false
   },
@@ -30,7 +30,7 @@
    "det": "128 GB · Nuevo sellado",
    "precio": 1469000,
    "tag": null,
-   "foto": "fotos/cel-iphone-16-128-gb.png",
+   "foto": "fotos/cel-iphone-16-128-gb.jpg",
    "id": "iphone-16-128-gb",
    "nuevo": false
   },
@@ -41,7 +41,7 @@
    "det": "256 GB · Nuevo sellado",
    "precio": 1699000,
    "tag": null,
-   "foto": "fotos/cel-iphone-17-256-gb.png",
+   "foto": "fotos/cel-iphone-17-256-gb.jpg",
    "id": "iphone-17-256-gb",
    "nuevo": false
   },
@@ -52,7 +52,7 @@
    "det": "256 GB · Nuevo sellado",
    "precio": 2099000,
    "tag": null,
-   "foto": "fotos/cel-iphone-17-pro-256-gb.png",
+   "foto": "fotos/cel-iphone-17-pro-256-gb.jpg",
    "id": "iphone-17-pro-256-gb",
    "nuevo": false
   },
@@ -63,7 +63,7 @@
    "det": "256 GB · Nuevo sellado",
    "precio": 2299000,
    "tag": null,
-   "foto": "fotos/cel-iphone-17-pro-max-256-gb.png",
+   "foto": "fotos/cel-iphone-17-pro-max-256-gb.jpg",
    "id": "iphone-17-pro-max-256-gb",
    "nuevo": false
   },
@@ -74,7 +74,7 @@
    "det": "256 GB · Nuevo sellado",
    "precio": 2450000,
    "tag": null,
-   "foto": "fotos/cel-iphone-18-pro-256-gb.png",
+   "foto": "fotos/cel-iphone-18-pro-256-gb.jpg",
    "id": "iphone-18-pro-256-gb",
    "nuevo": false
   },
@@ -85,7 +85,7 @@
    "det": "256 GB · Nuevo sellado",
    "precio": 2750000,
    "tag": null,
-   "foto": "fotos/cel-iphone-18-pro-max-256-gb.png",
+   "foto": "fotos/cel-iphone-18-pro-max-256-gb.jpg",
    "id": "iphone-18-pro-max-256-gb",
    "nuevo": true
   },
@@ -96,7 +96,7 @@
    "det": "64 GB",
    "precio": 239000,
    "tag": null,
-   "foto": "fotos/cel-galaxy-a07-64-gb.png",
+   "foto": "fotos/cel-galaxy-a07-64-gb.jpg",
    "id": "galaxy-a07-64-gb",
    "nuevo": false
   },
@@ -107,7 +107,7 @@
    "det": "128 GB · 4 GB RAM",
    "precio": 309000,
    "tag": null,
-   "foto": "fotos/cel-galaxy-a16-128-gb.png",
+   "foto": "fotos/cel-galaxy-a16-128-gb.jpg",
    "id": "galaxy-a16-128-gb",
    "nuevo": false
   },
@@ -118,7 +118,7 @@
    "det": "128 GB · 6 GB RAM",
    "precio": 349000,
    "tag": null,
-   "foto": "fotos/cel-galaxy-a17-128-gb.png",
+   "foto": "fotos/cel-galaxy-a17-128-gb.jpg",
    "id": "galaxy-a17-128-gb",
    "nuevo": false
   },
@@ -129,7 +129,7 @@
    "det": "256 GB",
    "precio": 699000,
    "tag": null,
-   "foto": "fotos/cel-galaxy-a37-256-gb.png",
+   "foto": "fotos/cel-galaxy-a37-256-gb.jpg",
    "id": "galaxy-a37-256-gb",
    "nuevo": false
   },
@@ -140,7 +140,7 @@
    "det": "256 GB",
    "precio": 799000,
    "tag": null,
-   "foto": "fotos/cel-galaxy-a57-256-gb.png",
+   "foto": "fotos/cel-galaxy-a57-256-gb.jpg",
    "id": "galaxy-a57-256-gb",
    "nuevo": false
   },
@@ -151,7 +151,7 @@
    "det": "64 GB",
    "precio": 209000,
    "tag": null,
-   "foto": "fotos/cel-moto-e15-64-gb.png",
+   "foto": "fotos/cel-moto-e15-64-gb.jpg",
    "id": "moto-e15-64-gb",
    "nuevo": false
   },
@@ -162,7 +162,7 @@
    "det": "64 GB",
    "precio": 229000,
    "tag": null,
-   "foto": "fotos/cel-moto-g06-64-gb.png",
+   "foto": "fotos/cel-moto-g06-64-gb.jpg",
    "id": "moto-g06-64-gb",
    "nuevo": false
   },
@@ -173,7 +173,7 @@
    "det": "128 GB",
    "precio": 279000,
    "tag": null,
-   "foto": "fotos/cel-moto-g06-128-gb.png",
+   "foto": "fotos/cel-moto-g06-128-gb.jpg",
    "id": "moto-g06-128-gb",
    "nuevo": false
   },
@@ -184,7 +184,7 @@
    "det": "256 GB",
    "precio": 349000,
    "tag": null,
-   "foto": "fotos/cel-moto-g35-256-gb.png",
+   "foto": "fotos/cel-moto-g35-256-gb.jpg",
    "id": "moto-g35-256-gb",
    "nuevo": false
   },
@@ -195,7 +195,7 @@
    "det": "256 GB",
    "precio": 449000,
    "tag": null,
-   "foto": "fotos/cel-moto-g57-256-gb.png",
+   "foto": "fotos/cel-moto-g57-256-gb.jpg",
    "id": "moto-g57-256-gb",
    "nuevo": false
   },
@@ -206,7 +206,7 @@
    "det": "64 GB · 3 GB RAM · a elección",
    "precio": 209000,
    "tag": null,
-   "foto": "fotos/cel-redmi-a5-poco-c71-64-gb.png",
+   "foto": "fotos/cel-redmi-a5-poco-c71-64-gb.jpg",
    "id": "redmi-a5-poco-c71-64-gb",
    "nuevo": false
   },
@@ -217,7 +217,7 @@
    "det": "128 GB · 4 GB RAM · a elección",
    "precio": 239000,
    "tag": null,
-   "foto": "fotos/cel-redmi-a5-poco-c71-128-gb.png",
+   "foto": "fotos/cel-redmi-a5-poco-c71-128-gb.jpg",
    "id": "redmi-a5-poco-c71-128-gb",
    "nuevo": false
   },
@@ -228,7 +228,7 @@
    "det": "256 GB",
    "precio": 299000,
    "tag": null,
-   "foto": "fotos/cel-redmi-15c-256-gb.png",
+   "foto": "fotos/cel-redmi-15c-256-gb.jpg",
    "id": "redmi-15c-256-gb",
    "nuevo": false
   },
@@ -239,7 +239,7 @@
    "det": "256 GB · 8 GB RAM",
    "precio": 459000,
    "tag": null,
-   "foto": "fotos/cel-redmi-note-15-256-gb.png",
+   "foto": "fotos/cel-redmi-note-15-256-gb.jpg",
    "id": "redmi-note-15-256-gb",
    "nuevo": false
   },
@@ -250,7 +250,7 @@
    "det": "128 GB · Black · batería 87 %",
    "precio": 629000,
    "tag": "usado",
-   "foto": "fotos/cel-iphone-13-128-gb-usado.png",
+   "foto": "fotos/cel-iphone-13-128-gb-usado.jpg",
    "id": "iphone-13-128-gb-usado",
    "nuevo": false
   },
@@ -261,7 +261,7 @@
    "det": "128 GB · Starlight · batería 86 %",
    "precio": 699000,
    "tag": "usado",
-   "foto": "fotos/cel-iphone-14-128-gb-usado.png",
+   "foto": "fotos/cel-iphone-14-128-gb-usado.jpg",
    "id": "iphone-14-128-gb-usado",
    "nuevo": false
   },
@@ -272,7 +272,7 @@
    "det": "128 GB · Blue 86 % (2) · Black 85 %",
    "precio": 899000,
    "tag": "usado",
-   "foto": "fotos/cel-iphone-15-128-gb-usado.png",
+   "foto": "fotos/cel-iphone-15-128-gb-usado.jpg",
    "id": "iphone-15-128-gb-usado",
    "nuevo": false
   },
@@ -283,7 +283,7 @@
    "det": "128 GB · Blue Titanium · batería 86 %",
    "precio": 1070000,
    "tag": "usado",
-   "foto": "fotos/cel-iphone-15-pro-128-gb-usado.png",
+   "foto": "fotos/cel-iphone-15-pro-128-gb-usado.jpg",
    "id": "iphone-15-pro-128-gb-usado",
    "nuevo": false
   },
@@ -294,7 +294,7 @@
    "det": "128 GB · White 92 % · White 91 %",
    "precio": 1149000,
    "tag": "usado",
-   "foto": "fotos/cel-iphone-16-128-gb-usado.png",
+   "foto": "fotos/cel-iphone-16-128-gb-usado.jpg",
    "id": "iphone-16-128-gb-usado",
    "nuevo": false
   },
@@ -305,7 +305,7 @@
    "det": "128 GB · Black · batería 98 %",
    "precio": 1189000,
    "tag": "usado",
-   "foto": "fotos/cel-iphone-16-128-gb-usado-2.png",
+   "foto": "fotos/cel-iphone-16-128-gb-usado-2.jpg",
    "id": "iphone-16-128-gb-usado-2",
    "nuevo": false
   },
@@ -316,7 +316,7 @@
    "det": "128 GB · Natural Titanium · batería 89 %",
    "precio": 1299000,
    "tag": "usado",
-   "foto": "fotos/cel-iphone-16-pro-128-gb-usado.png",
+   "foto": "fotos/cel-iphone-16-pro-128-gb-usado.jpg",
    "id": "iphone-16-pro-128-gb-usado",
    "nuevo": true
   },
