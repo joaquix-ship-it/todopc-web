@@ -67,20 +67,45 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
   .tile.ult b { min-height: 0; }
 }
 /* Vidriera de celulares */
-.vidriera { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 42%; grid-template-rows: auto auto; column-gap: 8px; border-radius: 24px; background: var(--navy); color: #FFFFFF; padding: 18px 16px 16px 18px; overflow: hidden; isolation: isolate; }
-.vidriera::before { content: ""; position: absolute; z-index: -1; width: 190px; height: 190px; border-radius: 50%; background: var(--gold); right: -46px; top: -34px; }
-.vidriera .vt { grid-column: 1; grid-row: 1; align-self: center; display: flex; flex-direction: column; gap: 6px; }
-.vidriera h2 { margin: 0; font-size: 25px; font-weight: 900; font-stretch: 116%; line-height: 1.02; letter-spacing: -0.5px; text-wrap: balance; }
-.vidriera .vver { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 700; color: rgba(255, 255, 255, 0.85); }
-.vidriera .fones { grid-column: 2; grid-row: 1; position: relative; display: flex; justify-content: center; align-items: flex-end; height: 118px; margin: -6px -6px 0 0; pointer-events: none; }
-.vidriera .fones img { width: 62%; height: auto; margin: 0 -9%; filter: drop-shadow(0 12px 10px rgba(10, 20, 35, 0.4)); }
-.vidriera .fones img:nth-child(1) { transform: rotate(-9deg) translateY(4px); }
-.vidriera .fones img:nth-child(2) { width: 72%; position: relative; z-index: 2; }
-.vidriera .marcas { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 14px; }
-.vidriera .marcas button { height: 46px; border: 0; border-radius: 14px; background: rgba(255, 255, 255, 0.12); color: #FFFFFF; font-size: 14px; font-weight: 800; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; cursor: pointer; line-height: 1.1; }
-.vidriera .marcas button small { font-size: 11.5px; font-weight: 600; color: rgba(255, 255, 255, 0.7); }
-.vidriera .marcas button:active { background: rgba(255, 255, 255, 0.24); }
-@media (min-width: 700px) { .vidriera { padding: 24px 28px 22px; grid-template-columns: minmax(0, 1fr) 260px; } .vidriera h2 { font-size: 34px; } .vidriera .fones { height: 150px; } .vidriera .marcas { grid-column: 1; grid-template-columns: repeat(4, minmax(0, 150px)); } .vidriera .fones { grid-row: 1 / span 2; } }
+.vidriera { position: relative; border-radius: 24px; background: var(--vbg, var(--navy)); color: #FFFFFF; padding: 16px 16px 14px 18px; overflow: hidden; isolation: isolate; transition: background-color 0.7s ease; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.vidriera .vsol { position: absolute; z-index: -1; width: 196px; height: 196px; border-radius: 50%; background: var(--gold); right: -52px; top: -30px; transition: transform 0.9s cubic-bezier(.2,.8,.2,1); }
+.vidriera .vsol::after { content: ""; position: absolute; inset: -22px; border-radius: 50%; border: 2px dashed rgba(255, 255, 255, 0.28); animation: vgira 26s linear infinite; }
+.vidriera.cambia .vsol { transform: scale(1.12) rotate(18deg); }
+.vidriera .vbar { display: flex; gap: 4px; margin: 0 4px 12px 0; position: relative; z-index: 3; }
+.vidriera .vbar i { flex: 1 1 0; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, 0.28); overflow: hidden; }
+.vidriera .vbar i b { display: block; height: 100%; width: 0; background: #FFFFFF; border-radius: inherit; }
+.vidriera .vbar i.ok b { width: 100%; }
+.vidriera .vbar i.ya b { animation: vllena var(--vt, 4s) linear forwards; }
+.vidriera.pausa .vbar i.ya b { animation-play-state: paused; }
+.vidriera .vcuerpo { display: grid; grid-template-columns: minmax(0, 1fr) 44%; align-items: center; min-height: 118px; }
+.vidriera .vt { display: flex; flex-direction: column; gap: 8px; position: relative; z-index: 2; }
+.vidriera h2 { margin: 0; font-size: 25px; font-weight: 900; font-stretch: 116%; line-height: 1.02; letter-spacing: -0.5px; }
+.vidriera h2 .vrol { display: block; position: relative; height: 1.08em; overflow: hidden; }
+.vidriera h2 .vrol span { position: absolute; left: 0; top: 0; white-space: nowrap; color: var(--gold); }
+.vidriera h2 .vrol span.entra { animation: ventra 0.55s cubic-bezier(.2,.9,.25,1.15) both; }
+.vidriera h2 .vrol span.sale { animation: vsale 0.4s ease-in both; }
+.vidriera .vver { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 700; color: rgba(255, 255, 255, 0.86); }
+.vidriera .vimg { position: relative; height: 128px; margin: -10px -4px 0 0; }
+.vidriera .vimg img { position: absolute; inset: 0; margin: auto; max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 14px 12px rgba(5, 12, 25, 0.42)); }
+.vidriera .vimg img.entra { animation: vimgin 0.7s cubic-bezier(.2,.9,.25,1.1) both, vflota 3.6s ease-in-out 0.7s infinite; }
+.vidriera .vimg img.sale { animation: vimgout 0.45s ease-in both; }
+.vidriera .vbot { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 12px; min-height: 46px; }
+.vidriera .vbot button { min-width: 0; height: 46px; border: 0; border-radius: 14px; background: rgba(255, 255, 255, 0.13); color: #FFFFFF; font-size: 13.5px; font-weight: 800; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1; padding: 0 4px; text-align: center; cursor: pointer; animation: vbotin 0.45s ease both; }
+.vidriera .vbot button span, .vidriera .vbot button small { max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vidriera .vbot button small { font-size: 11px; font-weight: 600; color: rgba(255, 255, 255, 0.72); }
+.vidriera .vbot button.todo { background: #FFFFFF; color: var(--night); }
+.vidriera .vbot button.todo small { color: var(--muted); }
+.vidriera .vbot button:nth-child(2) { animation-delay: 0.05s; } .vidriera .vbot button:nth-child(3) { animation-delay: 0.1s; } .vidriera .vbot button:nth-child(4) { animation-delay: 0.15s; }
+@keyframes vllena { to { width: 100%; } }
+@keyframes ventra { from { transform: translateY(105%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes vsale { to { transform: translateY(-105%); opacity: 0; } }
+@keyframes vimgin { from { transform: translateX(46%) rotate(14deg) scale(0.7); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes vimgout { to { transform: translateX(-38%) rotate(-10deg) scale(0.75); opacity: 0; } }
+@keyframes vflota { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-6px) rotate(-1.5deg); } }
+@keyframes vbotin { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes vgira { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .vidriera *, .vidriera *::after { animation: none !important; transition: none !important; } .vidriera .vbar i.ya b { width: 100%; } }
+@media (min-width: 700px) { .vidriera { padding: 22px 28px 20px; } .vidriera h2 { font-size: 36px; } .vidriera .vcuerpo { grid-template-columns: minmax(0, 1fr) 300px; min-height: 160px; } .vidriera .vimg { height: 170px; } .vidriera .vbot { grid-template-columns: repeat(4, minmax(0, 160px)); } .vidriera .vsol { width: 280px; height: 280px; right: -40px; top: -60px; } }
 .rban { position: relative; min-height: 132px; border-radius: 24px; background: var(--tint); padding: 18px 16px 16px; display: flex; align-items: flex-end; overflow: hidden; isolation: isolate; }
 .rban::before { content: ""; position: absolute; z-index: -1; width: 170px; height: 170px; border-radius: 50%; background: rgba(255, 255, 255, 0.5); right: -20px; bottom: -60px; }
 .rban .rbt { max-width: 58%; }
@@ -350,16 +375,92 @@ const LOCAL = {
   envios: '',
 };
 const SUGERENCIAS = ['mouse', 'cargador', 'iPhone', 'tinta Epson', 'pendrive', 'parlante JBL', 'router', 'Samsung'];
+/* Vidriera animada: "Tu próximo ___" rota entre los rubros fuertes, como historias */
+const VIDRIERA = [
+  { rubro: 'celulares', art: 'Tu próximo', palabra: 'celular', fondo: '#17406B' },
+  { rubro: 'audio', art: 'Tu próximo', palabra: 'parlante', fondo: '#3D2C74' },
+  { rubro: 'impresion', art: 'Tu próxima', palabra: 'impresora', fondo: '#0F1B2D' },
+  { rubro: 'mouses', art: 'Tu próximo', palabra: 'teclado', fondo: '#1C4E6E' },
+  { rubro: 'memorias', art: 'Tu próximo', palabra: 'pendrive', fondo: '#16504A' },
+  { rubro: 'redes', art: 'Tu próximo', palabra: 'router', fondo: '#244A8C' },
+  { rubro: 'tintas', art: 'Tus próximas', palabra: 'tintas', fondo: '#6E2340' },
+];
+let vidTimer = null;
+function vidSlides() {
+  return VIDRIERA.map(v => {
+    const r = RUBRO[v.rubro], ps = DATA.productos.filter(p => p.rubro === v.rubro);
+    if (!r || !ps.length) return null;
+    const img = v.rubro === 'celulares' ? ((DATA.vidriera || [])[0] || {}).rec : r.rec;
+    if (!img) return null;
+    let bots;
+    if (v.rubro === 'celulares') bots = ['iPhone', 'Samsung', 'Motorola', 'Xiaomi'].map(m => [m, ps.filter(p => p.sub === m).length]).filter(x => x[1]).slice(0, 4).map(([m, n]) => ({ s: m, t: m, n: n + (n === 1 ? ' modelo' : ' modelos') }));
+    else {
+      const subs = [...new Set(ps.map(p => p.sub).filter(Boolean))].map(s2 => [s2, ps.filter(p => p.sub === s2).length]).sort((a, b) => b[1] - a[1]).slice(0, 3);
+      bots = subs.map(([s2, n]) => ({ s: s2, t: s2.replace(/^Combos? teclado y mouse$/, 'Combos').replace(/^Cartuchos de tinta$/, 'Cartuchos').replace(/^Botellas de tinta$/, 'Botellas').replace(/^Adaptadores Wi-Fi$/, 'Adaptadores').replace(/^Tarjetas de memoria$/, 'Micro SD').replace(/^Combos gamer$/, 'Gamer'), n: n + (n === 1 ? ' producto' : ' productos') }));
+      bots.push({ s: 'Todos', t: 'Ver todo', n: ps.length + ' en total', todo: true });
+    }
+    return { ...v, img, n: ps.length, bots };
+  }).filter(Boolean);
+}
 function vidriera() {
-  const cel = DATA.productos.filter(p => p.rubro === 'celulares');
-  if (!cel.length) return '';
-  const fs = (DATA.vidriera || []).slice(0, 2).reverse();
-  const marcas = ['iPhone', 'Samsung', 'Motorola', 'Xiaomi'].map(m => [m, cel.filter(p => p.sub === m).length]).filter(x => x[1]);
-  return `<section class="vidriera" aria-label="Celulares">
-    <a class="vt" href="#celulares"><h2>Tu próximo celular</h2><span class="vver">Ver los ${cel.length} modelos ${ico('chev', 14, 2.6)}</span></a>
-    <span class="fones" aria-hidden="true">${fs.map(f => `<img src="${f.rec}" alt="">`).join('')}</span>
-    <div class="marcas" role="group" aria-label="Elegí la marca">${marcas.map(([m, n]) => `<button type="button" data-marca="${esc(m)}">${esc(m)}<small>${n} ${n === 1 ? 'modelo' : 'modelos'}</small></button>`).join('')}</div>
+  const sl = vidSlides();
+  if (!sl.length) return '';
+  return `<section class="vidriera" id="vid" aria-label="Destacados" aria-roledescription="carrusel" style="--vbg:${sl[0].fondo}">
+    <span class="vsol" aria-hidden="true"></span>
+    <div class="vbar" aria-hidden="true">${sl.map((_, i) => `<i><b></b></i>`).join('')}</div>
+    <div class="vcuerpo">
+      <a class="vt" id="vid-link" href="#${sl[0].rubro}"><h2><span id="vid-art">${sl[0].art}</span><span class="vrol" id="vid-rol"><span>${esc(sl[0].palabra)}</span></span></h2><span class="vver" id="vid-ver"></span></a>
+      <span class="vimg" id="vid-img" aria-hidden="true"><img src="${sl[0].img}" alt="" class="entra"></span>
+    </div>
+    <div class="vbot" id="vid-bot" role="group"></div>
   </section>`;
+}
+function montarVidriera() {
+  const el = $('vid'); if (!el) return;
+  const sl = vidSlides(), T = 4200, quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let k = 0, pausa = false, t0 = 0;
+  el.style.setProperty('--vt', T + 'ms');
+  const barras = [...el.querySelectorAll('.vbar i')];
+  const botones = s2 => s2.bots.map(b => `<button type="button" class="${b.todo ? 'todo' : ''}" data-s="${esc(b.s)}" data-r="${s2.rubro}"><span>${esc(b.t)}</span><small>${esc(b.n)}</small></button>`).join('');
+  const pintar = (i, primera) => {
+    const s2 = sl[i];
+    barras.forEach((b, j) => { b.className = j < i ? 'ok' : ''; b.firstChild.style.animation = 'none'; void b.offsetWidth; b.firstChild.style.animation = ''; });
+    if (barras[i]) barras[i].className = 'ya';
+    el.style.setProperty('--vbg', s2.fondo);
+    $('vid-link').href = '#' + s2.rubro;
+    $('vid-ver').innerHTML = `Ver los ${s2.n} ${s2.rubro === 'celulares' ? 'modelos' : (s2.n === 1 ? 'producto' : 'productos')} ${ico('chev', 14, 2.6)}`;
+    $('vid-bot').innerHTML = botones(s2);
+    $('vid-bot').querySelectorAll('button').forEach(b => b.onclick = () => { marcaPend = b.dataset.s; location.hash = '#' + b.dataset.r; });
+    if (primera) return;
+    $('vid-art').textContent = s2.art;
+    const rol = $('vid-rol'), viejo = rol.querySelector('span:not(.sale)');
+    if (viejo) { viejo.className = 'sale'; setTimeout(() => viejo.remove(), 420); }
+    rol.insertAdjacentHTML('beforeend', `<span class="entra">${esc(s2.palabra)}</span>`);
+    const caja = $('vid-img'), vi = caja.querySelector('img:not(.sale)');
+    if (vi) { vi.className = 'sale'; setTimeout(() => vi.remove(), 460); }
+    caja.insertAdjacentHTML('beforeend', `<img src="${s2.img}" alt="" class="entra">`);
+    el.classList.add('cambia'); setTimeout(() => el.classList.remove('cambia'), 900);
+  };
+  const ir = d => { k = (k + d + sl.length) % sl.length; pintar(k); t0 = performance.now(); };
+  pintar(0, true); t0 = performance.now();
+  clearInterval(vidTimer);
+  if (sl.length > 1 && !quieto) vidTimer = setInterval(() => {
+    if (!document.body.contains(el)) { clearInterval(vidTimer); return; }
+    if (!pausa && performance.now() - t0 >= T) ir(1);
+  }, 120);
+  // tocar y mantener = pausa; deslizar = pasar
+  let x0 = null, y0 = 0, tp = 0, desliz = false;
+  el.addEventListener('pointerdown', e => { x0 = e.clientX; y0 = e.clientY; tp = performance.now(); pausa = true; el.classList.add('pausa'); });
+  const soltar = e => {
+    if (x0 === null) return;
+    const dx = e.clientX - x0, dy = e.clientY - y0, dt = performance.now() - tp;
+    pausa = false; el.classList.remove('pausa');
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { desliz = true; ir(dx < 0 ? 1 : -1); }
+    else if (dt > 350) t0 += dt;   // lo que estuvo pausado no cuenta
+    x0 = null;
+  };
+  el.addEventListener('pointerup', soltar); el.addEventListener('pointercancel', soltar); el.addEventListener('pointerleave', soltar);
+  el.addEventListener('click', e => { if (desliz) { e.preventDefault(); e.stopPropagation(); desliz = false; } }, true);
 }
 function sugerencias() {
   const ok = SUGERENCIAS.filter(q => { const w = norm(q).split(/\s+/); return DATA.productos.some(p => w.every(x => norm(p.nombre + ' ' + (p.sub || '') + ' ' + (p.det || '')).includes(x))); }).slice(0, 6);
@@ -389,7 +490,7 @@ function vInicio() {
     ${infoLocal()}
     ${nuevos.length ? `<section><p class="label">Recién ingresados</p><div class="recent">${nuevos.map(itemLista).join('')}</div></section>` : ''}`;
   vista.querySelectorAll('.recent .item').forEach((el, i) => el.style.borderTop = i ? '' : '0');
-  vista.querySelectorAll('.marcas button').forEach(b => b.onclick = () => { marcaPend = b.dataset.marca; location.hash = '#celulares'; });
+  montarVidriera();
   vista.querySelectorAll('.sugs button').forEach(b => b.onclick = () => { buscar.value = b.dataset.q; buscar.dispatchEvent(new Event('input')); buscar.focus(); });
 }
 
