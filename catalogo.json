@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-02",
+ "fecha": "2026-11-03",
  "productos": [
   {
    "rubro": "celulares",
@@ -87,7 +87,7 @@
    "tag": null,
    "foto": "fotos/cel-iphone-18-pro-max-256-gb.jpg",
    "id": "iphone-18-pro-max-256-gb",
-   "nuevo": true
+   "nuevo": false
   },
   {
    "rubro": "celulares",
@@ -307,7 +307,7 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-14-plus-128-gb-usado.jpg",
    "id": "iphone-14-plus-128-gb-usado",
-   "nuevo": true
+   "nuevo": false
   },
   {
    "rubro": "celulares",
@@ -362,7 +362,7 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-16-pro-128-gb-usado.jpg",
    "id": "iphone-16-pro-128-gb-usado",
-   "nuevo": true
+   "nuevo": false
   },
   {
    "rubro": "mouses",
@@ -1143,6 +1143,366 @@
    "id": "repetidor-wi-fi-mercusys-mw300re",
    "nuevo": false,
    "tp": "TP00074"
+  },
+  {
+   "rubro": "redes",
+   "sub": "Routers",
+   "nombre": "Router Wi-Fi ASUS RT-N300 3 en 1",
+   "det": "300 Mbps · Router, repetidor y punto de acceso",
+   "precio": 33000,
+   "tag": null,
+   "foto": "fotos/a-590ad809b256efd721020d1c9af1754c.jpg",
+   "id": "router-wi-fi-asus-rt-n300-3-en-1",
+   "nuevo": false,
+   "tp": "TP00075"
+  },
+  {
+   "rubro": "redes",
+   "sub": "Switches",
+   "nombre": "Switch Cudy FS108D 8 puertos",
+   "det": "10/100 Mbps · Escritorio",
+   "precio": 15000,
+   "tag": null,
+   "foto": "fotos/a-49c95450690dc8da6cbed366dca67fc1.jpg",
+   "id": "switch-cudy-fs108d-8-puertos",
+   "nuevo": false,
+   "tp": "TP00076"
+  },
+  {
+   "rubro": "redes",
+   "sub": "Placas de red",
+   "nombre": "Placa Wi-Fi PCI-E TP-Link TL-WN781ND",
+   "det": "150 Mbps · Para PC de escritorio",
+   "precio": 19000,
+   "tag": null,
+   "foto": "fotos/a-972a82871dbcc79d6a23625026189926.jpg",
+   "id": "placa-wi-fi-pci-e-tp-link-tl-wn781nd",
+   "nuevo": false,
+   "tp": "TP00077"
+  },
+  {
+   "rubro": "redes",
+   "sub": "Placas de red",
+   "nombre": "Placa de red PCI-E Cudy PE10 Gigabit",
+   "det": "10/100/1000 Mbps · Para PC de escritorio",
+   "precio": 10000,
+   "tag": null,
+   "foto": "fotos/a-bf774b201fe5b6c01e32494414febd4f.jpg",
+   "id": "placa-de-red-pci-e-cudy-pe10-gigabit",
+   "nuevo": false,
+   "tp": "TP00078"
+  },
+  {
+   "rubro": "redes",
+   "sub": "Adaptadores Wi-Fi",
+   "nombre": "Adaptador Wi-Fi USB Mercusys MW150US",
+   "det": "150 Mbps · Nano",
+   "precio": 8000,
+   "tag": null,
+   "foto": "fotos/a-43f418d1cf0cd4d45c801dc2fa58ebcd.jpg",
+   "id": "adaptador-wi-fi-usb-mercusys-mw150us",
+   "nuevo": false,
+   "tp": "TP00079"
+  },
+  {
+   "rubro": "redes",
+   "sub": "Switches",
+   "nombre": "Switch TP-Link TL-SF1008D 8 puertos",
+   "det": "10/100 Mbps · Escritorio",
+   "precio": 23000,
+   "tag": null,
+   "foto": "fotos/a-c0cc8ae9a15e4153feef0fb40b83aae8.jpg",
+   "id": "switch-tp-link-tl-sf1008d-8-puertos",
+   "nuevo": false,
+   "tp": "TP00080"
+  },
+  {
+   "rubro": "redes",
+   "sub": "Placas de red",
+   "nombre": "Adaptador USB 3.0 a red Gigabit TP-Link UE306",
+   "det": "Para notebooks sin puerto de red",
+   "precio": 39000,
+   "tag": null,
+   "foto": "fotos/a-5f2b34fdbe474710d05431093cd1fdcf.jpg",
+   "id": "adaptador-usb-3-0-a-red-gigabit-tp-link-ue306",
+   "nuevo": false,
+   "tp": "TP00081"
+  },
+  {
+   "rubro": "tv",
+   "sub": "Soportes para TV",
+   "nombre": "Soporte de pared para TV Netmak NM-ST36",
+   "det": "De 32\" a 60\" · VESA 400x400",
+   "precio": 27000,
+   "tag": null,
+   "foto": "fotos/a-eb63c7d245377517679fb346138966be.jpg",
+   "id": "soporte-de-pared-para-tv-netmak-nm-st36",
+   "nuevo": false,
+   "tp": "TP00082"
+  },
+  {
+   "rubro": "computacion",
+   "sub": "Monitores",
+   "nombre": "Proyector Netmak NM-PR300 Smart",
+   "det": "Android 14 · Wi-Fi 6 · Bluetooth 5.4 · Hasta 150\"",
+   "precio": 80000,
+   "tag": null,
+   "foto": "fotos/a-da3c505fcd3bc6aa82d07048dad23f51.jpg",
+   "id": "proyector-netmak-nm-pr300-smart",
+   "nuevo": false,
+   "tp": "TP00083"
+  },
+  {
+   "rubro": "computacion",
+   "sub": "Monitores",
+   "nombre": "Monitor Philips 18.5\" 193V5",
+   "det": "LED · HDMI",
+   "precio": 177000,
+   "tag": null,
+   "foto": "fotos/a-cbcf0c219c6d905365f9b5afdca8ed82.jpg",
+   "id": "monitor-philips-18-5-193v5",
+   "nuevo": false,
+   "tp": "TP00084"
+  },
+  {
+   "rubro": "computacion",
+   "sub": "Monitores",
+   "nombre": "Monitor Philips 21.5\" 221V8",
+   "det": "LED · HDMI y VGA",
+   "precio": 184000,
+   "tag": null,
+   "foto": "fotos/a-88077a42ff9ba39d8a4396389a63eeb2.jpg",
+   "id": "monitor-philips-21-5-221v8",
+   "nuevo": false,
+   "tp": "TP00085"
+  },
+  {
+   "rubro": "impresion",
+   "sub": "Impresoras",
+   "nombre": "Impresora láser HP M111w",
+   "det": "Wi-Fi · Blanco y negro",
+   "precio": 256000,
+   "tag": null,
+   "foto": "fotos/a-85582e68fbe5112ae8f3d9c1b7313dc2.jpg",
+   "id": "impresora-laser-hp-m111w",
+   "nuevo": false,
+   "tp": "TP00086"
+  },
+  {
+   "rubro": "impresion",
+   "sub": "Papel y etiquetas",
+   "nombre": "Resma Report A4 75 g",
+   "det": "500 hojas",
+   "precio": 8000,
+   "tag": null,
+   "foto": "fotos/a-692aceeb5e35a863bd707f7a6a6f190c.jpg",
+   "id": "resma-report-a4-75-g",
+   "nuevo": false,
+   "tp": "TP00087"
+  },
+  {
+   "rubro": "tintas",
+   "sub": "Botellas de tinta",
+   "nombre": "Tinta HP GT53 negra original",
+   "det": "Para Ink Tank y Smart Tank",
+   "precio": 27000,
+   "tag": null,
+   "foto": "fotos/a-93e56e337a8ac85d907ebc632ba10f05.jpg",
+   "id": "tinta-hp-gt53-negra-original",
+   "nuevo": false,
+   "tp": "TP00088"
+  },
+  {
+   "rubro": "tintas",
+   "sub": "Botellas de tinta",
+   "nombre": "Tinta HP GT52 cian original",
+   "det": "Para Ink Tank y Smart Tank",
+   "precio": 27000,
+   "tag": null,
+   "foto": "fotos/a-29e0138d0df66fc7560eb6761477c404.jpg",
+   "id": "tinta-hp-gt52-cian-original",
+   "nuevo": false,
+   "tp": "TP00089"
+  },
+  {
+   "rubro": "tintas",
+   "sub": "Botellas de tinta",
+   "nombre": "Tinta HP GT52 magenta original",
+   "det": "Para Ink Tank y Smart Tank",
+   "precio": 27000,
+   "tag": null,
+   "foto": "fotos/a-2def0a0c791452ca6938ef40ab8760fd.jpg",
+   "id": "tinta-hp-gt52-magenta-original",
+   "nuevo": false,
+   "tp": "TP00090"
+  },
+  {
+   "rubro": "tintas",
+   "sub": "Botellas de tinta",
+   "nombre": "Tinta HP GT52 amarilla original",
+   "det": "Para Ink Tank y Smart Tank",
+   "precio": 27000,
+   "tag": null,
+   "foto": "fotos/a-7e5208afbd1e12515fe53f89ee8ff2ff.jpg",
+   "id": "tinta-hp-gt52-amarilla-original",
+   "nuevo": false,
+   "tp": "TP00091"
+  },
+  {
+   "rubro": "audio",
+   "sub": "Micrófonos",
+   "nombre": "Micrófono corbatero inalámbrico Soul Furry dual",
+   "det": "2 micrófonos · Receptor USB-C y Lightning",
+   "precio": 27000,
+   "tag": null,
+   "foto": "fotos/a-4cf729901644e6fb8c7d6ac0178f8dab.jpg",
+   "id": "microfono-corbatero-inalambrico-soul-furry-dual",
+   "nuevo": false,
+   "tp": "TP00092"
+  },
+  {
+   "rubro": "accesorios",
+   "sub": "Power banks",
+   "nombre": "Power bank Xiaomi 10000 mAh con carga inalámbrica",
+   "det": "Mi Power Bank Essential Wireless",
+   "precio": 47000,
+   "tag": null,
+   "foto": "fotos/a-b7439361eda9982f937c84ba3b843708.jpg",
+   "id": "power-bank-xiaomi-10000-mah-con-carga-inalambrica",
+   "nuevo": false,
+   "tp": "TP00093"
+  },
+  {
+   "rubro": "accesorios",
+   "sub": "Cargadores",
+   "nombre": "Cargador Samsung 25W USB-C original",
+   "det": "Con cable USB-C a USB-C",
+   "precio": 10000,
+   "tag": null,
+   "foto": "fotos/a-a13c1552ce5affd2c49a600b28c827f0.jpg",
+   "id": "cargador-samsung-25w-usb-c-original",
+   "nuevo": false,
+   "tp": "TP00094"
+  },
+  {
+   "rubro": "accesorios",
+   "sub": "Cargadores",
+   "nombre": "Cargador Motorola TurboPower 68W",
+   "det": "USB-C + USB · Con cable USB-C",
+   "precio": 13000,
+   "tag": null,
+   "foto": "fotos/a-16f6d08f6662db442d023aacdfd148f5.jpg",
+   "id": "cargador-motorola-turbopower-68w",
+   "nuevo": false,
+   "tp": "TP00095"
+  },
+  {
+   "rubro": "accesorios",
+   "sub": "Cables",
+   "nombre": "Cable USB-C a USB-C para iPhone 1 m",
+   "det": "Original",
+   "precio": 41000,
+   "tag": null,
+   "foto": "fotos/a-5d62b1ef0e8a66b692a3f02b2f0e103b.jpg",
+   "id": "cable-usb-c-a-usb-c-para-iphone-1-m",
+   "nuevo": false,
+   "tp": "TP00096"
+  },
+  {
+   "rubro": "accesorios",
+   "sub": "Cables",
+   "nombre": "Cable USB-C a Lightning para iPhone 1 m",
+   "det": "Original",
+   "precio": 53000,
+   "tag": null,
+   "foto": "fotos/a-a203cbd9bc65c7b8f45016a9f366988d.jpg",
+   "id": "cable-usb-c-a-lightning-para-iphone-1-m",
+   "nuevo": false,
+   "tp": "TP00097"
+  },
+  {
+   "rubro": "gaming",
+   "sub": "Joysticks",
+   "nombre": "Joystick PS5 DualSense original blanco",
+   "det": "Sony · Inalámbrico",
+   "precio": 229000,
+   "tag": null,
+   "foto": "fotos/a-d3f8d9e50da990ad7f9ecd44afec252a.jpg",
+   "id": "joystick-ps5-dualsense-original-blanco",
+   "nuevo": false,
+   "tp": "TP00098"
+  },
+  {
+   "rubro": "gaming",
+   "sub": "Joysticks",
+   "nombre": "Joystick inalámbrico para PS4",
+   "det": "Doble motor de vibración",
+   "precio": 34000,
+   "tag": null,
+   "foto": "fotos/a-b0f61a08b17e9a902fc9f7212b0d80dd.jpg",
+   "id": "joystick-inalambrico-para-ps4",
+   "nuevo": false,
+   "tp": "TP00099"
+  },
+  {
+   "rubro": "gaming",
+   "sub": "Joysticks",
+   "nombre": "Joystick inalámbrico para PS3",
+   "det": "DoubleShock",
+   "precio": 17000,
+   "tag": null,
+   "foto": "fotos/a-1b1155e1f1c33b6558898dc367b4deb2.jpg",
+   "id": "joystick-inalambrico-para-ps3",
+   "nuevo": false,
+   "tp": "TP00100"
+  },
+  {
+   "rubro": "gaming",
+   "sub": "Accesorios gamer",
+   "nombre": "Base de carga doble para joysticks PS4",
+   "det": "Dobe TP4-002",
+   "precio": 14000,
+   "tag": null,
+   "foto": "fotos/a-1cad61caef2a86df425255e64fd83c2b.jpg",
+   "id": "base-de-carga-doble-para-joysticks-ps4",
+   "nuevo": false,
+   "tp": "TP00101"
+  },
+  {
+   "rubro": "accesorios",
+   "sub": "Accesorios de PC",
+   "nombre": "Adaptador Bluetooth de audio USB Netmak NM-BT8",
+   "det": "Transmisor y receptor 2 en 1",
+   "precio": 7000,
+   "tag": null,
+   "foto": "fotos/a-3f30de6f2e0fa37a1931db6b015f161a.jpg",
+   "id": "adaptador-bluetooth-de-audio-usb-netmak-nm-bt8",
+   "nuevo": false,
+   "tp": "TP00102"
+  },
+  {
+   "rubro": "audio",
+   "sub": "Parlantes",
+   "nombre": "Parlantes USB para PC Netmak Delight NM-9025R",
+   "det": "2.0 · 6W · Negro y rojo",
+   "precio": 14000,
+   "tag": null,
+   "foto": "fotos/a-d7228e2166e354190aa0c7f3b8740f2f.jpg",
+   "id": "parlantes-usb-para-pc-netmak-delight-nm-9025r",
+   "nuevo": false,
+   "tp": "TP00103"
+  },
+  {
+   "rubro": "computacion",
+   "sub": "Notebooks",
+   "nombre": "Notebook HP 255R G10 15.6\"",
+   "det": "AMD Ryzen 3 7335U · 16 GB · SSD 256 GB",
+   "precio": 1216000,
+   "tag": null,
+   "foto": "fotos/a-8eafa2ccc807d0144bf6633514237a0f.jpg",
+   "id": "notebook-hp-255r-g10-15-6",
+   "nuevo": false,
+   "tp": "TP00104"
   }
  ]
 }
