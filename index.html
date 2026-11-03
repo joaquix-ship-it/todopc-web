@@ -514,8 +514,8 @@ const icoAcc = k => `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"
 ICO_ACC.cel = '<rect x="14" y="4" width="20" height="40" rx="5"/><path d="M21 8h6"/><path d="M20 39h8"/>';
 const promoCel = sub => {
   const usado = sub === 'Usados';
-  const items = usado ? [['caja', 'Caja'], ['cargador', 'Cargador'], ['vidrio', 'Vidrio'], ['funda', 'Funda'], ['garantia', 'Garantía']] : [['cel', 'Tu celular'], ['cargador', 'Cargador original'], ['vidrio', 'Vidrio templado'], ['funda', 'Funda']];
-  return `<div class="regalo${usado ? ' u' : ''}"><p class="rg-t">${ICO_REGALO}${usado ? 'Tu iPhone usado viene con todo' : 'Te llevás de regalo'}</p>
+  const items = usado ? [['caja', 'Caja'], ['cargador', 'Cargador'], ['vidrio', 'Vidrio'], ['funda', 'Funda'], ['garantia', 'Garantía']] : [['cargador', 'Cargador original'], ['vidrio', 'Vidrio templado'], ['funda', 'Funda']];
+  return `<div class="regalo${usado ? ' u' : ''}"><p class="rg-t">${ICO_REGALO}${usado ? 'Tu iPhone usado viene con todo' : 'Con tu celular te regalamos'}</p>
     <div class="rg-suma">${items.map(([k, t], i) => `${i ? '<span class="mas" aria-hidden="true">+</span>' : ''}<figure class="${k === 'cel' ? 'base' : ''}">${icoAcc(k)}<figcaption>${t}</figcaption></figure>`).join('')}</div></div>`;
 };
 const herramientas = () => `<div class="tools">
