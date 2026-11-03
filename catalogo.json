@@ -12,11 +12,22 @@
    "id": "iphone-13-128-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "12 MP",
-    "Hasta 19 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "12 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 19 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -29,11 +40,22 @@
    "id": "iphone-15-128-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "48 MP",
-    "Hasta 20 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 20 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -46,11 +68,22 @@
    "id": "iphone-16-128-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "48 MP",
-    "Hasta 22 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 22 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -63,11 +96,22 @@
    "id": "iphone-17-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,3\"",
-    "48 MP",
-    "Hasta 30 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,3\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "48 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "18 MP",
+    "bateria": "Hasta 30 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -80,11 +124,26 @@
    "id": "iphone-17-pro-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,3\"",
-    "48 MP",
-    "Hasta 31 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,3\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "48 MP",
+      "ultra gran angular"
+     ],
+     [
+      "48 MP",
+      "teleobjetivo 4x"
+     ]
+    ],
+    "frontal": "18 MP",
+    "bateria": "Hasta 31 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -97,11 +156,26 @@
    "id": "iphone-17-pro-max-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,9\"",
-    "48 MP",
-    "Hasta 37 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,9\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "48 MP",
+      "ultra gran angular"
+     ],
+     [
+      "48 MP",
+      "teleobjetivo 4x"
+     ]
+    ],
+    "frontal": "18 MP",
+    "bateria": "Hasta 37 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -114,11 +188,26 @@
    "id": "iphone-18-pro-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,3\"",
-    "48 MP",
-    "Hasta 36 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,3\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "48 MP",
+      "ultra gran angular"
+     ],
+     [
+      "48 MP",
+      "teleobjetivo 4x"
+     ]
+    ],
+    "frontal": "18 MP",
+    "bateria": "Hasta 36 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -131,11 +220,26 @@
    "id": "iphone-18-pro-max-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,9\"",
-    "48 MP",
-    "Hasta 45 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,9\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "48 MP",
+      "ultra gran angular"
+     ],
+     [
+      "48 MP",
+      "teleobjetivo 4x"
+     ]
+    ],
+    "frontal": "18 MP",
+    "bateria": "Hasta 45 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -148,11 +252,22 @@
    "id": "galaxy-a07-64-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,7\"",
-    "50 MP",
-    "5.000 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,7\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "2 MP",
+      "profundidad"
+     ]
+    ],
+    "frontal": "8 MP",
+    "bateria": "5.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -165,11 +280,26 @@
    "id": "galaxy-a16-128-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,7\"",
-    "50 MP",
-    "5.000 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,7\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "5 MP",
+      "ultra gran angular"
+     ],
+     [
+      "2 MP",
+      "macro"
+     ]
+    ],
+    "frontal": "13 MP",
+    "bateria": "5.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -182,11 +312,26 @@
    "id": "galaxy-a17-128-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,7\"",
-    "50 MP",
-    "5.000 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,7\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "5 MP",
+      "ultra gran angular"
+     ],
+     [
+      "2 MP",
+      "macro"
+     ]
+    ],
+    "frontal": "13 MP",
+    "bateria": "5.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -199,11 +344,26 @@
    "id": "galaxy-a27-128-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,7\"",
-    "50 MP",
-    "5.000 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,7\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "5 MP",
+      "ultra gran angular"
+     ],
+     [
+      "2 MP",
+      "macro"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "5.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -216,11 +376,26 @@
    "id": "galaxy-a37-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,7\"",
-    "50 MP",
-    "5.000 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,7\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "8 MP",
+      "ultra gran angular"
+     ],
+     [
+      "5 MP",
+      "macro"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "5.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -233,11 +408,26 @@
    "id": "galaxy-a57-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,7\"",
-    "50 MP",
-    "5.000 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,7\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ],
+     [
+      "5 MP",
+      "macro"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "5.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -250,11 +440,18 @@
    "id": "moto-e15-64-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,67\"",
-    "32 MP",
-    "5.200 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,67\"",
+    "traseras": [
+     [
+      "32 MP",
+      "principal"
+     ]
+    ],
+    "frontal": "8 MP",
+    "bateria": "5.200",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -267,11 +464,18 @@
    "id": "moto-g06-64-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,88\"",
-    "50 MP",
-    "5.200 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,88\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ]
+    ],
+    "frontal": "8 MP",
+    "bateria": "5.200",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -284,11 +488,18 @@
    "id": "moto-g06-128-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,88\"",
-    "50 MP",
-    "5.200 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,88\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ]
+    ],
+    "frontal": "8 MP",
+    "bateria": "5.200",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -301,11 +512,22 @@
    "id": "moto-g35-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,72\"",
-    "50 MP",
-    "5.000 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,72\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "8 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "16 MP",
+    "bateria": "5.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -318,11 +540,22 @@
    "id": "moto-g57-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,72\"",
-    "50 MP",
-    "5.200 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,72\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "8 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "8 MP",
+    "bateria": "5.200",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -335,11 +568,22 @@
    "id": "moto-g86-power-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,67\"",
-    "50 MP",
-    "6.720 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,67\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ],
+     [
+      "8 MP",
+      "ultra gran angular y macro"
+     ]
+    ],
+    "frontal": "32 MP",
+    "bateria": "6.720",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -352,11 +596,18 @@
    "id": "redmi-a5-poco-c71-64-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,88\"",
-    "32 MP",
-    "5.200 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,88\"",
+    "traseras": [
+     [
+      "32 MP",
+      "principal"
+     ]
+    ],
+    "frontal": "8 MP",
+    "bateria": "5.200",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -369,11 +620,18 @@
    "id": "redmi-a5-poco-c71-128-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,88\"",
-    "32 MP",
-    "5.200 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,88\"",
+    "traseras": [
+     [
+      "32 MP",
+      "principal"
+     ]
+    ],
+    "frontal": "8 MP",
+    "bateria": "5.200",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -386,11 +644,18 @@
    "id": "redmi-15c-256-gb",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,9\"",
-    "50 MP",
-    "6.000 mAh"
-   ]
+   "specs": {
+    "pantalla": "6,9\"",
+    "traseras": [
+     [
+      "50 MP",
+      "principal"
+     ]
+    ],
+    "frontal": "8 MP",
+    "bateria": "6.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -427,11 +692,22 @@
    "id": "iphone-13-128-gb-usado",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "12 MP",
-    "Hasta 19 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "12 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 19 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -444,11 +720,22 @@
    "id": "iphone-14-128-gb-usado",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "12 MP",
-    "Hasta 20 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "12 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 20 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -461,11 +748,22 @@
    "id": "iphone-14-plus-128-gb-usado",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,7\"",
-    "12 MP",
-    "Hasta 26 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,7\"",
+    "traseras": [
+     [
+      "12 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 26 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -478,11 +776,22 @@
    "id": "iphone-15-128-gb-usado",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "48 MP",
-    "Hasta 20 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 20 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -495,11 +804,26 @@
    "id": "iphone-15-pro-128-gb-usado",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "48 MP",
-    "Hasta 23 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ],
+     [
+      "12 MP",
+      "teleobjetivo 3x"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 23 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -512,11 +836,22 @@
    "id": "iphone-16-128-gb-usado",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "48 MP",
-    "Hasta 22 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 22 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -529,11 +864,22 @@
    "id": "iphone-16-128-gb-usado-2",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,1\"",
-    "48 MP",
-    "Hasta 22 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 22 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "celulares",
@@ -546,11 +892,26 @@
    "id": "iphone-16-pro-128-gb-usado",
    "nuevo": false,
    "alta": "2026-11-01",
-   "specs": [
-    "6,3\"",
-    "48 MP",
-    "Hasta 27 h de video"
-   ]
+   "specs": {
+    "pantalla": "6,3\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "48 MP",
+      "ultra gran angular"
+     ],
+     [
+      "12 MP",
+      "teleobjetivo 5x"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 27 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "mouses",
