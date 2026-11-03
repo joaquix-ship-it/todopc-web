@@ -63,22 +63,35 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .label { font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
 
 /* Inicio: rubros con portada */
-.celcard { border-radius: 24px; background: #DCE8F7; color: var(--night); padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 14px; overflow: hidden; }
+.celcard { border-radius: 24px; background: linear-gradient(160deg, #E3EDF9 0%, #D3E2F4 100%); color: var(--night); padding: 18px 16px 16px; display: flex; flex-direction: column; gap: 16px; overflow: hidden; }
 .celcard .cc-top { display: grid; grid-template-columns: minmax(0, 1fr) 128px; align-items: center; gap: 8px; color: inherit; }
-.celcard .cc-txt b { display: block; font-size: 26px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.05; }
-.celcard .cc-txt small { display: block; margin-top: 4px; font-size: 14px; font-weight: 600; color: rgba(15, 27, 45, 0.62); }
-.celcard .cc-ver { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; padding: 9px 14px; border-radius: 999px; background: var(--night); color: #FFFFFF; font-size: 14px; font-weight: 800; }
+.celcard .cc-txt b { display: block; font-size: 30px; font-weight: 800; font-stretch: 112%; letter-spacing: -0.6px; line-height: 1; }
+.celcard .cc-txt small { display: block; margin-top: 6px; font-size: 14px; font-weight: 600; color: rgba(15, 27, 45, 0.62); }
+.celcard .cc-ver { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: 10px 16px; border-radius: 999px; background: var(--navy); color: #FFFFFF; font-size: 14px; font-weight: 800; }
 .celcard .cc-img { position: relative; height: 118px; }
 .celcard .cc-img img { position: absolute; bottom: 0; height: 112px; width: auto; filter: drop-shadow(0 10px 9px rgba(15, 27, 45, 0.28)); }
 .celcard .cc-img img:nth-child(1) { right: 34px; transform: rotate(-9deg); height: 98px; opacity: 0.92; }
 .celcard .cc-img img:nth-child(2) { right: 0; z-index: 2; }
 .celcard .cc-marcas { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
-.celcard .cc-marcas button { grid-column: span 2; }
+.celcard .cc-marcas button { grid-column: span 2; position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 6px 10px; border: 0; border-radius: 16px; background: #FFFFFF; color: var(--night); font: inherit; box-shadow: 0 1px 2px rgba(15, 27, 45, 0.06), 0 6px 14px rgba(15, 27, 45, 0.05); text-align: center; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; }
 .celcard .cc-marcas.n5 button:nth-child(n+4), .celcard .cc-marcas.n4 button { grid-column: span 3; }
-.celcard .cc-marcas button { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 9px 12px; border: 0; border-radius: 14px; background: #FFFFFF; color: var(--night); font: inherit; box-shadow: 0 1px 2px rgba(15, 27, 45, 0.06); text-align: left; cursor: pointer; }
-.celcard .cc-marcas button span { font-size: 15px; font-weight: 800; }
-.celcard .cc-marcas button small { font-size: 12px; font-weight: 600; color: rgba(15, 27, 45, 0.55); }
-.celcard .cc-marcas button:active { transform: scale(0.98); }
+.celcard .cc-marcas .mf { height: 58px; width: 100%; display: grid; place-items: center; }
+.celcard .cc-marcas .mf img { max-height: 58px; max-width: 76px; object-fit: contain; mix-blend-mode: multiply; }
+.celcard .cc-marcas .mt { display: flex; flex-direction: column; gap: 1px; }
+.celcard .cc-marcas b { font-size: 15px; font-weight: 800; line-height: 1.1; }
+.celcard .cc-marcas small { font-size: 12px; font-weight: 600; color: rgba(15, 27, 45, 0.55); }
+.celcard .cc-marcas button:active { transform: scale(0.97); }
+@media (hover: hover) { .celcard .cc-marcas button:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(15, 27, 45, 0.06), 0 12px 24px rgba(15, 27, 45, 0.1); } }
+@media (min-width: 900px) {
+  .celcard { display: grid; grid-template-columns: 300px minmax(0, 1fr); align-items: stretch; gap: 20px; padding: 22px; }
+  .celcard .cc-top { grid-template-columns: 1fr; align-content: space-between; }
+  .celcard .cc-img { height: 150px; order: 2; }
+  .celcard .cc-img img { height: 148px; left: 40px; right: auto; }
+  .celcard .cc-img img:nth-child(1) { left: 0; height: 128px; }
+  .celcard .cc-marcas { grid-template-columns: repeat(5, minmax(0, 1fr)); align-content: center; }
+  .celcard .cc-marcas button, .celcard .cc-marcas.n5 button:nth-child(n+4), .celcard .cc-marcas.n4 button { grid-column: auto; padding: 16px 8px 14px; }
+  .celcard .cc-marcas .mf { height: 96px; } .celcard .cc-marcas .mf img { max-height: 96px; max-width: 110px; }
+}
 .tile { position: relative; display: flex; flex-direction: column; border-radius: 22px; padding: 12px 12px 12px 14px; background: var(--tint, #E3ECF7); color: var(--night); }
 .tile .tim { position: relative; display: grid; place-items: center; height: 128px; margin: 2px 0 2px; }
 .tile .tim::before { content: ""; position: absolute; left: 50%; top: 50%; width: 112px; height: 112px; border-radius: 50%; background: rgba(255, 255, 255, 0.62); transform: translate(-50%, -50%); }
@@ -174,6 +187,15 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .rtop .crumb { width: 44px; height: 44px; padding: 0; justify-content: center; }
 .rtop h1 { font-size: 24px; line-height: 1.1; }
 .rtop .sub { margin: 2px 0 0; }
+.subchips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding: 2px max(16px, env(safe-area-inset-left, 0px)) 4px; }
+.subchips::-webkit-scrollbar { display: none; }
+.subchips button { flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; height: 48px; padding: 0 14px 0 5px; border: 0; border-radius: 999px; background: var(--card); color: var(--ink); font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.06); white-space: nowrap; }
+.subchips button small { font-size: 12px; font-weight: 700; color: var(--muted); margin-left: -2px; }
+.subchips .cf { width: 38px; height: 38px; border-radius: 50%; background: var(--paper); display: grid; place-items: center; overflow: hidden; color: var(--navy); }
+.subchips .cf img { max-width: 30px; max-height: 30px; object-fit: contain; mix-blend-mode: multiply; }
+.subchips button[aria-pressed="true"] { background: var(--navy); color: #FFFFFF; }
+.subchips button[aria-pressed="true"] small { color: rgba(255, 255, 255, 0.75); }
+.subchips button[aria-pressed="true"] .cf { background: #FFFFFF; }
 .subtiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .subtiles button { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px 9px; border: 0; border-radius: 16px; background: var(--card); color: var(--ink); font: inherit; cursor: pointer; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.06); }
 .subtiles .sf { width: 56px; height: 56px; display: grid; place-items: center; margin-bottom: 4px; color: var(--navy); }
@@ -200,6 +222,12 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .view { display: flex; background: var(--card); border-radius: 10px; padding: 3px; box-shadow: inset 0 0 0 1.5px var(--line); }
 .view button { width: 40px; height: 32px; border: 0; border-radius: 8px; background: none; color: var(--faint); display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .view button[aria-pressed="true"] { background: var(--paper); color: var(--night); }
+.regalo { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 16px; background: var(--card); box-shadow: inset 0 0 0 1.5px rgba(122, 187, 76, 0.55); }
+.regalo .rg-ic { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--gold); color: #FFFFFF; }
+.regalo p { margin: 0 0 4px; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #4E8A27; }
+.regalo ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 2px 12px; }
+.regalo li { position: relative; padding-left: 15px; font-size: 14px; font-weight: 800; color: var(--ink); }
+.regalo li::before { content: ""; position: absolute; left: 0; top: 50%; width: 8px; height: 5px; margin-top: -4px; border-left: 2.5px solid var(--gold); border-bottom: 2.5px solid var(--gold); transform: rotate(-45deg); }
 .promo { display: flex; align-items: center; gap: 10px; padding: 9px 12px 9px 9px; border-radius: 14px; background: repeating-linear-gradient(-45deg, var(--red) 0 16px, #E03548 16px 32px); color: #FFFFFF; font-size: 13px; font-weight: 700; line-height: 1.3; }
 .promo .st { flex-shrink: 0; background: var(--amarillo); color: var(--night); border-radius: 8px; padding: 5px 9px; font-size: 12px; font-weight: 800; font-style: italic; text-transform: uppercase; transform: rotate(-3deg); }
 .promo b { color: var(--amarillo); padding: 0 2px; }
@@ -284,6 +312,26 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .pagos b { font-size: 14px; font-weight: 800; }
 .logos { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
 .logos img { height: 22px; width: auto; mix-blend-mode: multiply; }
+.fgrid, .fcol2 { display: flex; flex-direction: column; gap: 16px; }
+.cta-in { display: none !important; }
+@media (min-width: 900px) {
+  .wrap { max-width: 1080px; }
+  .fgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 28px; }
+  .fcol1 { position: sticky; top: 84px; }
+  .ficha .foto { max-height: none; padding: 36px; }
+  .ficha h1 { font-size: 34px; }
+  .ficha .pr { font-size: 42px; }
+  .cta-in { display: inline-flex !important; justify-content: center; align-self: stretch; }
+  .buy { display: none !important; }
+  .tabbar { display: none !important; }
+  .top .bar { gap: 20px; }
+  .hdr-acc { display: flex !important; }
+  body { padding-bottom: 0 !important; }
+}
+.hdr-acc { display: none; align-items: center; gap: 8px; flex-shrink: 0; }
+.hdr-acc a { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 999px; font-size: 14px; font-weight: 800; color: var(--navy); }
+.hdr-acc a.wa { background: var(--green); color: #FFFFFF; }
+.hdr-acc a:not(.wa):hover { background: var(--paper); }
 .buy { position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; background: var(--card); border-top: 1px solid var(--line); padding-block: 10px calc(10px + env(safe-area-inset-bottom, 0px)); }
 .buy .wrap { display: flex; align-items: center; gap: 12px; }
 .buy .mini { min-width: 0; flex: 1 1 auto; display: flex; flex-direction: column; }
@@ -336,6 +384,7 @@ footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; hei
       <input id="buscar" type="search" placeholder="Buscar productos" autocomplete="off" enterkeyhint="search">
       <button class="x" id="limpiar" type="button" aria-label="Borrar búsqueda" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
     </label>
+    <nav class="hdr-acc" aria-label="Accesos"><a href="#rubros">Rubros</a><a class="wa" href="https://wa.me/543405483451?text=Hola%20TODO%20PC!" target="_blank" rel="noopener">WhatsApp</a></nav>
   </div>
 </header>
 
@@ -444,9 +493,11 @@ const itemLista = p => `<a class="item" href="#p-${p.id}"><div class="ph">${foto
 const itemGrilla = p => `<a class="card" href="#p-${p.id}"><div class="ph">${foto(p, 34)}</div><div class="bd">${badge(p)}<span class="nm">${esc(p.nombre)}</span>${p.det ? `<span class="dt">${esc(p.det)}</span>` : ''}${precio(p)}</div></a>`;
 const resultados = ps => vistaModo === 'grilla' ? `<section class="grid">${ps.map(itemGrilla).join('')}</section>` : `<section class="list">${ps.map(itemLista).join('')}</section>`;
 const subTxt = s => s === 'Usados' ? 'iPhone usados' : s;   // los usados son solo iPhone
-const promoCel = sub => sub === 'Usados'
-  ? `<div class="promo"><span class="st">Incluye</span><span>Caja<b>+</b>Cargador<b>+</b>Vidrio<b>+</b>Funda<b>+</b>Garantía</span></div>`
-  : `<div class="promo"><span class="st">¡De regalo!</span><span>Cargador original<b>+</b>Vidrio templado<b>+</b>Funda</span></div>`;
+const ICO_REGALO = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5v7.5h14v-7.5M12 8.5V20"/><path d="M12 8.5C10.5 5 7 4.5 7 6.6S10 8.5 12 8.5zM12 8.5c1.5-3.5 5-4 5-1.9S14 8.5 12 8.5z"/></svg>';
+const promoCel = sub => {
+  const usado = sub === 'Usados', items = usado ? ['Caja', 'Cargador', 'Vidrio', 'Funda', 'Garantía'] : ['Cargador original', 'Vidrio templado', 'Funda'];
+  return `<div class="regalo"><span class="rg-ic">${ICO_REGALO}</span><div><p>${usado ? 'Tu iPhone usado incluye' : 'De regalo con tu celular'}</p><ul>${items.map(t => `<li>${t}</li>`).join('')}</ul></div></div>`;
+};
 const herramientas = () => `<div class="tools">
   <label class="sort"><span class="sr">Ordenar</span><select id="orden">
     <option value="precio-asc" ${orden === 'precio-asc' ? 'selected' : ''}>Menor precio</option>
@@ -568,9 +619,10 @@ function celCard() {
   const imgs = (DATA.vidriera || []).slice(0, 2).map(v => v.rec).filter(Boolean);
   if (!imgs.length && r.rec) imgs.push(r.rec);
   const marcas = ['iPhone', 'Samsung', 'Motorola', 'Xiaomi', 'Usados'].map(m => [m, ps.filter(p => p.sub === m).length]).filter(x => x[1]);
+  const fotoMarca = m => { const c = ps.filter(p => p.sub === m && p.foto).sort((a, b) => (b.precio || 0) - (a.precio || 0))[0]; return c ? `<img src="${c.foto}" alt="" loading="lazy">` : ''; };
   return `<section class="celcard" aria-label="Celulares">
     <a class="cc-top" href="#celulares"><span class="cc-txt"><b>Celulares</b><small>${ps.length} modelos</small><span class="cc-ver">Ver todos ${ico('chev', 14, 2.6)}</span></span><span class="cc-img" aria-hidden="true">${imgs.map(i => `<img src="${i}" alt="">`).join('')}</span></a>
-    <div class="cc-marcas n${marcas.length}" role="group" aria-label="Marcas">${marcas.map(([m, n]) => `<button type="button" data-s="${esc(m)}"><span>${esc(subTxt(m))}</span><small>${n} ${n === 1 ? 'modelo' : 'modelos'}</small></button>`).join('')}</div>
+    <div class="cc-marcas n${marcas.length}" role="group" aria-label="Marcas">${marcas.map(([m, n]) => `<button type="button" data-s="${esc(m)}"><span class="mf">${fotoMarca(m)}</span><span class="mt"><b>${esc(subTxt(m))}</b><small>${n} ${n === 1 ? 'modelo' : 'modelos'}</small></span></button>`).join('')}</div>
   </section>`;
 }
 function vInicio() {
@@ -614,7 +666,7 @@ function vRubro(id) {
   const demo = todos.every(p => p.tag === 'ejemplo');
   const fotoSub = s => { const p = todos.find(x => x.sub === s && x.foto); return p ? `<img src="${p.foto}" alt="" loading="lazy">` : ico(r.icon || id, 26, 1.8); };
   let filtro = '';
-  if (subs.length > 1 && subSel !== 'Todos') filtro = `<div class="subsel"><span>${esc(subTxt(subSel))} <small>${cuenta(subSel)}</small></span><button type="button" data-s="Todos">Ver todo ${esc(r.nombre)} ${ico('x', 14, 2.6)}</button></div>`;
+  if (subs.length > 2 && subSel !== 'Todos') filtro = `<div class="subchips" role="group" aria-label="Elegí qué buscás"><button type="button" data-s="Todos"><span class="cf">${ico('todos', 18, 2)}</span>Todos</button>${subs.map(s2 => `<button type="button" data-s="${esc(s2)}" aria-pressed="${s2 === subSel}"><span class="cf">${fotoSub(s2)}</span>${esc(subTxt(s2))}<small>${cuenta(s2)}</small></button>`).join('')}</div>`;
   else if (subs.length > 2) filtro = `<div class="subtiles" role="group" aria-label="Elegí qué buscás">${subs.map(s => `<button type="button" data-s="${esc(s)}"><span class="sf">${fotoSub(s)}</span><b>${esc(subTxt(s))}</b><small>${cuenta(s)}</small></button>`).join('')}</div>`;
   else if (subs.length === 2) filtro = `<div class="subs" role="group" aria-label="Tipo">${['Todos', ...subs].map(s => `<button type="button" data-s="${esc(s)}" aria-pressed="${s === subSel}">${esc(subTxt(s))}</button>`).join('')}</div>`;
   // "Todos": agrupado por subrubro, para no mezclar un adaptador con los routers
@@ -631,7 +683,8 @@ function vRubro(id) {
     </section>
     ${lista}`;
   $('share').onclick = () => copiar(location.href.split('#')[0] + '#' + id, 'Link del rubro copiado');
-  vista.querySelectorAll('.subs button, .subtiles button, .subsel button').forEach(b => b.onclick = () => { subSel = b.dataset.s; vRubro(id); window.scrollTo({ top: 0 }); });
+  vista.querySelectorAll('.subs button, .subtiles button, .subchips button').forEach(b => b.onclick = () => { subSel = b.dataset.s; vRubro(id); window.scrollTo({ top: 0 }); });
+  { const act = vista.querySelector('.subchips [aria-pressed="true"]'), fila = act && act.parentElement; if (fila && act.offsetLeft + act.offsetWidth > fila.clientWidth - 24) fila.scrollLeft = act.offsetLeft - 60; }
   conectarHerramientas(() => vRubro(id));
 }
 
@@ -678,7 +731,8 @@ function vFicha(p) {
   vista.innerHTML = `
     <article class="ficha">
       <a class="crumb" href="#${r.id}">${ico('back', 18, 2.4)}${esc(r.nombre)}${p.sub ? ' · ' + esc(p.sub) : ''}</a>
-      <div class="foto">${p.foto ? `<img src="${p.foto}" alt="${esc(p.nombre)}">` : `<div class="ph-vacio" style="width:50%;height:50%">${ico(p.rubro, 56, 1.5)}</div>`}</div>
+      <div class="fgrid"><div class="fcol1"><div class="foto">${p.foto ? `<img src="${p.foto}" alt="${esc(p.nombre)}">` : `<div class="ph-vacio" style="width:50%;height:50%">${ico(p.rubro, 56, 1.5)}</div>`}</div></div>
+      <div class="fcol2">
       <div class="rh">
         <div class="datos">${badge(p)}<h1>${esc(p.nombre)}</h1>${p.det ? `<span class="dt">${esc(p.det)}</span>` : ''}
           ${pr ? `<span class="pr">${pr}</span><span class="cq">Contado / transferencia</span><span class="como">Te confirmamos stock por WhatsApp.</span>` : `<span class="pr sin" style="font-size:18px">${p.tag === 'ingresa' ? 'Ingresa muy pronto' : 'Consultá el precio'}</span>`}</div>
@@ -686,7 +740,9 @@ function vFicha(p) {
       </div>
       ${p.rubro === 'celulares' ? promoCel(p.sub) : ''}
       ${pr ? `<div class="pagos"><b>También en 3, 6 y 12 cuotas</b><div class="logos">${LOGOS.map(l => `<img src="${l.src}" alt="${l.alt}">`).join('')}</div></div>` : ''}
+      <a class="cta cta-in" href="${wa(`Hola TODO PC! Me interesa: ${p.nombre}${p.det ? ' (' + p.det + ')' : ''}.${pr ? ' Precio en la web: ' + pr + '.' : ''} ${linkProd(p)}`)}" target="_blank" rel="noopener">${ICO_WA}${p.tag === 'ingresa' ? 'Avisame' : 'Consultar por WhatsApp'}</a>
       ${p.specs ? fichaSpecs(p.specs, p.det) : ''}
+      </div></div>
     </article>
     ${otros.length ? `<section><p class="label">Más en ${esc(p.sub || r.nombre)}</p><div class="list">${otros.map(itemLista).join('')}</div></section>` : ''}
     <div class="buy"><div class="wrap">
