@@ -10,7 +10,8 @@
    "tag": null,
    "foto": "fotos/cel-iphone-13-128-gb.jpg",
    "id": "iphone-13-128-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -21,7 +22,8 @@
    "tag": null,
    "foto": "fotos/cel-iphone-15-128-gb.jpg",
    "id": "iphone-15-128-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -32,7 +34,8 @@
    "tag": null,
    "foto": "fotos/cel-iphone-16-128-gb.jpg",
    "id": "iphone-16-128-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -43,7 +46,8 @@
    "tag": null,
    "foto": "fotos/cel-iphone-17-256-gb.jpg",
    "id": "iphone-17-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -54,7 +58,8 @@
    "tag": null,
    "foto": "fotos/cel-iphone-17-pro-256-gb.jpg",
    "id": "iphone-17-pro-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -65,7 +70,8 @@
    "tag": null,
    "foto": "fotos/cel-iphone-17-pro-max-256-gb.jpg",
    "id": "iphone-17-pro-max-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -76,7 +82,8 @@
    "tag": null,
    "foto": "fotos/cel-iphone-18-pro-256-gb.jpg",
    "id": "iphone-18-pro-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -87,7 +94,8 @@
    "tag": null,
    "foto": "fotos/cel-iphone-18-pro-max-256-gb.jpg",
    "id": "iphone-18-pro-max-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -98,7 +106,8 @@
    "tag": null,
    "foto": "fotos/cel-galaxy-a07-64-gb.jpg",
    "id": "galaxy-a07-64-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -109,7 +118,8 @@
    "tag": null,
    "foto": "fotos/cel-galaxy-a16-128-gb.jpg",
    "id": "galaxy-a16-128-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -120,7 +130,8 @@
    "tag": null,
    "foto": "fotos/cel-galaxy-a17-128-gb.jpg",
    "id": "galaxy-a17-128-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -131,7 +142,8 @@
    "tag": null,
    "foto": "fotos/cel-galaxy-a27-128-gb.jpg",
    "id": "galaxy-a27-128-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -142,7 +154,8 @@
    "tag": null,
    "foto": "fotos/cel-galaxy-a37-256-gb.jpg",
    "id": "galaxy-a37-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -153,7 +166,8 @@
    "tag": null,
    "foto": "fotos/cel-galaxy-a57-256-gb.jpg",
    "id": "galaxy-a57-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -164,7 +178,8 @@
    "tag": null,
    "foto": "fotos/cel-moto-e15-64-gb.jpg",
    "id": "moto-e15-64-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -175,7 +190,8 @@
    "tag": null,
    "foto": "fotos/cel-moto-g06-64-gb.jpg",
    "id": "moto-g06-64-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -186,7 +202,8 @@
    "tag": null,
    "foto": "fotos/cel-moto-g06-128-gb.jpg",
    "id": "moto-g06-128-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -197,7 +214,8 @@
    "tag": null,
    "foto": "fotos/cel-moto-g35-256-gb.jpg",
    "id": "moto-g35-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -208,7 +226,8 @@
    "tag": null,
    "foto": "fotos/cel-moto-g57-256-gb.jpg",
    "id": "moto-g57-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -219,7 +238,8 @@
    "tag": null,
    "foto": "fotos/cel-moto-g86-power-256-gb.jpg",
    "id": "moto-g86-power-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -230,7 +250,8 @@
    "tag": null,
    "foto": "fotos/cel-redmi-a5-poco-c71-64-gb.jpg",
    "id": "redmi-a5-poco-c71-64-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -241,7 +262,8 @@
    "tag": null,
    "foto": "fotos/cel-redmi-a5-poco-c71-128-gb.jpg",
    "id": "redmi-a5-poco-c71-128-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -252,7 +274,8 @@
    "tag": null,
    "foto": "fotos/cel-redmi-15c-256-gb.jpg",
    "id": "redmi-15c-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -263,7 +286,8 @@
    "tag": null,
    "foto": "fotos/cel-redmi-note-15-256-gb.jpg",
    "id": "redmi-note-15-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -274,7 +298,8 @@
    "tag": null,
    "foto": "fotos/cel-redmi-note-15-pro-256-gb.jpg",
    "id": "redmi-note-15-pro-256-gb",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -285,7 +310,8 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-13-128-gb-usado.jpg",
    "id": "iphone-13-128-gb-usado",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -296,7 +322,8 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-14-128-gb-usado.jpg",
    "id": "iphone-14-128-gb-usado",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -307,7 +334,8 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-14-plus-128-gb-usado.jpg",
    "id": "iphone-14-plus-128-gb-usado",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -318,7 +346,8 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-15-128-gb-usado.jpg",
    "id": "iphone-15-128-gb-usado",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -329,7 +358,8 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-15-pro-128-gb-usado.jpg",
    "id": "iphone-15-pro-128-gb-usado",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -340,7 +370,8 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-16-128-gb-usado.jpg",
    "id": "iphone-16-128-gb-usado",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -351,7 +382,8 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-16-128-gb-usado-2.jpg",
    "id": "iphone-16-128-gb-usado-2",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -362,7 +394,8 @@
    "tag": "usado",
    "foto": "fotos/cel-iphone-16-pro-128-gb-usado.jpg",
    "id": "iphone-16-pro-128-gb-usado",
-   "nuevo": false
+   "nuevo": false,
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -374,7 +407,8 @@
    "foto": "fotos/a-29010123a890e4b322135260b4de53f5.jpg",
    "id": "combo-teclado-y-mouse-inalambrico-logitech-mk235-negro",
    "nuevo": false,
-   "tp": "TP00002"
+   "tp": "TP00002",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -386,7 +420,8 @@
    "foto": "fotos/a-e9880ec2e0ea3a3fc85fc2c6a4de990c.jpg",
    "id": "parlante-jbl-go-4",
    "nuevo": false,
-   "tp": "TP00003"
+   "tp": "TP00003",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -398,7 +433,8 @@
    "foto": "fotos/a-8e2a4f7ff8d6572d73be6a98d0c179db.jpg",
    "id": "parlante-jbl-flip-7",
    "nuevo": false,
-   "tp": "TP00004"
+   "tp": "TP00004",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -410,7 +446,8 @@
    "foto": "fotos/a-6261848ddb8079c2538976e01db5f1b3.jpg",
    "id": "parlante-jbl-charge-6",
    "nuevo": false,
-   "tp": "TP00005"
+   "tp": "TP00005",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -422,7 +459,8 @@
    "foto": "fotos/a-e235a1ababcc5df6bf88cf6a5b3f26ec.jpg",
    "id": "parlante-jbl-flip-6",
    "nuevo": false,
-   "tp": "TP00006"
+   "tp": "TP00006",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -434,7 +472,8 @@
    "foto": "fotos/a-876fb4eba31ca59afea319ea427a4677.jpg",
    "id": "parlante-xiaomi-sound-outdoor-30w",
    "nuevo": false,
-   "tp": "TP00007"
+   "tp": "TP00007",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "memorias",
@@ -446,7 +485,8 @@
    "foto": "fotos/a-f6eddd9aa7477aa7ff89d51754eab36e.jpg",
    "id": "tarjeta-microsd-sandisk-ultra-64-gb",
    "nuevo": false,
-   "tp": "TP00008"
+   "tp": "TP00008",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "memorias",
@@ -458,7 +498,8 @@
    "foto": "fotos/a-c35a8640ad05cbe5fe442d3ef9c43c0f.jpg",
    "id": "pendrive-philips-snow-32-gb",
    "nuevo": false,
-   "tp": "TP00009"
+   "tp": "TP00009",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "memorias",
@@ -470,7 +511,8 @@
    "foto": "fotos/a-7dd65dd4f3cb2d2bbfa622874a7eeda4.jpg",
    "id": "pendrive-kingston-exodia-s-64-gb",
    "nuevo": false,
-   "tp": "TP00010"
+   "tp": "TP00010",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "memorias",
@@ -482,7 +524,8 @@
    "foto": "fotos/a-895d87fa5fa9ff09f31256e0d145dfbd.jpg",
    "id": "pendrive-kingston-exodia-s-128-gb",
    "nuevo": false,
-   "tp": "TP00011"
+   "tp": "TP00011",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -494,7 +537,8 @@
    "foto": "fotos/a-85d41dcf04187ad62de1629da7ab98da.jpg",
    "id": "tinta-epson-664-amarilla-original-70-ml",
    "nuevo": false,
-   "tp": "TP00016"
+   "tp": "TP00016",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -506,7 +550,8 @@
    "foto": "fotos/a-49e9fbb401631fa1c1f8346dc9c5b886.jpg",
    "id": "tinta-epson-664-magenta-original-70-ml",
    "nuevo": false,
-   "tp": "TP00017"
+   "tp": "TP00017",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -518,7 +563,8 @@
    "foto": "fotos/a-0f9508caec2f41e8b8f5521a5cefeec8.jpg",
    "id": "tinta-epson-664-cian-original-70-ml",
    "nuevo": false,
-   "tp": "TP00018"
+   "tp": "TP00018",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -530,7 +576,8 @@
    "foto": "fotos/a-171b4951930bc3f1ab884950a030a4d4.jpg",
    "id": "tinta-epson-664-negra-original-70-ml",
    "nuevo": false,
-   "tp": "TP00019"
+   "tp": "TP00019",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -542,7 +589,8 @@
    "foto": "fotos/a-6c69a9eca46b71f97be0f9997feba1b3.jpg",
    "id": "cartucho-hp-664-color-original",
    "nuevo": false,
-   "tp": "TP00020"
+   "tp": "TP00020",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -554,7 +602,8 @@
    "foto": "fotos/a-6f0b6afc28912b7e9ab22cb85276d9c2.jpg",
    "id": "cartucho-hp-664-negro-original",
    "nuevo": false,
-   "tp": "TP00021"
+   "tp": "TP00021",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -566,7 +615,8 @@
    "foto": "fotos/a-bae66833ff292044f84a87d2325bee76.jpg",
    "id": "tinta-alternativa-gtc-para-epson-554-negra-70-ml",
    "nuevo": false,
-   "tp": "TP00022"
+   "tp": "TP00022",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -578,7 +628,8 @@
    "foto": "fotos/a-152567c332c369ee04281cac63f0caeb.jpg",
    "id": "toner-alternativo-gtc-para-hp-80a-05a",
    "nuevo": false,
-   "tp": "TP00024"
+   "tp": "TP00024",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -590,7 +641,8 @@
    "foto": "fotos/a-232662ce67bc6cce52137bea1b8b0131.jpg",
    "id": "tinta-epson-544-amarilla-original-65-ml",
    "nuevo": false,
-   "tp": "TP00025"
+   "tp": "TP00025",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -602,7 +654,8 @@
    "foto": "fotos/a-a34406f0b3b25de8d2703f9c7fdaf3f0.jpg",
    "id": "tinta-epson-544-magenta-original-65-ml",
    "nuevo": false,
-   "tp": "TP00026"
+   "tp": "TP00026",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -614,7 +667,8 @@
    "foto": "fotos/a-9f2aaa271d388b943835b1c4fb2ddd5a.jpg",
    "id": "tinta-epson-544-cian-original-65-ml",
    "nuevo": false,
-   "tp": "TP00027"
+   "tp": "TP00027",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -626,7 +680,8 @@
    "foto": "fotos/a-853773aed43dc0c839f48cd0066bda44.jpg",
    "id": "tinta-epson-544-negra-original-65-ml",
    "nuevo": false,
-   "tp": "TP00028"
+   "tp": "TP00028",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -638,7 +693,8 @@
    "foto": "fotos/a-a1770137242b5494245a9b2becf54fdd.jpg",
    "id": "adaptador-hdmi-a-vga-con-audio",
    "nuevo": false,
-   "tp": "TP00029"
+   "tp": "TP00029",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -650,7 +706,8 @@
    "foto": "fotos/a-2d31ef11495dc07ef6457c4fb2a1561c.jpg",
    "id": "cable-hdmi-1-5-m-4k",
    "nuevo": false,
-   "tp": "TP00031"
+   "tp": "TP00031",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -662,7 +719,8 @@
    "foto": "fotos/a-b8391c7eb4e65e6bca699944a85c81fd.jpg",
    "id": "cable-usb-para-impresora-1-5-m",
    "nuevo": false,
-   "tp": "TP00032"
+   "tp": "TP00032",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -674,7 +732,8 @@
    "foto": "fotos/a-f13ac0cdf5d8e90086776a2432f62f66.jpg",
    "id": "cartucho-hp-667-color-original",
    "nuevo": false,
-   "tp": "TP00033"
+   "tp": "TP00033",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -686,7 +745,8 @@
    "foto": "fotos/a-6ac8034a4289a40bfd857795d180821a.jpg",
    "id": "cartucho-hp-667-negro-original",
    "nuevo": false,
-   "tp": "TP00034"
+   "tp": "TP00034",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "impresion",
@@ -698,7 +758,8 @@
    "foto": "fotos/a-2a7c37619d796c8a559f82bcdc7d3e95.jpg",
    "id": "impresora-multifuncion-epson-l3310",
    "nuevo": false,
-   "tp": "TP00035"
+   "tp": "TP00035",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "impresion",
@@ -710,7 +771,8 @@
    "foto": "fotos/a-9df269ad70ac000f3aa7c43f7bf9c606.jpg",
    "id": "impresora-multifuncion-epson-l3350-wi-fi",
    "nuevo": false,
-   "tp": "TP00036"
+   "tp": "TP00036",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "impresion",
@@ -722,7 +784,8 @@
    "foto": "fotos/a-e66a8365a33e9f287770526bbe24417d.jpg",
    "id": "impresora-laser-brother-hl-1200",
    "nuevo": false,
-   "tp": "TP00037"
+   "tp": "TP00037",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "impresion",
@@ -734,7 +797,8 @@
    "foto": "fotos/a-d2ea129c3e944c9e75925920f4c7c3eb.jpg",
    "id": "impresora-multifuncion-laser-hp-m141w",
    "nuevo": false,
-   "tp": "TP00038"
+   "tp": "TP00038",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "energia",
@@ -746,7 +810,8 @@
    "foto": "fotos/a-ace114da9d847355b0373aed213ae9a5.jpg",
    "id": "estabilizador-de-tension-forza-900-va",
    "nuevo": false,
-   "tp": "TP00039"
+   "tp": "TP00039",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "energia",
@@ -758,7 +823,8 @@
    "foto": "fotos/a-1810e0e7f6972f9825e1a1b34bed40cb.jpg",
    "id": "ups-forza-500-va",
    "nuevo": false,
-   "tp": "TP00040"
+   "tp": "TP00040",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "energia",
@@ -770,7 +836,8 @@
    "foto": "fotos/a-869561e1ec2978c3b3154a222cb5c3fa.jpg",
    "id": "protector-de-tension-forza-1800-w",
    "nuevo": false,
-   "tp": "TP00041"
+   "tp": "TP00041",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "comercio",
@@ -782,7 +849,8 @@
    "foto": "fotos/a-ade0f26f6f781e48f7c9000f3c580c6f.jpg",
    "id": "lector-de-codigo-de-barras-y-qr-netmak",
    "nuevo": false,
-   "tp": "TP00042"
+   "tp": "TP00042",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "comercio",
@@ -794,7 +862,8 @@
    "foto": "fotos/a-c20346b28b4cad7424f5fea080b83bc5.jpg",
    "id": "lector-de-codigo-de-barras-inalambrico-netmak",
    "nuevo": false,
-   "tp": "TP00043"
+   "tp": "TP00043",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "microfonos",
@@ -806,7 +875,8 @@
    "foto": "fotos/a-a1fad5e16392175d50cc1a4c379d8f84.jpg",
    "id": "microfono-inalambrico-recargable-netmak",
    "nuevo": false,
-   "tp": "TP00044"
+   "tp": "TP00044",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "microfonos",
@@ -818,7 +888,8 @@
    "foto": "fotos/a-45d84e988281442a986a2fd2360796ff.jpg",
    "id": "set-de-2-microfonos-inalambricos-netmak",
    "nuevo": false,
-   "tp": "TP00045"
+   "tp": "TP00045",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "microfonos",
@@ -830,7 +901,8 @@
    "foto": "fotos/a-f8e159f8f6f6a168a444ed602f8da6ec.jpg",
    "id": "set-de-2-microfonos-inalambricos-recargables-netmak",
    "nuevo": false,
-   "tp": "TP00046"
+   "tp": "TP00046",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "auriculares",
@@ -842,7 +914,8 @@
    "foto": "fotos/a-c9506f4e8e50948558ec9d598d7b0b7c.jpg",
    "id": "auriculares-bluetooth-netmak-volt",
    "nuevo": false,
-   "tp": "TP00047"
+   "tp": "TP00047",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -854,7 +927,8 @@
    "foto": "fotos/a-9933f003876413632e89cb7c94e7586a.jpg",
    "id": "router-wi-fi-tp-link-tl-wr840n",
    "nuevo": false,
-   "tp": "TP00048"
+   "tp": "TP00048",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -866,7 +940,8 @@
    "foto": "fotos/a-ee7692fe4f3b0cfef96acb59da9323e4.jpg",
    "id": "repetidor-wi-fi-tp-link-tl-wa850re",
    "nuevo": false,
-   "tp": "TP00049"
+   "tp": "TP00049",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -878,7 +953,8 @@
    "foto": "fotos/a-aad1b45d53803cc55d0d95d7581b3694.jpg",
    "id": "router-wi-fi-mercusys-mw305r",
    "nuevo": false,
-   "tp": "TP00050"
+   "tp": "TP00050",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -890,7 +966,8 @@
    "foto": "fotos/a-b7114a7b84342ce1737e306af8997e63.jpg",
    "id": "router-wi-fi-mercusys-mw325r",
    "nuevo": false,
-   "tp": "TP00051"
+   "tp": "TP00051",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -902,7 +979,8 @@
    "foto": "fotos/a-b7a80ffb2754a038071d11488701338a.jpg",
    "id": "combo-gamer-solarmax-teclado-mouse-auriculares-y-pad",
    "nuevo": false,
-   "tp": "TP00052"
+   "tp": "TP00052",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "camaras",
@@ -914,7 +992,8 @@
    "foto": "fotos/a-6a6bfefc2979b95ebec72dd72bec94c4.jpg",
    "id": "camara-wi-fi-tp-link-tapo-c500-para-exterior",
    "nuevo": false,
-   "tp": "TP00053"
+   "tp": "TP00053",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "camaras",
@@ -926,7 +1005,8 @@
    "foto": "fotos/a-911b542aba4be0a4e8312a3053e2f1ba.jpg",
    "id": "camara-wi-fi-tp-link-tapo-c520ws-para-exterior",
    "nuevo": false,
-   "tp": "TP00054"
+   "tp": "TP00054",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "camaras",
@@ -938,7 +1018,8 @@
    "foto": "fotos/a-c9e9ec6955c3965814f84a241232482e.jpg",
    "id": "camara-wi-fi-tp-link-tapo-c100",
    "nuevo": false,
-   "tp": "TP00055"
+   "tp": "TP00055",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -950,7 +1031,8 @@
    "foto": "fotos/a-2a046dc69a20826c34b4dc1c78606da8.jpg",
    "id": "mouse-silencioso-genius-dx-125s",
    "nuevo": false,
-   "tp": "TP00056"
+   "tp": "TP00056",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -962,7 +1044,8 @@
    "foto": "fotos/a-a47e4f682f65630c8e904be5329a0603.jpg",
    "id": "mouse-genius-dx-123",
    "nuevo": false,
-   "tp": "TP00057"
+   "tp": "TP00057",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -974,7 +1057,8 @@
    "foto": "fotos/a-403f44d3f99a8591dade4f392947401a.jpg",
    "id": "mouse-inalambrico-genius-nx-7000se",
    "nuevo": false,
-   "tp": "TP00058"
+   "tp": "TP00058",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -986,7 +1070,8 @@
    "foto": "fotos/a-09b1ae927859d9f7234f7e75eb49459e.jpg",
    "id": "mouse-genius-dx-mini",
    "nuevo": false,
-   "tp": "TP00059"
+   "tp": "TP00059",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -998,7 +1083,8 @@
    "foto": "fotos/a-bbdba62f9c0a908c30ef3be31fa67ae6.jpg",
    "id": "mouse-genius-micro-traveler-v2",
    "nuevo": false,
-   "tp": "TP00060"
+   "tp": "TP00060",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1010,7 +1096,8 @@
    "foto": "fotos/a-1ec4cadac2ec135afc574c8b92de0376.jpg",
    "id": "mouse-logitech-m90",
    "nuevo": false,
-   "tp": "TP00062"
+   "tp": "TP00062",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1022,7 +1109,8 @@
    "foto": "fotos/a-c866a922ff5685dbec6891ce542bb76a.jpg",
    "id": "mouse-genius-dx-110-usb-c",
    "nuevo": false,
-   "tp": "TP00063"
+   "tp": "TP00063",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1034,7 +1122,8 @@
    "foto": "fotos/a-d01054b960d1da8bc8fb758dce9aad7d.jpg",
    "id": "mouse-inalambrico-genius-nx-7000xe",
    "nuevo": false,
-   "tp": "TP00064"
+   "tp": "TP00064",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1046,7 +1135,8 @@
    "foto": "fotos/a-c703aac9fc85a41b5de924dd78533569.jpg",
    "id": "mouse-inalambrico-logitech-m170",
    "nuevo": false,
-   "tp": "TP00065"
+   "tp": "TP00065",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1058,7 +1148,8 @@
    "foto": "fotos/a-31fa0d226ecb333e4bb172b95a0f22c2.jpg",
    "id": "mouse-inalambrico-logitech-m170-tp00066",
    "nuevo": false,
-   "tp": "TP00066"
+   "tp": "TP00066",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1070,7 +1161,8 @@
    "foto": "fotos/a-0b6842c7361dcf7f6c1e4c66ac540384.jpg",
    "id": "mouse-inalambrico-logitech-m170-tp00067",
    "nuevo": false,
-   "tp": "TP00067"
+   "tp": "TP00067",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1082,7 +1174,8 @@
    "foto": "fotos/a-58a96c91d87dc5c5f5c54c6cf4085140.jpg",
    "id": "combo-teclado-y-mouse-solarmax-kmc2300w",
    "nuevo": false,
-   "tp": "TP00069"
+   "tp": "TP00069",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1094,7 +1187,8 @@
    "foto": "fotos/a-7cf9bc56e921277fc6243f4abc2c8381.jpg",
    "id": "teclado-genius-slimstar-m200",
    "nuevo": false,
-   "tp": "TP00070"
+   "tp": "TP00070",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "mouses",
@@ -1106,7 +1200,8 @@
    "foto": "fotos/a-2cafd88b181b69bd2a852bebd0a1618f.jpg",
    "id": "combo-teclado-y-mouse-inalambrico-solarmax-kmc2006s",
    "nuevo": false,
-   "tp": "TP00071"
+   "tp": "TP00071",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1118,7 +1213,8 @@
    "foto": "fotos/a-ef56587ce05c80010095f2aa7f1dd632.jpg",
    "id": "adaptador-wi-fi-usb-tp-link-tl-wn722n",
    "nuevo": false,
-   "tp": "TP00072"
+   "tp": "TP00072",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1130,7 +1226,8 @@
    "foto": "fotos/a-ead0379030a00ba986a27c28f547ee5c.jpg",
    "id": "adaptador-wi-fi-usb-cudy-wu650",
    "nuevo": false,
-   "tp": "TP00073"
+   "tp": "TP00073",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1142,7 +1239,8 @@
    "foto": "fotos/a-e2b3cbba50375a9eee70a8e27ab994f8.jpg",
    "id": "repetidor-wi-fi-mercusys-mw300re",
    "nuevo": false,
-   "tp": "TP00074"
+   "tp": "TP00074",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1154,7 +1252,8 @@
    "foto": "fotos/a-590ad809b256efd721020d1c9af1754c.jpg",
    "id": "router-wi-fi-asus-rt-n300-3-en-1",
    "nuevo": false,
-   "tp": "TP00075"
+   "tp": "TP00075",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1166,7 +1265,8 @@
    "foto": "fotos/a-49c95450690dc8da6cbed366dca67fc1.jpg",
    "id": "switch-cudy-fs108d-8-puertos",
    "nuevo": false,
-   "tp": "TP00076"
+   "tp": "TP00076",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1178,7 +1278,8 @@
    "foto": "fotos/a-972a82871dbcc79d6a23625026189926.jpg",
    "id": "placa-wi-fi-pci-e-tp-link-tl-wn781nd",
    "nuevo": false,
-   "tp": "TP00077"
+   "tp": "TP00077",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1190,7 +1291,8 @@
    "foto": "fotos/a-bf774b201fe5b6c01e32494414febd4f.jpg",
    "id": "placa-de-red-pci-e-cudy-pe10-gigabit",
    "nuevo": false,
-   "tp": "TP00078"
+   "tp": "TP00078",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1202,7 +1304,8 @@
    "foto": "fotos/a-43f418d1cf0cd4d45c801dc2fa58ebcd.jpg",
    "id": "adaptador-wi-fi-usb-mercusys-mw150us",
    "nuevo": false,
-   "tp": "TP00079"
+   "tp": "TP00079",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1214,7 +1317,8 @@
    "foto": "fotos/a-c0cc8ae9a15e4153feef0fb40b83aae8.jpg",
    "id": "switch-tp-link-tl-sf1008d-8-puertos",
    "nuevo": false,
-   "tp": "TP00080"
+   "tp": "TP00080",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "redes",
@@ -1226,7 +1330,8 @@
    "foto": "fotos/a-5f2b34fdbe474710d05431093cd1fdcf.jpg",
    "id": "adaptador-usb-3-0-a-red-gigabit-tp-link-ue306",
    "nuevo": false,
-   "tp": "TP00081"
+   "tp": "TP00081",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tv",
@@ -1238,7 +1343,8 @@
    "foto": "fotos/a-eb63c7d245377517679fb346138966be.jpg",
    "id": "soporte-de-pared-para-tv-netmak-nm-st36",
    "nuevo": false,
-   "tp": "TP00082"
+   "tp": "TP00082",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tv",
@@ -1250,7 +1356,8 @@
    "foto": "fotos/a-da3c505fcd3bc6aa82d07048dad23f51.jpg",
    "id": "proyector-netmak-nm-pr300-smart",
    "nuevo": false,
-   "tp": "TP00083"
+   "tp": "TP00083",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "computacion",
@@ -1262,7 +1369,8 @@
    "foto": "fotos/a-cbcf0c219c6d905365f9b5afdca8ed82.jpg",
    "id": "monitor-philips-18-5-193v5",
    "nuevo": false,
-   "tp": "TP00084"
+   "tp": "TP00084",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "computacion",
@@ -1274,7 +1382,8 @@
    "foto": "fotos/a-88077a42ff9ba39d8a4396389a63eeb2.jpg",
    "id": "monitor-philips-21-5-221v8",
    "nuevo": false,
-   "tp": "TP00085"
+   "tp": "TP00085",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "impresion",
@@ -1286,7 +1395,8 @@
    "foto": "fotos/a-85582e68fbe5112ae8f3d9c1b7313dc2.jpg",
    "id": "impresora-laser-hp-m111w",
    "nuevo": false,
-   "tp": "TP00086"
+   "tp": "TP00086",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "impresion",
@@ -1298,7 +1408,8 @@
    "foto": "fotos/a-692aceeb5e35a863bd707f7a6a6f190c.jpg",
    "id": "resma-report-a4-75-g",
    "nuevo": false,
-   "tp": "TP00087"
+   "tp": "TP00087",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -1310,7 +1421,8 @@
    "foto": "fotos/a-93e56e337a8ac85d907ebc632ba10f05.jpg",
    "id": "tinta-hp-gt53-negra-original",
    "nuevo": false,
-   "tp": "TP00088"
+   "tp": "TP00088",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -1322,7 +1434,8 @@
    "foto": "fotos/a-29e0138d0df66fc7560eb6761477c404.jpg",
    "id": "tinta-hp-gt52-cian-original",
    "nuevo": false,
-   "tp": "TP00089"
+   "tp": "TP00089",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -1334,7 +1447,8 @@
    "foto": "fotos/a-2def0a0c791452ca6938ef40ab8760fd.jpg",
    "id": "tinta-hp-gt52-magenta-original",
    "nuevo": false,
-   "tp": "TP00090"
+   "tp": "TP00090",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -1346,7 +1460,8 @@
    "foto": "fotos/a-7e5208afbd1e12515fe53f89ee8ff2ff.jpg",
    "id": "tinta-hp-gt52-amarilla-original",
    "nuevo": false,
-   "tp": "TP00091"
+   "tp": "TP00091",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "microfonos",
@@ -1358,7 +1473,8 @@
    "foto": "fotos/a-4cf729901644e6fb8c7d6ac0178f8dab.jpg",
    "id": "microfono-corbatero-inalambrico-soul-furry-dual",
    "nuevo": false,
-   "tp": "TP00092"
+   "tp": "TP00092",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1370,7 +1486,8 @@
    "foto": "fotos/a-b7439361eda9982f937c84ba3b843708.jpg",
    "id": "power-bank-xiaomi-10000-mah-con-carga-inalambrica",
    "nuevo": false,
-   "tp": "TP00093"
+   "tp": "TP00093",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1382,7 +1499,8 @@
    "foto": "fotos/a-a13c1552ce5affd2c49a600b28c827f0.jpg",
    "id": "cargador-samsung-25w-usb-c-original",
    "nuevo": false,
-   "tp": "TP00094"
+   "tp": "TP00094",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1394,7 +1512,8 @@
    "foto": "fotos/a-16f6d08f6662db442d023aacdfd148f5.jpg",
    "id": "cargador-motorola-turbopower-68w",
    "nuevo": false,
-   "tp": "TP00095"
+   "tp": "TP00095",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1406,7 +1525,8 @@
    "foto": "fotos/a-5d62b1ef0e8a66b692a3f02b2f0e103b.jpg",
    "id": "cable-usb-c-a-usb-c-para-iphone-1-m",
    "nuevo": false,
-   "tp": "TP00096"
+   "tp": "TP00096",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1418,7 +1538,8 @@
    "foto": "fotos/a-a203cbd9bc65c7b8f45016a9f366988d.jpg",
    "id": "cable-usb-c-a-lightning-para-iphone-1-m",
    "nuevo": false,
-   "tp": "TP00097"
+   "tp": "TP00097",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "gaming",
@@ -1430,7 +1551,8 @@
    "foto": "fotos/a-d3f8d9e50da990ad7f9ecd44afec252a.jpg",
    "id": "joystick-ps5-dualsense-original-blanco",
    "nuevo": false,
-   "tp": "TP00098"
+   "tp": "TP00098",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "gaming",
@@ -1442,7 +1564,8 @@
    "foto": "fotos/a-b0f61a08b17e9a902fc9f7212b0d80dd.jpg",
    "id": "joystick-inalambrico-para-ps4",
    "nuevo": false,
-   "tp": "TP00099"
+   "tp": "TP00099",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "gaming",
@@ -1454,7 +1577,8 @@
    "foto": "fotos/a-1b1155e1f1c33b6558898dc367b4deb2.jpg",
    "id": "joystick-inalambrico-para-ps3",
    "nuevo": false,
-   "tp": "TP00100"
+   "tp": "TP00100",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "gaming",
@@ -1466,7 +1590,8 @@
    "foto": "fotos/a-1cad61caef2a86df425255e64fd83c2b.jpg",
    "id": "base-de-carga-doble-para-joysticks-ps4",
    "nuevo": false,
-   "tp": "TP00101"
+   "tp": "TP00101",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1478,7 +1603,8 @@
    "foto": "fotos/a-3f30de6f2e0fa37a1931db6b015f161a.jpg",
    "id": "adaptador-bluetooth-de-audio-usb-netmak-nm-bt8",
    "nuevo": false,
-   "tp": "TP00102"
+   "tp": "TP00102",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -1490,7 +1616,8 @@
    "foto": "fotos/a-d7228e2166e354190aa0c7f3b8740f2f.jpg",
    "id": "parlantes-usb-para-pc-netmak-delight-nm-9025r",
    "nuevo": false,
-   "tp": "TP00103"
+   "tp": "TP00103",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "computacion",
@@ -1502,7 +1629,8 @@
    "foto": "fotos/a-8eafa2ccc807d0144bf6633514237a0f.jpg",
    "id": "notebook-hp-255r-g10-15-6",
    "nuevo": false,
-   "tp": "TP00104"
+   "tp": "TP00104",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "auriculares",
@@ -1514,7 +1642,8 @@
    "foto": "fotos/a-8094a6c8b5d5b7ede175e0f2e0f252fa.jpg",
    "id": "auriculares-inalambricos-sate-ae-6231-ae-6232",
    "nuevo": false,
-   "tp": "TP00105"
+   "tp": "TP00105",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "auriculares",
@@ -1526,7 +1655,8 @@
    "foto": "fotos/a-c21187d332c5fe66cbec7d94e99e0f2a.jpg",
    "id": "auriculares-inalambricos-ven-dens-vd-bt011",
    "nuevo": false,
-   "tp": "TP00106"
+   "tp": "TP00106",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "auriculares",
@@ -1538,7 +1668,8 @@
    "foto": "fotos/a-09ce5f45bddb42c31192c18a81720ea7.jpg",
    "id": "auriculares-deportivos-ven-dens-vd-bt029",
    "nuevo": false,
-   "tp": "TP00107"
+   "tp": "TP00107",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "auriculares",
@@ -1550,7 +1681,8 @@
    "foto": "fotos/a-77585a005818a5cc7aa5d8034a6e0a62.jpg",
    "id": "auriculares-redmi-buds-6-play",
    "nuevo": false,
-   "tp": "TP00108"
+   "tp": "TP00108",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "auriculares",
@@ -1562,7 +1694,8 @@
    "foto": "fotos/a-56890c39443a5766102914ad76b907c6.jpg",
    "id": "auriculares-redmi-buds-6-active",
    "nuevo": false,
-   "tp": "TP00109"
+   "tp": "TP00109",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "relojes",
@@ -1574,7 +1707,8 @@
    "foto": "fotos/a-590de139c5d6b06eff6c05e7c4d03bee.jpg",
    "id": "smartwatch-xst-roma",
    "nuevo": false,
-   "tp": "TP00110"
+   "tp": "TP00110",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "relojes",
@@ -1586,7 +1720,8 @@
    "foto": "fotos/a-36233a286806a0734bed25c4d8b35c5d.jpg",
    "id": "smartwatch-redmi-watch-5-active",
    "nuevo": false,
-   "tp": "TP00111"
+   "tp": "TP00111",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "relojes",
@@ -1598,7 +1733,8 @@
    "foto": "fotos/a-8f43143db7d3d3b78c74dccfc1e70a6b.jpg",
    "id": "xiaomi-smart-band-10",
    "nuevo": false,
-   "tp": "TP00112"
+   "tp": "TP00112",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "relojes",
@@ -1610,7 +1746,8 @@
    "foto": "fotos/a-e3eb4e92fcd09f8cdd55fa71f466a858.jpg",
    "id": "xiaomi-smart-band-9-active",
    "nuevo": false,
-   "tp": "TP00113"
+   "tp": "TP00113",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -1622,7 +1759,8 @@
    "foto": "fotos/a-646ad1242f2c0a8774cc9b41aa33deef.jpg",
    "id": "parlante-philips-party-speaker-tax2208",
    "nuevo": false,
-   "tp": "TP00114"
+   "tp": "TP00114",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -1634,7 +1772,8 @@
    "foto": "fotos/a-62cad0a2d811939bdf385f3f486317e5.jpg",
    "id": "parlante-philips-party-speaker-tax2706",
    "nuevo": false,
-   "tp": "TP00115"
+   "tp": "TP00115",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "parlantes",
@@ -1646,7 +1785,8 @@
    "foto": "fotos/a-b2836d85b3992c4bf9db5ba740f3990a.jpg",
    "id": "parlante-philips-party-speaker-tax2206",
    "nuevo": false,
-   "tp": "TP00116"
+   "tp": "TP00116",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "celulares",
@@ -1658,7 +1798,8 @@
    "foto": "fotos/a-b4f42664751cf911a9848428671c89ac.jpg",
    "id": "celular-nokia-106-4g",
    "nuevo": false,
-   "tp": "TP00117"
+   "tp": "TP00117",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "auriculares",
@@ -1670,7 +1811,8 @@
    "foto": "fotos/a-fac9867f1cfdfdbcfd6f86b7d6887900.jpg",
    "id": "auriculares-vincha-bluetooth-ven-dens-vd-hp010",
    "nuevo": false,
-   "tp": "TP00118"
+   "tp": "TP00118",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1682,7 +1824,8 @@
    "foto": "fotos/a-6250675c73bba312249d43cf6d6a2e38.jpg",
    "id": "power-bank-magnetico-xaea-voltrix-25w",
    "nuevo": false,
-   "tp": "TP00119"
+   "tp": "TP00119",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1694,7 +1837,8 @@
    "foto": "fotos/a-9a3e67bca7ae68158e7326e6f3406176.jpg",
    "id": "bateria-externa-magsafe-para-iphone",
    "nuevo": false,
-   "tp": "TP00120"
+   "tp": "TP00120",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "comercio",
@@ -1706,7 +1850,8 @@
    "foto": "fotos/a-6068330bf5334152871f04eda7cb7e69.jpg",
    "id": "impresora-termica-de-tickets-ocom-ocpp-80s",
    "nuevo": false,
-   "tp": "TP00121"
+   "tp": "TP00121",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "computacion",
@@ -1718,7 +1863,8 @@
    "foto": "fotos/a-5d61e4f439af034d93c051631c66e053.jpg",
    "id": "notebook-hp-250-g10-15-6",
    "nuevo": false,
-   "tp": "TP00122"
+   "tp": "TP00122",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "computacion",
@@ -1730,7 +1876,8 @@
    "foto": "fotos/a-7f72327f689f29a5715423b44b008e4e.jpg",
    "id": "notebook-hp-14-em0027la-14",
    "nuevo": false,
-   "tp": "TP00123"
+   "tp": "TP00123",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "computacion",
@@ -1742,7 +1889,8 @@
    "foto": "fotos/a-48c096c2424d907b0fee77711c2f147b.jpg",
    "id": "monitor-hikvision-ds-d5019s0",
    "nuevo": false,
-   "tp": "TP00124"
+   "tp": "TP00124",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1754,7 +1902,8 @@
    "foto": "fotos/a-9486f59fa68c359f0cea85c75f16bfb5.jpg",
    "id": "cargador-apple-usb-c-35w",
    "nuevo": false,
-   "tp": "TP00125"
+   "tp": "TP00125",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1766,7 +1915,8 @@
    "foto": "fotos/a-8a387e9b21911b6afed1920f583ef41c.jpg",
    "id": "cable-lightning-a-usb-para-iphone-1-m",
    "nuevo": false,
-   "tp": "TP00126"
+   "tp": "TP00126",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1778,7 +1928,8 @@
    "foto": "fotos/a-68ed056290fc36b84d94abde5a463ae4.jpg",
    "id": "cargador-para-auto-pro21-65w",
    "nuevo": false,
-   "tp": "TP00127"
+   "tp": "TP00127",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1790,7 +1941,8 @@
    "foto": "fotos/a-6aa3b1d27d99ce0b00c8f3ae71b12dda.jpg",
    "id": "cargador-doble-usb-2-4a",
    "nuevo": false,
-   "tp": "TP00128"
+   "tp": "TP00128",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1802,7 +1954,8 @@
    "foto": "fotos/a-c2f34257d50a82c32e66ac8ee41f7695.jpg",
    "id": "cargador-motorola-turbopower-50w",
    "nuevo": false,
-   "tp": "TP00129"
+   "tp": "TP00129",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1814,7 +1967,8 @@
    "foto": "fotos/a-304a0bdf2e35f08124950eef55caa8e0.jpg",
    "id": "cargador-rapido-pro21-4-3a",
    "nuevo": false,
-   "tp": "TP00130"
+   "tp": "TP00130",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1826,7 +1980,8 @@
    "foto": "fotos/a-eba96c0edae35d1506260b87cad053a5.jpg",
    "id": "cargador-xaea-intensify-30w",
    "nuevo": false,
-   "tp": "TP00131"
+   "tp": "TP00131",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "gaming",
@@ -1838,7 +1993,8 @@
    "foto": "fotos/a-e96699c2b4887ff4d1520dfdaedff720.jpg",
    "id": "base-de-carga-para-joysticks-ps5",
    "nuevo": false,
-   "tp": "TP00132"
+   "tp": "TP00132",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "microfonos",
@@ -1850,7 +2006,8 @@
    "foto": "fotos/a-06655351c55874828d15665a4c048fec.jpg",
    "id": "microfono-inalambrico-ven-dens-vd-mic007",
    "nuevo": false,
-   "tp": "TP00133"
+   "tp": "TP00133",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1862,7 +2019,8 @@
    "foto": "fotos/a-6927200af370c4c49857a2eef74aadc5.jpg",
    "id": "transmisor-fm-bluetooth-para-auto-netmak",
    "nuevo": false,
-   "tp": "TP00134"
+   "tp": "TP00134",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1874,7 +2032,8 @@
    "foto": "fotos/a-d84df7d6e595e796282330d2d4714e7a.jpg",
    "id": "transmisor-fm-para-auto-allison-mod-2025",
    "nuevo": false,
-   "tp": "TP00135"
+   "tp": "TP00135",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1886,7 +2045,8 @@
    "foto": "fotos/a-a655acb6cc225f89fa3aef9a92fe4570.jpg",
    "id": "soporte-de-escritorio-para-celular-soul-sop-q50",
    "nuevo": false,
-   "tp": "TP00136"
+   "tp": "TP00136",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1898,7 +2058,8 @@
    "foto": "fotos/a-4256901cbbbe96c9c6661bfbae9171cb.jpg",
    "id": "soporte-de-escritorio-para-celular-ven-dens-vd-hd027",
    "nuevo": false,
-   "tp": "TP00137"
+   "tp": "TP00137",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "accesorios",
@@ -1910,7 +2071,8 @@
    "foto": "fotos/a-e11d289b14ae55e095199269f93c5ada.jpg",
    "id": "baston-selfie-con-tripode-inalambrico-aitech",
    "nuevo": false,
-   "tp": "TP00138"
+   "tp": "TP00138",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -1922,7 +2084,8 @@
    "foto": "fotos/a-9859da65ea53c47e8aed0f9064e75d6d.jpg",
    "id": "cartucho-alternativo-gtc-662-xl-negro",
    "nuevo": false,
-   "tp": "TP00139"
+   "tp": "TP00139",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -1934,7 +2097,8 @@
    "foto": "fotos/a-99c1d832afd59fb6647db39d6bd9d3ff.jpg",
    "id": "cartucho-alternativo-gtc-662-xl-color",
    "nuevo": false,
-   "tp": "TP00140"
+   "tp": "TP00140",
+   "alta": "2026-11-01"
   },
   {
    "rubro": "tintas",
@@ -1946,7 +2110,8 @@
    "foto": "fotos/a-454a6d7dfc73d7bd5935a2a822fa5c22.jpg",
    "id": "cartucho-alternativo-gtc-122-xl-negro",
    "nuevo": false,
-   "tp": "TP00141"
+   "tp": "TP00141",
+   "alta": "2026-11-01"
   }
  ]
 }
