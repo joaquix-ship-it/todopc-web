@@ -377,8 +377,8 @@
    "tp": "TP00002"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Portátiles",
    "nombre": "Parlante JBL Go 4",
    "det": "Bluetooth · Resistente al agua",
    "precio": 102000,
@@ -389,8 +389,8 @@
    "tp": "TP00003"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Portátiles",
    "nombre": "Parlante JBL Flip 7",
    "det": "Bluetooth · Resistente al agua",
    "precio": 266000,
@@ -401,8 +401,8 @@
    "tp": "TP00004"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Portátiles",
    "nombre": "Parlante JBL Charge 6",
    "det": "Bluetooth · Resistente al agua · Azul",
    "precio": 389000,
@@ -413,8 +413,8 @@
    "tp": "TP00005"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Portátiles",
    "nombre": "Parlante JBL Flip 6",
    "det": "Bluetooth · Resistente al agua",
    "precio": 225000,
@@ -425,8 +425,8 @@
    "tp": "TP00006"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Portátiles",
    "nombre": "Parlante Xiaomi Sound Outdoor 30W",
    "det": "Bluetooth · Resistente al agua",
    "precio": 130000,
@@ -797,8 +797,8 @@
    "tp": "TP00043"
   },
   {
-   "rubro": "audio",
-   "sub": "Micrófonos",
+   "rubro": "microfonos",
+   "sub": "De mano",
    "nombre": "Micrófono inalámbrico recargable Netmak",
    "det": "NM-MC23",
    "precio": 28000,
@@ -809,8 +809,8 @@
    "tp": "TP00044"
   },
   {
-   "rubro": "audio",
-   "sub": "Micrófonos",
+   "rubro": "microfonos",
+   "sub": "De mano",
    "nombre": "Set de 2 micrófonos inalámbricos Netmak",
    "det": "Receptor con plug 6,3 mm",
    "precio": 32000,
@@ -821,8 +821,8 @@
    "tp": "TP00045"
   },
   {
-   "rubro": "audio",
-   "sub": "Micrófonos",
+   "rubro": "microfonos",
+   "sub": "De mano",
    "nombre": "Set de 2 micrófonos inalámbricos recargables Netmak",
    "det": "Carga USB-C",
    "precio": 39000,
@@ -833,8 +833,8 @@
    "tp": "TP00046"
   },
   {
-   "rubro": "audio",
-   "sub": "Auriculares",
+   "rubro": "auriculares",
+   "sub": "Vincha",
    "nombre": "Auriculares Bluetooth Netmak Volt",
    "det": "Vincha · Bluetooth y cable",
    "precio": 25000,
@@ -905,8 +905,8 @@
    "tp": "TP00052"
   },
   {
-   "rubro": "redes",
-   "sub": "Cámaras Wi-Fi",
+   "rubro": "camaras",
+   "sub": "Exterior",
    "nombre": "Cámara Wi-Fi TP-Link Tapo C500 para exterior",
    "det": "Full HD · Motorizada · IP65",
    "precio": 91000,
@@ -917,8 +917,8 @@
    "tp": "TP00053"
   },
   {
-   "rubro": "redes",
-   "sub": "Cámaras Wi-Fi",
+   "rubro": "camaras",
+   "sub": "Exterior",
    "nombre": "Cámara Wi-Fi TP-Link Tapo C520WS para exterior",
    "det": "2K · Motorizada · IP66",
    "precio": 120000,
@@ -929,8 +929,8 @@
    "tp": "TP00054"
   },
   {
-   "rubro": "redes",
-   "sub": "Cámaras Wi-Fi",
+   "rubro": "camaras",
+   "sub": "Interior",
    "nombre": "Cámara Wi-Fi TP-Link Tapo C100",
    "det": "Full HD · Para interior",
    "precio": 52000,
@@ -1241,8 +1241,8 @@
    "tp": "TP00082"
   },
   {
-   "rubro": "computacion",
-   "sub": "Monitores",
+   "rubro": "tv",
+   "sub": "Proyectores",
    "nombre": "Proyector Netmak NM-PR300 Smart",
    "det": "Android 14 · Wi-Fi 6 · Bluetooth 5.4 · Hasta 150\"",
    "precio": 80000,
@@ -1349,8 +1349,8 @@
    "tp": "TP00091"
   },
   {
-   "rubro": "audio",
-   "sub": "Micrófonos",
+   "rubro": "microfonos",
+   "sub": "Corbateros",
    "nombre": "Micrófono corbatero inalámbrico Soul Furry dual",
    "det": "2 micrófonos · Receptor USB-C y Lightning",
    "precio": 27000,
@@ -1481,8 +1481,8 @@
    "tp": "TP00102"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Para PC",
    "nombre": "Parlantes USB para PC Netmak Delight NM-9025R",
    "det": "2.0 · 6W · Negro y rojo",
    "precio": 14000,
@@ -1505,8 +1505,8 @@
    "tp": "TP00104"
   },
   {
-   "rubro": "audio",
-   "sub": "Auriculares",
+   "rubro": "auriculares",
+   "sub": "Inalámbricos",
    "nombre": "Auriculares inalámbricos SATE AE-6231 / AE-6232",
    "det": "True Wireless · Bluetooth",
    "precio": null,
@@ -1517,8 +1517,8 @@
    "tp": "TP00105"
   },
   {
-   "rubro": "audio",
-   "sub": "Auriculares",
+   "rubro": "auriculares",
+   "sub": "Inalámbricos",
    "nombre": "Auriculares inalámbricos Ven-Dens VD-BT011",
    "det": "Bluetooth 5.4 · Con estuche de carga",
    "precio": null,
@@ -1529,8 +1529,8 @@
    "tp": "TP00106"
   },
   {
-   "rubro": "audio",
-   "sub": "Auriculares",
+   "rubro": "auriculares",
+   "sub": "Inalámbricos",
    "nombre": "Auriculares deportivos Ven-Dens VD-BT029",
    "det": "Bluetooth 5.3 · Oído abierto",
    "precio": null,
@@ -1541,8 +1541,8 @@
    "tp": "TP00107"
   },
   {
-   "rubro": "audio",
-   "sub": "Auriculares",
+   "rubro": "auriculares",
+   "sub": "Inalámbricos",
    "nombre": "Auriculares Redmi Buds 6 Play",
    "det": "Xiaomi · Bluetooth",
    "precio": null,
@@ -1553,8 +1553,8 @@
    "tp": "TP00108"
   },
   {
-   "rubro": "audio",
-   "sub": "Auriculares",
+   "rubro": "auriculares",
+   "sub": "Inalámbricos",
    "nombre": "Auriculares Redmi Buds 6 Active",
    "det": "Xiaomi · Bluetooth",
    "precio": null,
@@ -1590,7 +1590,7 @@
   },
   {
    "rubro": "relojes",
-   "sub": "Smartwatch",
+   "sub": "Bandas",
    "nombre": "Xiaomi Smart Band 10",
    "det": "Pulsera inteligente",
    "precio": null,
@@ -1602,7 +1602,7 @@
   },
   {
    "rubro": "relojes",
-   "sub": "Smartwatch",
+   "sub": "Bandas",
    "nombre": "Xiaomi Smart Band 9 Active",
    "det": "Pulsera inteligente",
    "precio": null,
@@ -1613,8 +1613,8 @@
    "tp": "TP00113"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Para fiestas",
    "nombre": "Parlante Philips Party Speaker TAX2208",
    "det": "Serie 2000 · Bluetooth · Luces",
    "precio": null,
@@ -1625,8 +1625,8 @@
    "tp": "TP00114"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Para fiestas",
    "nombre": "Parlante Philips Party Speaker TAX2706",
    "det": "Bluetooth · Luces",
    "precio": null,
@@ -1637,8 +1637,8 @@
    "tp": "TP00115"
   },
   {
-   "rubro": "audio",
-   "sub": "Parlantes",
+   "rubro": "parlantes",
+   "sub": "Para fiestas",
    "nombre": "Parlante Philips Party Speaker TAX2206",
    "det": "Bluetooth · Luces",
    "precio": null,
@@ -1661,8 +1661,8 @@
    "tp": "TP00117"
   },
   {
-   "rubro": "audio",
-   "sub": "Auriculares",
+   "rubro": "auriculares",
+   "sub": "Vincha",
    "nombre": "Auriculares vincha Bluetooth Ven-Dens VD-HP010",
    "det": "Inalámbricos · Bass",
    "precio": null,
@@ -1770,7 +1770,7 @@
   },
   {
    "rubro": "accesorios",
-   "sub": "Cargadores",
+   "sub": "Para auto",
    "nombre": "Cargador para auto Pro21 65W",
    "det": "Carga rápida · Con cable USB-C",
    "precio": null,
@@ -1841,8 +1841,8 @@
    "tp": "TP00132"
   },
   {
-   "rubro": "audio",
-   "sub": "Micrófonos",
+   "rubro": "microfonos",
+   "sub": "Corbateros",
    "nombre": "Micrófono inalámbrico Ven-Dens VD-MIC007",
    "det": "Corbatero · Para celular",
    "precio": null,
@@ -1854,7 +1854,7 @@
   },
   {
    "rubro": "accesorios",
-   "sub": "Cargadores",
+   "sub": "Para auto",
    "nombre": "Transmisor FM Bluetooth para auto Netmak",
    "det": "Cargador 3.1A · Doble USB",
    "precio": null,
@@ -1866,7 +1866,7 @@
   },
   {
    "rubro": "accesorios",
-   "sub": "Cargadores",
+   "sub": "Para auto",
    "nombre": "Transmisor FM para auto Allison MOD-2025",
    "det": "MP3 · Bluetooth · Cargador",
    "precio": null,
