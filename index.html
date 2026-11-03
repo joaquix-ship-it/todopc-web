@@ -6,9 +6,10 @@
 <style>
 /* Layout: buscador de stock para el pulgar — barra con búsqueda siempre a mano, rubros en grilla de íconos, resultados en lista o grilla, ficha con link propio. */
 :root {
-  --navy: #17406B;
+  --navy: #00508A;   /* azul del logo */
   --night: #0F1B2D;
-  --gold: #FFC83D;
+  --gold: #7ABB4C;   /* verde del logo (acentos) */
+  --amarillo: #FFC83D;
   --green: #1F8A3B;
   --green-deep: #17702F;
   --red: #D62839;
@@ -101,7 +102,7 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .vidriera h2 .vrol span { position: absolute; left: 0; right: 0; top: 0; color: #FFFFFF; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .vidriera h2 .vrol span.entra { animation: ventra 0.55s cubic-bezier(.2,.9,.25,1.15) both; }
 .vidriera h2 .vrol span.sale { animation: vsale 0.4s ease-in both; }
-.vidriera .vver { display: inline-flex; align-items: center; gap: 4px; font-size: 17px; font-weight: 800; color: var(--gold); }
+.vidriera .vver { display: inline-flex; align-items: center; gap: 4px; font-size: 17px; font-weight: 800; color: #A6DC7C; }
 .vidriera .vimg { position: relative; height: 116px; margin: -4px 0 0; --sol: 112px; }
 .vidriera .vimg img { position: absolute; inset: 0; margin: auto; z-index: 1; max-width: 86%; max-height: 82%; object-fit: contain; filter: drop-shadow(0 14px 12px rgba(5, 12, 25, 0.42)); }
 .vidriera .vimg img.entra { animation: vimgin 0.7s cubic-bezier(.2,.9,.25,1.1) both, vflota 3.6s ease-in-out 0.7s infinite; }
@@ -169,8 +170,8 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .view button { width: 40px; height: 32px; border: 0; border-radius: 8px; background: none; color: var(--faint); display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .view button[aria-pressed="true"] { background: var(--paper); color: var(--night); }
 .promo { display: flex; align-items: center; gap: 10px; padding: 9px 12px 9px 9px; border-radius: 14px; background: repeating-linear-gradient(-45deg, var(--red) 0 16px, #E03548 16px 32px); color: #FFFFFF; font-size: 13px; font-weight: 700; line-height: 1.3; }
-.promo .st { flex-shrink: 0; background: var(--gold); color: var(--night); border-radius: 8px; padding: 5px 9px; font-size: 12px; font-weight: 800; font-style: italic; text-transform: uppercase; transform: rotate(-3deg); }
-.promo b { color: var(--gold); padding: 0 2px; }
+.promo .st { flex-shrink: 0; background: var(--amarillo); color: var(--night); border-radius: 8px; padding: 5px 9px; font-size: 12px; font-weight: 800; font-style: italic; text-transform: uppercase; transform: rotate(-3deg); }
+.promo b { color: var(--amarillo); padding: 0 2px; }
 .nota { font-size: 13px; font-weight: 600; color: #6B5310; background: #FFF4D1; border-radius: 12px; padding: 10px 12px; }
 
 /* Lista */
@@ -402,10 +403,10 @@ const LOCAL = {
 };
 const SUGERENCIAS = ['mouse', 'cargador', 'iPhone', 'tinta Epson', 'pendrive', 'parlante JBL', 'cámara', 'Samsung'];
 /* Portada animada: productos (los que destacás en Listas y lo mejor de cada rubro), como historias */
-const FONDOS = { celulares: '#17406B', parlantes: '#3D2C74', auriculares: '#4A2C6E', impresion: '#0F1B2D', relojes: '#1E5A4A', gaming: '#6E2340', camaras: '#244A8C', mouses: '#1C4E6E' };
+const FONDOS = { celulares: '#00508A', parlantes: '#163F70', auriculares: '#0B3A63', impresion: '#12304F', relojes: '#0A4A6A', gaming: '#183A66', camaras: '#0D4677', mouses: '#104B73' };   // familia del azul del logo
 let vidTimer = null;
 function vidSlides() {
-  return (DATA.portada || []).filter(v => BY_ID[v.id] && v.rec).map(v => ({ ...v, fondo: FONDOS[v.rubro] || '#17406B' }));
+  return (DATA.portada || []).filter(v => BY_ID[v.id] && v.rec).map(v => ({ ...v, fondo: FONDOS[v.rubro] || '#00508A' }));
 }
 const vidPrecio = v => v.precio ? fmt(v.precio) : 'Consultá el precio';
 function vidriera() {
