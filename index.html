@@ -222,12 +222,19 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .view { display: flex; background: var(--card); border-radius: 10px; padding: 3px; box-shadow: inset 0 0 0 1.5px var(--line); }
 .view button { width: 40px; height: 32px; border: 0; border-radius: 8px; background: none; color: var(--faint); display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .view button[aria-pressed="true"] { background: var(--paper); color: var(--night); }
-.regalo { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 16px; background: var(--card); box-shadow: inset 0 0 0 1.5px rgba(122, 187, 76, 0.55); }
-.regalo .rg-ic { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--gold); color: #FFFFFF; }
-.regalo p { margin: 0 0 4px; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #4E8A27; }
-.regalo ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 2px 12px; }
-.regalo li { position: relative; padding-left: 15px; font-size: 14px; font-weight: 800; color: var(--ink); }
-.regalo li::before { content: ""; position: absolute; left: 0; top: 50%; width: 8px; height: 5px; margin-top: -4px; border-left: 2.5px solid var(--gold); border-bottom: 2.5px solid var(--gold); transform: rotate(-45deg); }
+.regalo { display: flex; flex-direction: column; gap: 12px; padding: 14px; border-radius: 20px; background: linear-gradient(160deg, #F4FAEF 0%, #FFFFFF 70%); box-shadow: inset 0 0 0 1.5px rgba(122, 187, 76, 0.5); }
+.regalo .rg-cab { display: flex; align-items: center; gap: 12px; }
+.regalo .rg-ic { flex-shrink: 0; width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--gold); color: #FFFFFF; box-shadow: 0 6px 14px rgba(122, 187, 76, 0.35); }
+.regalo p { margin: 0 0 2px; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #4E8A27; }
+.regalo .rg-cab b { font-size: 18px; font-weight: 800; font-stretch: 112%; color: var(--ink); line-height: 1.1; }
+.regalo .rg-items { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.regalo.u .rg-items { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.regalo .rg-items > div { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 4px 10px; border-radius: 14px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.06); color: var(--navy); text-align: center; }
+.regalo .rg-items span:last-child { font-size: 12.5px; font-weight: 800; color: var(--ink); line-height: 1.15; }
+.regalo.u .rg-items svg { width: 34px; height: 34px; }
+.regalo.u .rg-items span:last-child { font-size: 11px; }
+.regalo .ok { position: absolute; top: 6px; right: 6px; width: 18px; height: 18px; border-radius: 50%; background: var(--gold); }
+.regalo .ok::after { content: ""; position: absolute; left: 5px; top: 5px; width: 7px; height: 4px; border-left: 2px solid #FFFFFF; border-bottom: 2px solid #FFFFFF; transform: rotate(-45deg); }
 .promo { display: flex; align-items: center; gap: 10px; padding: 9px 12px 9px 9px; border-radius: 14px; background: repeating-linear-gradient(-45deg, var(--red) 0 16px, #E03548 16px 32px); color: #FFFFFF; font-size: 13px; font-weight: 700; line-height: 1.3; }
 .promo .st { flex-shrink: 0; background: var(--amarillo); color: var(--night); border-radius: 8px; padding: 5px 9px; font-size: 12px; font-weight: 800; font-style: italic; text-transform: uppercase; transform: rotate(-3deg); }
 .promo b { color: var(--amarillo); padding: 0 2px; }
@@ -246,33 +253,40 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .pr { font-size: 19px; font-weight: 800; letter-spacing: -0.4px; color: var(--navy); font-variant-numeric: tabular-nums; margin-top: 4px; white-space: nowrap; }
 .pr.sin { font-size: 14px; letter-spacing: 0; color: var(--muted); font-weight: 700; }
 .chev { flex-shrink: 0; color: #B6C1CE; }
-.specs { background: var(--card); border-radius: 22px; padding: 18px 16px 18px; display: flex; flex-direction: column; gap: 16px; }
-.specs .ey, .spclave .ey { margin: 0; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.specs { background: var(--card); border-radius: 22px; padding: 18px 14px 16px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.05); }
+.specs .ey { margin: 0 4px; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); }
 .specs b { font-stretch: 118%; font-variant-numeric: tabular-nums; }
-.specs b i { font-style: normal; font-stretch: 100%; font-size: 0.5em; font-weight: 700; margin-left: 2px; letter-spacing: 0; opacity: 0.7; }
+.specs b i { font-style: normal; font-stretch: 100%; font-size: 0.55em; font-weight: 800; margin-left: 3px; letter-spacing: 0; opacity: 0.75; }
 .specs b i.pre { margin: 0 4px 0 0; }
 .specs b i.in { font-size: 0.8em; margin-left: 1px; opacity: 1; }
-.spclave { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding: 16px 18px 15px; border-radius: 16px; background: linear-gradient(135deg, #00508A 0%, #0A3D6B 100%); color: #FFFFFF; }
-.spclave .ey { color: rgba(255, 255, 255, 0.72); margin-bottom: 4px; }
-.spclave b { display: block; font-size: 38px; font-weight: 800; line-height: 0.95; letter-spacing: -0.5px; }
-.spclave .ram { flex-shrink: 0; padding: 6px 11px; border-radius: 999px; background: rgba(255, 255, 255, 0.14); font-size: 13px; font-weight: 800; letter-spacing: 0.02em; }
+.spclave { display: grid; grid-template-columns: repeat(var(--n, 1), minmax(0, 1fr)); border-radius: 16px; background: linear-gradient(135deg, #00508A 0%, #0A3D6B 100%); color: #FFFFFF; padding: 14px 4px; }
+.spclave.n2 { --n: 2; }
+.spclave > div { display: flex; align-items: center; gap: 10px; padding: 0 12px; min-width: 0; }
+.spclave > div + div { border-left: 1px solid rgba(255, 255, 255, 0.22); }
+.spclave .si { flex-shrink: 0; color: rgba(255, 255, 255, 0.9); display: grid; place-items: center; }
+.spclave .si svg { width: 28px; height: 28px; }
+.spclave.n2 .si svg { width: 24px; height: 24px; }
+.spclave.n2 > div { gap: 8px; padding: 0 10px; }
+.spclave .sv { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.spclave small { font-size: 10px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255, 255, 255, 0.75); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.spclave b { font-size: 32px; font-weight: 800; line-height: 1; letter-spacing: -0.5px; }
 .sp3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .sp3 > div { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 2px 4px; }
 .sp3 > div + div { border-left: 1px solid var(--line); }
-.sp3 .si { color: var(--navy); margin-bottom: 4px; display: grid; place-items: center; height: 26px; }
-.sp3 b { font-size: 23px; font-weight: 800; letter-spacing: -0.4px; line-height: 1; color: var(--ink); white-space: nowrap; }
-.sp3 small { font-size: 10.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.cams { border-top: 1px solid var(--line); padding-top: 16px; display: flex; flex-direction: column; gap: 14px; }
-.cams .ey { display: flex; justify-content: space-between; }
-.lentes { display: flex; align-items: flex-start; gap: 12px; }
-.lentes .tras { flex: 1; display: flex; justify-content: space-around; gap: 6px; }
-.lentes .front { flex-shrink: 0; padding-left: 12px; border-left: 1px solid var(--line); }
-.lente { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px; min-width: 0; flex: 1; }
-.lente .lz { position: relative; width: 34px; height: 34px; border-radius: 50%; margin-bottom: 6px; background: radial-gradient(circle at 50% 50%, #0B1522 0 30%, #1D3550 31% 44%, #0B1522 45% 100%); box-shadow: 0 0 0 3px #DCE3EB, 0 0 0 4px #C3CDD8, 0 3px 8px rgba(11, 21, 34, 0.25); }
-.lente .lz::after { content: ""; position: absolute; left: 26%; top: 22%; width: 22%; height: 22%; border-radius: 50%; background: rgba(160, 200, 255, 0.55); filter: blur(0.5px); }
-.lente .lz.g { width: 44px; height: 44px; margin-bottom: 1px; margin-top: -5px; }
-.lente b { font-size: 19px; font-weight: 800; line-height: 1; color: var(--ink); }
-.lente small { font-size: 11.5px; font-weight: 600; color: var(--muted); line-height: 1.2; }
+.sp3 .si { color: var(--navy); margin-bottom: 4px; display: grid; place-items: center; height: 30px; }
+.sp3 .si svg { width: 28px; height: 28px; }
+.sp3 b { font-size: 24px; font-weight: 800; letter-spacing: -0.4px; line-height: 1; color: var(--ink); white-space: nowrap; }
+.sp3 small { font-size: 10.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); line-height: 1.25; }
+.cams { border-top: 1px solid var(--line); padding-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+.camcards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.camc { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 16px; background: #F3F7FB; min-width: 0; }
+.camc svg { flex-shrink: 0; }
+.camc > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.camc small { font-size: 12px; font-weight: 800; color: var(--muted); }
+.camc b { font-size: 22px; font-weight: 800; line-height: 1.05; color: var(--ink); }
+.camc b .mas { font-stretch: 100%; font-weight: 700; color: var(--faint); margin: 0 4px; }
+.camc .tp { font-size: 12.5px; font-weight: 600; color: var(--muted); line-height: 1.3; }
+@media (min-width: 420px) { .camcards { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
 .spcam { margin: 16px 6px 0; border-top: 1px solid var(--line); }
 .spcam > div { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; padding: 11px 0; }
 .spcam > div + div { border-top: 1px solid var(--line); }
@@ -494,9 +508,18 @@ const itemGrilla = p => `<a class="card" href="#p-${p.id}"><div class="ph">${fot
 const resultados = ps => vistaModo === 'grilla' ? `<section class="grid">${ps.map(itemGrilla).join('')}</section>` : `<section class="list">${ps.map(itemLista).join('')}</section>`;
 const subTxt = s => s === 'Usados' ? 'iPhone usados' : s;   // los usados son solo iPhone
 const ICO_REGALO = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5v7.5h14v-7.5M12 8.5V20"/><path d="M12 8.5C10.5 5 7 4.5 7 6.6S10 8.5 12 8.5zM12 8.5c1.5-3.5 5-4 5-1.9S14 8.5 12 8.5z"/></svg>';
+const ICO_ACC = {
+  cargador: '<rect x="12" y="20" width="24" height="22" rx="5"/><path d="M19 20v-8M29 20v-8"/><rect x="20" y="29" width="8" height="4" rx="1"/>',
+  vidrio: '<rect x="13" y="6" width="20" height="36" rx="4"/><path d="M17 6.5l-4 4M33 14L19 41.5M33 24L25 41.5" opacity=".55"/><rect x="16" y="9" width="20" height="36" rx="4" stroke-dasharray="3 3" opacity=".6"/>',
+  funda: '<rect x="12" y="5" width="24" height="38" rx="6"/><rect x="15.5" y="8.5" width="9" height="11" rx="3"/><circle cx="20" cy="12" r="1.6"/><circle cx="20" cy="16.5" r="1.6"/>',
+  caja: '<path d="M8 16l16-7 16 7v18l-16 7-16-7z"/><path d="M8 16l16 7 16-7M24 23v18"/>',
+  garantia: '<path d="M24 5l15 6v11c0 10-6.5 17-15 21-8.5-4-15-11-15-21V11z"/><path d="M17 24l5 5 9-10"/>'
+};
+const icoAcc = k => `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO_ACC[k]}</svg>`;
 const promoCel = sub => {
-  const usado = sub === 'Usados', items = usado ? ['Caja', 'Cargador', 'Vidrio', 'Funda', 'Garantía'] : ['Cargador original', 'Vidrio templado', 'Funda'];
-  return `<div class="regalo"><span class="rg-ic">${ICO_REGALO}</span><div><p>${usado ? 'Tu iPhone usado incluye' : 'De regalo con tu celular'}</p><ul>${items.map(t => `<li>${t}</li>`).join('')}</ul></div></div>`;
+  const usado = sub === 'Usados', items = usado ? [['caja', 'Caja'], ['cargador', 'Cargador'], ['vidrio', 'Vidrio'], ['funda', 'Funda'], ['garantia', 'Garantía']] : [['cargador', 'Cargador original'], ['vidrio', 'Vidrio templado'], ['funda', 'Funda protectora']];
+  return `<div class="regalo${usado ? ' u' : ''}"><div class="rg-cab"><span class="rg-ic">${ICO_REGALO}</span><div><p>${usado ? 'Tu iPhone usado incluye' : 'De regalo con tu celular'}</p><b>${usado ? 'Todo lo que necesitás' : 'Accesorios incluidos'}</b></div></div>
+    <div class="rg-items">${items.map(([k, t]) => `<div><span class="ok" aria-hidden="true"></span>${icoAcc(k)}<span>${t}</span></div>`).join('')}</div></div>`;
 };
 const herramientas = () => `<div class="tools">
   <label class="sort"><span class="sr">Ordenar</span><select id="orden">
@@ -703,25 +726,32 @@ function vBuscar(q) {
 const ICO_SP = {
   pantalla: '<rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 5.2h3"/><path d="M9 9.5l2.2-2.2M9 13.5l6-6M12 15.5l3.5-3.5"/>',
   camara: '<path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.7l1.3-2h5l1.3 2h1.7A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z"/><circle cx="12" cy="12.4" r="3.6"/>',
+  disco: '<ellipse cx="12" cy="6" rx="7.5" ry="2.8"/><path d="M4.5 6v12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V6"/><path d="M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/>',
+  chip: '<rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M12 3v3M15 3v3M9 18v3M12 18v3M15 18v3M3 9h3M3 12h3M3 15h3M18 9h3M18 12h3M18 15h3"/>',
   memoria: '<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M9 3v4M12 3v4M15 3v4"/><path d="M8.5 12.5h7M8.5 16h4.5"/>',
   bateria: '<rect x="2.5" y="7" width="17" height="10" rx="2.4"/><path d="M21.5 10.5v3"/><path d="M11.5 9l-2.5 3.6h3.5L10 15.2" stroke-width="1.7"/>'
 };
 const icoSp = k => `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO_SP[k]}</svg>`;
 function fichaSpecs(f, det) {
   const tr = f.traseras || [], ppal = tr[0] ? tr[0][0] : '';
-  const alm = ((det || '').match(/(\d+)\s?(GB|TB)(?!\s*RAM)/i) || []), ram = ((det || '').match(/(\d+\s?GB)\s*RAM/i) || [])[1];
+  const alm = ((det || '').match(/(\d+)\s?(GB|TB)(?!\s*RAM)/i) || []), ram = ((det || '').match(/(\d+)\s?GB\s*RAM/i) || [])[1];
   const num = (v, u) => `<b>${esc(v)}${u ? `<i>${esc(u)}</i>` : ''}</b>`;
   const pant = String(f.pantalla).replace('"', '');
   const mp = s2 => String(s2).replace(/\s*MP$/i, '');
   const bat = f.bat_nota === 'mAh' ? num(f.bateria, 'mAh') : `<b><i class="pre">hasta</i>${esc(String(f.bateria).replace(/^Hasta\s+/i, '').replace(/\s*h$/, ''))}<i>h</i></b>`;
   const stats = [['pantalla', `<b>${esc(pant)}<i class="in">"</i></b>`, 'Pantalla'], ppal ? ['camara', num(mp(ppal), 'MP'), 'Cámara'] : null, ['bateria', bat, f.bat_nota === 'mAh' ? 'Batería' : 'Autonomía']].filter(Boolean);
-  const lente = (m, t, i) => `<div class="lente"><span class="lz${i === 0 ? ' g' : ''}" aria-hidden="true"></span><b>${esc(mp(m))}<i>MP</i></b><small>${esc(t)}</small></div>`;
+  const memo = [alm[1] ? ['disco', alm[1], alm[2].toUpperCase(), 'Almacenamiento'] : null, ram ? ['chip', ram, 'GB', 'Memoria RAM'] : null].filter(Boolean);
+  const modulo = n => `<svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><rect x="2" y="2" width="42" height="42" rx="12" fill="#DCE6F1" stroke="#C3D0DE"/>${(n >= 3 ? [[15, 15, 8], [15, 31, 8], [31, 23, 8]] : n === 2 ? [[15, 15, 8.5], [15, 31, 8.5]] : [[17, 17, 10]]).map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="#0B1522" stroke="#8796A8" stroke-width="2"/><circle cx="${x}" cy="${y}" r="${r * 0.45}" fill="#1D3550"/><circle cx="${x - r * 0.3}" cy="${y - r * 0.3}" r="${r * 0.16}" fill="#9CC3F0" opacity=".8"/>`).join('')}</svg>`;
+  const lente = `<svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="17" fill="#0B1522" stroke="#C3D0DE" stroke-width="4"/><circle cx="23" cy="23" r="7.5" fill="#1D3550"/><circle cx="18.5" cy="18.5" r="2.6" fill="#9CC3F0" opacity=".8"/></svg>`;
+  const tipos = tr.map(([, t]) => t.charAt(0).toUpperCase() + t.slice(1));
   return `<section class="specs" aria-label="Características">
-    <p class="ey">Características</p>
-    ${alm[1] ? `<div class="spclave"><div><p class="ey">Almacenamiento</p><b>${esc(alm[1])}<i>${esc(alm[2].toUpperCase())}</i></b></div>${ram ? `<span class="ram">${esc(ram)} RAM</span>` : ''}</div>` : ''}
+    <p class="ey">Características principales</p>
+    ${memo.length ? `<div class="spclave n${memo.length}">${memo.map(([k, v, u, l]) => `<div><span class="si">${icoSp(k)}</span><span class="sv"><small>${l}</small><b>${esc(v)}<i>${u}</i></b></span></div>`).join('')}</div>` : ''}
     <div class="sp3">${stats.map(([k, v, l]) => `<div><span class="si">${icoSp(k)}</span>${v}<small>${l}</small></div>`).join('')}</div>
-    ${tr.length ? `<div class="cams"><p class="ey">${tr.length > 1 ? 'Cámaras traseras' : 'Cámara trasera'}${f.frontal ? '<span>Frontal</span>' : ''}</p>
-      <div class="lentes"><div class="tras">${tr.map(([m, t], i) => lente(m, t, i)).join('')}</div>${f.frontal ? `<div class="front">${lente(f.frontal, 'selfie', 1)}</div>` : ''}</div></div>` : ''}
+    ${tr.length || f.frontal ? `<div class="cams"><p class="ey">Cámaras</p><div class="camcards">
+      ${tr.length ? `<div class="camc">${modulo(tr.length)}<div><small>${tr.length > 1 ? 'Traseras' : 'Trasera'}</small><b>${tr.map(([m]) => esc(mp(m))).join('<span class="mas">+</span>')}<i>MP</i></b><span class="tp">${esc(tipos.join(' + '))}</span></div></div>` : ''}
+      ${f.frontal ? `<div class="camc">${lente}<div><small>Frontal</small><b>${esc(mp(f.frontal))}<i>MP</i></b><span class="tp">Selfie</span></div></div>` : ''}
+    </div></div>` : ''}
   </section>`;
 }
 function vFicha(p) {
