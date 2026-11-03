@@ -218,20 +218,33 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .pr { font-size: 19px; font-weight: 800; letter-spacing: -0.4px; color: var(--navy); font-variant-numeric: tabular-nums; margin-top: 4px; white-space: nowrap; }
 .pr.sin { font-size: 14px; letter-spacing: 0; color: var(--muted); font-weight: 700; }
 .chev { flex-shrink: 0; color: #B6C1CE; }
-.specs { background: var(--card); border-radius: 20px; padding: 10px 10px 4px; }
-.spclave { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 15px; background: var(--navy); color: #FFFFFF; margin-bottom: 16px; }
-.spclave .si { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, 0.15); }
-.spclave .sv { display: flex; flex-direction: column; gap: 1px; }
-.spclave b { font-size: 24px; font-weight: 800; letter-spacing: -0.4px; line-height: 1.05; }
-.spclave small { font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.78); }
+.specs { background: var(--card); border-radius: 22px; padding: 18px 16px 18px; display: flex; flex-direction: column; gap: 16px; }
+.specs .ey, .spclave .ey { margin: 0; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.specs b { font-stretch: 118%; font-variant-numeric: tabular-nums; }
+.specs b i { font-style: normal; font-stretch: 100%; font-size: 0.5em; font-weight: 700; margin-left: 2px; letter-spacing: 0; opacity: 0.7; }
+.specs b i.pre { margin: 0 4px 0 0; }
+.specs b i.in { font-size: 0.8em; margin-left: 1px; opacity: 1; }
+.spclave { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding: 16px 18px 15px; border-radius: 16px; background: linear-gradient(135deg, #00508A 0%, #0A3D6B 100%); color: #FFFFFF; }
+.spclave .ey { color: rgba(255, 255, 255, 0.72); margin-bottom: 4px; }
+.spclave b { display: block; font-size: 38px; font-weight: 800; line-height: 0.95; letter-spacing: -0.5px; }
+.spclave .ram { flex-shrink: 0; padding: 6px 11px; border-radius: 999px; background: rgba(255, 255, 255, 0.14); font-size: 13px; font-weight: 800; letter-spacing: 0.02em; }
 .sp3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.sp3 > div { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px; padding: 0 6px; }
+.sp3 > div { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 2px 4px; }
 .sp3 > div + div { border-left: 1px solid var(--line); }
-.sp3 .si { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: #E8F0F8; color: var(--navy); margin-bottom: 6px; }
-.sp3 b { font-size: 19px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.1; color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.sp3 b i { font-style: normal; font-size: 12px; font-weight: 700; margin-left: 2px; color: var(--muted); }
-.sp3 b i.pre { margin: 0 3px 0 0; }
-.sp3 small { font-size: 12px; font-weight: 600; color: var(--muted); line-height: 1.2; }
+.sp3 .si { color: var(--navy); margin-bottom: 4px; display: grid; place-items: center; height: 26px; }
+.sp3 b { font-size: 23px; font-weight: 800; letter-spacing: -0.4px; line-height: 1; color: var(--ink); white-space: nowrap; }
+.sp3 small { font-size: 10.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.cams { border-top: 1px solid var(--line); padding-top: 16px; display: flex; flex-direction: column; gap: 14px; }
+.cams .ey { display: flex; justify-content: space-between; }
+.lentes { display: flex; align-items: flex-start; gap: 12px; }
+.lentes .tras { flex: 1; display: flex; justify-content: space-around; gap: 6px; }
+.lentes .front { flex-shrink: 0; padding-left: 12px; border-left: 1px solid var(--line); }
+.lente { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px; min-width: 0; flex: 1; }
+.lente .lz { position: relative; width: 34px; height: 34px; border-radius: 50%; margin-bottom: 6px; background: radial-gradient(circle at 50% 50%, #0B1522 0 30%, #1D3550 31% 44%, #0B1522 45% 100%); box-shadow: 0 0 0 3px #DCE3EB, 0 0 0 4px #C3CDD8, 0 3px 8px rgba(11, 21, 34, 0.25); }
+.lente .lz::after { content: ""; position: absolute; left: 26%; top: 22%; width: 22%; height: 22%; border-radius: 50%; background: rgba(160, 200, 255, 0.55); filter: blur(0.5px); }
+.lente .lz.g { width: 44px; height: 44px; margin-bottom: 1px; margin-top: -5px; }
+.lente b { font-size: 19px; font-weight: 800; line-height: 1; color: var(--ink); }
+.lente small { font-size: 11.5px; font-weight: 600; color: var(--muted); line-height: 1.2; }
 .spcam { margin: 16px 6px 0; border-top: 1px solid var(--line); }
 .spcam > div { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; padding: 11px 0; }
 .spcam > div + div { border-top: 1px solid var(--line); }
@@ -263,9 +276,9 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .ficha .foto { background: var(--card); border-radius: 22px; aspect-ratio: 1 / 1; max-width: 100%; max-height: 46vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
 .ficha .foto img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
 .ficha .datos { display: flex; flex-direction: column; gap: 4px; }
-.ficha h1 { font-size: 24px; }
+.ficha h1 { font-size: 27px; font-weight: 800; font-stretch: 112%; letter-spacing: -0.5px; line-height: 1.05; }
 .ficha .dt { font-size: 14px; white-space: normal; }
-.ficha .pr { font-size: 34px; letter-spacing: -1px; margin-top: 8px; line-height: 1; }
+.ficha .pr { font-size: 36px; font-stretch: 112%; letter-spacing: -1px; margin-top: 10px; line-height: 1; }
 .ficha .cq { font-size: 13.5px; font-weight: 700; color: var(--green); }
 .pagos { display: flex; flex-direction: column; gap: 10px; background: var(--card); border-radius: 16px; padding: 14px; }
 .pagos b { font-size: 14px; font-weight: 800; }
@@ -643,16 +656,19 @@ const ICO_SP = {
 const icoSp = k => `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO_SP[k]}</svg>`;
 function fichaSpecs(f, det) {
   const tr = f.traseras || [], ppal = tr[0] ? tr[0][0] : '';
-  const alm = ((det || '').match(/(\d+\s?(GB|TB))(?!\s*RAM)/i) || [])[1], ram = ((det || '').match(/(\d+\s?GB)\s*RAM/i) || [])[1];
-  const bat = f.bat_nota === 'mAh' ? `${esc(f.bateria)}<i>mAh</i>` : `<i class="pre">hasta</i>${esc(f.bateria.replace(/^Hasta\s+/i, ''))}`;
-  const cols = [alm ? ['memoria', esc(alm), ram ? `Almacenamiento · ${esc(ram)} RAM` : 'Almacenamiento', 'clave'] : null, ['pantalla', esc(f.pantalla), 'Pantalla'], ppal ? ['camara', esc(ppal), 'Cámara principal'] : null, ['bateria', bat, f.bat_nota === 'mAh' ? 'Batería' : 'Batería en video']].filter(Boolean);
-  const filas = [];
-  if (tr.length) filas.push([tr.length > 1 ? 'Cámaras traseras' : 'Cámara trasera', tr.map(([mp, t]) => `<span><b>${esc(mp)}</b>${esc(t)}</span>`).join('')]);
-  if (f.frontal) filas.push(['Cámara frontal', `<span><b>${esc(f.frontal)}</b></span>`]);
+  const alm = ((det || '').match(/(\d+)\s?(GB|TB)(?!\s*RAM)/i) || []), ram = ((det || '').match(/(\d+\s?GB)\s*RAM/i) || [])[1];
+  const num = (v, u) => `<b>${esc(v)}${u ? `<i>${esc(u)}</i>` : ''}</b>`;
+  const pant = String(f.pantalla).replace('"', '');
+  const mp = s2 => String(s2).replace(/\s*MP$/i, '');
+  const bat = f.bat_nota === 'mAh' ? num(f.bateria, 'mAh') : `<b><i class="pre">hasta</i>${esc(String(f.bateria).replace(/^Hasta\s+/i, '').replace(/\s*h$/, ''))}<i>h</i></b>`;
+  const stats = [['pantalla', `<b>${esc(pant)}<i class="in">"</i></b>`, 'Pantalla'], ppal ? ['camara', num(mp(ppal), 'MP'), 'Cámara'] : null, ['bateria', bat, f.bat_nota === 'mAh' ? 'Batería' : 'Autonomía']].filter(Boolean);
+  const lente = (m, t, i) => `<div class="lente"><span class="lz${i === 0 ? ' g' : ''}" aria-hidden="true"></span><b>${esc(mp(m))}<i>MP</i></b><small>${esc(t)}</small></div>`;
   return `<section class="specs" aria-label="Características">
-    ${cols.filter(c => c[3]).map(([k, v, l]) => `<div class="spclave"><span class="si">${icoSp(k)}</span><span class="sv"><b>${v}</b><small>${l}</small></span></div>`).join('')}
-    <div class="sp3">${cols.filter(c => !c[3]).map(([k, v, l]) => `<div><span class="si">${icoSp(k)}</span><b>${v}</b><small>${l}</small></div>`).join('')}</div>
-    ${filas.length ? `<dl class="spcam">${filas.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>` : ''}
+    <p class="ey">Características</p>
+    ${alm[1] ? `<div class="spclave"><div><p class="ey">Almacenamiento</p><b>${esc(alm[1])}<i>${esc(alm[2].toUpperCase())}</i></b></div>${ram ? `<span class="ram">${esc(ram)} RAM</span>` : ''}</div>` : ''}
+    <div class="sp3">${stats.map(([k, v, l]) => `<div><span class="si">${icoSp(k)}</span>${v}<small>${l}</small></div>`).join('')}</div>
+    ${tr.length ? `<div class="cams"><p class="ey">${tr.length > 1 ? 'Cámaras traseras' : 'Cámara trasera'}${f.frontal ? '<span>Frontal</span>' : ''}</p>
+      <div class="lentes"><div class="tras">${tr.map(([m, t], i) => lente(m, t, i)).join('')}</div>${f.frontal ? `<div class="front">${lente(f.frontal, 'selfie', 1)}</div>` : ''}</div></div>` : ''}
   </section>`;
 }
 function vFicha(p) {
@@ -668,9 +684,9 @@ function vFicha(p) {
           ${pr ? `<span class="pr">${pr}</span><span class="cq">Contado / transferencia</span><span class="como">Te confirmamos stock por WhatsApp.</span>` : `<span class="pr sin" style="font-size:18px">${p.tag === 'ingresa' ? 'Ingresa muy pronto' : 'Consultá el precio'}</span>`}</div>
         <button class="icon-btn" type="button" id="share" aria-label="Copiar link de este producto">${ico('share', 20)}</button>
       </div>
-      ${p.specs ? fichaSpecs(p.specs, p.det) : ''}
       ${p.rubro === 'celulares' ? promoCel(p.sub) : ''}
       ${pr ? `<div class="pagos"><b>También en 3, 6 y 12 cuotas</b><div class="logos">${LOGOS.map(l => `<img src="${l.src}" alt="${l.alt}">`).join('')}</div></div>` : ''}
+      ${p.specs ? fichaSpecs(p.specs, p.det) : ''}
     </article>
     ${otros.length ? `<section><p class="label">Más en ${esc(p.sub || r.nombre)}</p><div class="list">${otros.map(itemLista).join('')}</div></section>` : ''}
     <div class="buy"><div class="wrap">
