@@ -158,6 +158,25 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 /* Rubro: encabezado y herramientas */
 .rh { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .icon-btn { flex-shrink: 0; width: 44px; height: 44px; border-radius: 999px; border: 0; background: var(--card); color: var(--navy); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.08); }
+.rtop { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; }
+.rtop .crumb { width: 44px; height: 44px; padding: 0; justify-content: center; }
+.rtop h1 { font-size: 24px; line-height: 1.1; }
+.rtop .sub { margin: 2px 0 0; }
+.subtiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.subtiles button { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px 9px; border: 0; border-radius: 16px; background: var(--card); color: var(--ink); font: inherit; cursor: pointer; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.06); }
+.subtiles .sf { width: 56px; height: 56px; display: grid; place-items: center; margin-bottom: 4px; color: var(--navy); }
+.subtiles .sf img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.subtiles b { font-size: 13.5px; font-weight: 800; line-height: 1.15; text-align: center; }
+.subtiles small { font-size: 12px; font-weight: 600; color: var(--muted); }
+.subtiles button:active { transform: scale(0.97); }
+.subsel { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 8px 8px 14px; border-radius: 14px; background: var(--card); }
+.subsel span { font-size: 16px; font-weight: 800; }
+.subsel small { font-size: 13px; font-weight: 600; color: var(--muted); margin-left: 4px; }
+.subsel button { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border: 0; border-radius: 999px; background: var(--paper); color: var(--navy); font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; }
+.grupo { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+.grupo h2 { font-size: 18px; font-weight: 800; margin: 4px 2px 0; }
+.grupo h2 small { font-size: 13px; font-weight: 600; color: var(--muted); margin-left: 4px; }
+@media (min-width: 700px) { .subtiles { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
 .subs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); }
 .subs::-webkit-scrollbar { display: none; }
 .subs button { flex-shrink: 0; height: 36px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--card); font-size: 14px; font-weight: 700; cursor: pointer; white-space: nowrap; box-shadow: inset 0 0 0 1.5px var(--line); }
@@ -301,6 +320,7 @@ const P = {
   parlante: '<rect x="6" y="2" width="12" height="20" rx="2"/><circle cx="12" cy="14" r="4"/><path d="M12 6h.01"/>',
   microfono: '<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4M8 22h8"/>',
   camara: '<path d="M3 7h11l4 3v4l-4 3H3z"/><circle cx="9" cy="12" r="2.5"/><path d="M18 12h3M21 9v6"/>',
+  x: '<path d="M6 6l12 12M18 6L6 18"/>',
   computacion: '<rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20"/>',
   redes: '<path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1"/><path d="M2 9.5a15 15 0 0 1 20 0"/>',
   memorias: '<rect x="7" y="9" width="10" height="13" rx="2"/><path d="M9 9V3h6v6"/><path d="M10.5 5.5h.01M13.5 5.5h.01"/>',
@@ -465,6 +485,21 @@ function montarVidriera() {
   el.addEventListener('pointerup', soltar); el.addEventListener('pointercancel', soltar); el.addEventListener('pointerleave', soltar);
   el.addEventListener('click', e => { if (desliz) { e.preventDefault(); e.stopPropagation(); desliz = false; } }, true);
 }
+/* El buscador sugiere solo: escribe "Buscá: cargador…", "Buscá: iPhone…" (solo términos con resultados) */
+(function placeholderVivo() {
+  const base = 'Buscar productos';
+  const ok = SUGERENCIAS.filter(q => { const w = norm(q).split(/\s+/); return DATA.productos.some(p => w.every(x => norm(p.nombre + ' ' + (p.sub || '') + ' ' + (p.det || '')).includes(x))); });
+  if (!ok.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let i = 0, j = 0, borrando = false, espera = 0;
+  setInterval(() => {
+    if (document.activeElement === buscar || buscar.value) { buscar.placeholder = base; return; }
+    if (espera > 0) { espera--; return; }
+    const t = ok[i % ok.length];
+    if (!borrando) { j++; if (j >= t.length) { borrando = true; espera = 14; } }
+    else { j--; if (j <= 0) { borrando = false; i++; espera = 3; } }
+    buscar.placeholder = 'Buscá: ' + t.slice(0, Math.max(j, 0));
+  }, 90);
+})();
 function sugerencias() {
   const ok = SUGERENCIAS.filter(q => { const w = norm(q).split(/\s+/); return DATA.productos.some(p => w.every(x => norm(p.nombre + ' ' + (p.sub || '') + ' ' + (p.det || '')).includes(x))); }).slice(0, 6);
   return ok.length ? `<div class="subs sugs" role="group" aria-label="Búsquedas rápidas"><span class="sug-t">Probá:</span>${ok.map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join('')}</div>` : '';
@@ -493,7 +528,6 @@ function vInicio() {
   const nuevos = DATA.productos.filter(p => p.tag === 'ingresa' || p.nuevo).slice(0, 8);
   vista.innerHTML = `
     ${vidriera()}
-    <section style="display:flex;flex-direction:column;gap:10px"><h1 style="font-size:22px">¿Qué estás buscando?</h1>${sugerencias()}</section>
     ${celCard()}
     <section class="tiles" aria-label="Rubros">${(() => { const rs = DATA.rubros.filter(r => r.inicio && r.id !== 'celulares'); return rs.map((r, i) => {
       const n = DATA.productos.filter(p => p.rubro === r.id).length;
@@ -507,7 +541,6 @@ function vInicio() {
   vista.querySelectorAll('.recent .item').forEach((el, i) => el.style.borderTop = i ? '' : '0');
   montarVidriera();
   vista.querySelectorAll('.cc-marcas button').forEach(b => b.onclick = () => { marcaPend = b.dataset.s; location.hash = '#celulares'; });
-  vista.querySelectorAll('.sugs button').forEach(b => b.onclick = () => { buscar.value = b.dataset.q; buscar.dispatchEvent(new Event('input')); buscar.focus(); });
 }
 
 function vRubros() {
@@ -523,25 +556,33 @@ function vRubros() {
 function vRubro(id) {
   const r = RUBRO[id];
   const todos = DATA.productos.filter(p => p.rubro === id);
-  const subs = [...new Set(todos.map(p => p.sub).filter(Boolean))];
+  const ORD_CEL = ['iPhone', 'Samsung', 'Motorola', 'Xiaomi', 'Usados'];
+  const cuenta = s => todos.filter(p => p.sub === s).length;
+  let subs = [...new Set(todos.map(p => p.sub).filter(Boolean))];
+  subs = id === 'celulares' ? subs.sort((a, b) => ((ORD_CEL.indexOf(a) + 1) || 99) - ((ORD_CEL.indexOf(b) + 1) || 99)) : subs.sort((a, b) => cuenta(b) - cuenta(a));
   if (!['Todos', ...subs].includes(subSel)) subSel = 'Todos';
   const ps = ordenar(subSel === 'Todos' ? todos : todos.filter(p => p.sub === subSel));
   const demo = todos.every(p => p.tag === 'ejemplo');
+  const fotoSub = s => { const p = todos.find(x => x.sub === s && x.foto); return p ? `<img src="${p.foto}" alt="" loading="lazy">` : ico(r.icon || id, 26, 1.8); };
+  let filtro = '';
+  if (subs.length > 1 && subSel !== 'Todos') filtro = `<div class="subsel"><span>${esc(subTxt(subSel))} <small>${cuenta(subSel)}</small></span><button type="button" data-s="Todos">Ver todo ${esc(r.nombre)} ${ico('x', 14, 2.6)}</button></div>`;
+  else if (subs.length > 2) filtro = `<div class="subtiles" role="group" aria-label="Elegí qué buscás">${subs.map(s => `<button type="button" data-s="${esc(s)}"><span class="sf">${fotoSub(s)}</span><b>${esc(subTxt(s))}</b><small>${cuenta(s)}</small></button>`).join('')}</div>`;
+  else if (subs.length === 2) filtro = `<div class="subs" role="group" aria-label="Tipo">${['Todos', ...subs].map(s => `<button type="button" data-s="${esc(s)}" aria-pressed="${s === subSel}">${esc(subTxt(s))}</button>`).join('')}</div>`;
+  // "Todos": agrupado por subrubro, para no mezclar un adaptador con los routers
+  const agrupar = subSel === 'Todos' && subs.length > 2;
+  const lista = agrupar ? subs.map(s => `<section class="grupo"><h2>${esc(subTxt(s))} <small>${cuenta(s)}</small></h2>${resultados(ordenar(todos.filter(p => p.sub === s)))}</section>`).join('') : resultados(ps);
   vista.innerHTML = `
     <section style="display:flex;flex-direction:column;gap:12px">
-      <a class="crumb" href="#inicio">${ico('back', 18, 2.4)}Volver</a>
-      <div class="rban" style="--tint:${r.tint || '#E3ECF7'}"><div class="rbt"><h1>${esc(r.nombre)}</h1><p class="sub">${todos.length} producto${todos.length === 1 ? '' : 's'}</p></div>
-        ${r.rec ? `<img src="${r.rec}" alt="">` : ''}
+      <div class="rtop"><a class="crumb" href="#inicio" aria-label="Volver">${ico('back', 18, 2.4)}</a><div class="rtt"><h1>${esc(r.nombre)}</h1><p class="sub">${todos.length} producto${todos.length === 1 ? '' : 's'}</p></div>
         <button class="icon-btn" type="button" id="share" aria-label="Copiar link de ${esc(r.nombre)}">${ico('share', 20)}</button></div>
-      ${subs.length > 1 ? `<div class="subs" role="group" aria-label="Tipo">${['Todos', ...subs].map(s => `<button type="button" data-s="${esc(s)}" aria-pressed="${s === subSel}">${esc(subTxt(s))}</button>`).join('')}</div>` : ''}
+      ${filtro}
       ${id === 'celulares' ? promoCel(subSel) : ''}
       ${demo ? '<div class="nota">Rubro de ejemplo. Se completa con los productos que marques en TODO PC Listas.</div>' : ''}
       ${herramientas()}
     </section>
-    ${resultados(ps)}`;
+    ${lista}`;
   $('share').onclick = () => copiar(location.href.split('#')[0] + '#' + id, 'Link del rubro copiado');
-  vista.querySelectorAll('.subs button').forEach(b => b.onclick = () => { subSel = b.dataset.s; vRubro(id); });
-  { const act = vista.querySelector('.subs [aria-pressed="true"]'), fila = act && act.parentElement; if (fila && act.offsetLeft + act.offsetWidth > fila.clientWidth) fila.scrollLeft = act.offsetLeft - 16; }
+  vista.querySelectorAll('.subs button, .subtiles button, .subsel button').forEach(b => b.onclick = () => { subSel = b.dataset.s; vRubro(id); window.scrollTo({ top: 0 }); });
   conectarHerramientas(() => vRubro(id));
 }
 
