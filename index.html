@@ -372,6 +372,7 @@ const badge = p => BADGE[p.tag] ? `<span class="badge ${p.tag}">${BADGE[p.tag]}<
 const itemLista = p => `<a class="item" href="#p-${p.id}"><div class="ph">${foto(p, 30)}</div><div class="bd">${badge(p)}<span class="nm">${esc(p.nombre)}</span>${p.det ? `<span class="dt">${esc(p.det)}</span>` : ''}${precio(p)}</div><span class="chev">${ico('chev', 18, 2.4)}</span></a>`;
 const itemGrilla = p => `<a class="card" href="#p-${p.id}"><div class="ph">${foto(p, 34)}</div><div class="bd">${badge(p)}<span class="nm">${esc(p.nombre)}</span>${p.det ? `<span class="dt">${esc(p.det)}</span>` : ''}${precio(p)}</div></a>`;
 const resultados = ps => vistaModo === 'grilla' ? `<section class="grid">${ps.map(itemGrilla).join('')}</section>` : `<section class="list">${ps.map(itemLista).join('')}</section>`;
+const subTxt = s => s === 'Usados' ? 'iPhone usados' : s;   // los usados son solo iPhone
 const promoCel = sub => sub === 'Usados'
   ? `<div class="promo"><span class="st">Incluye</span><span>Caja<b>+</b>Cargador<b>+</b>Vidrio<b>+</b>Funda<b>+</b>Garantía</span></div>`
   : `<div class="promo"><span class="st">¡De regalo!</span><span>Cargador original<b>+</b>Vidrio templado<b>+</b>Funda</span></div>`;
@@ -506,7 +507,7 @@ function celCard() {
   const marcas = ['iPhone', 'Samsung', 'Motorola', 'Xiaomi', 'Usados'].map(m => [m, ps.filter(p => p.sub === m).length]).filter(x => x[1]);
   return `<section class="celcard" aria-label="Celulares">
     <a class="cc-top" href="#celulares"><span class="cc-txt"><b>Celulares</b><small>${ps.length} modelos</small><span class="cc-ver">Ver todos ${ico('chev', 14, 2.6)}</span></span><span class="cc-img" aria-hidden="true">${imgs.map(i => `<img src="${i}" alt="">`).join('')}</span></a>
-    <div class="cc-marcas n${marcas.length}" role="group" aria-label="Marcas">${marcas.map(([m, n]) => `<button type="button" data-s="${esc(m)}"><span>${esc(m)}</span><small>${n} ${n === 1 ? 'modelo' : 'modelos'}</small></button>`).join('')}</div>
+    <div class="cc-marcas n${marcas.length}" role="group" aria-label="Marcas">${marcas.map(([m, n]) => `<button type="button" data-s="${esc(m)}"><span>${esc(subTxt(m))}</span><small>${n} ${n === 1 ? 'modelo' : 'modelos'}</small></button>`).join('')}</div>
   </section>`;
 }
 function vInicio() {
@@ -536,7 +537,7 @@ function vRubros() {
     <section class="rlist">${DATA.rubros.map(r => {
       const ps = DATA.productos.filter(p => p.rubro === r.id);
       const subs = [...new Set(ps.map(p => p.sub).filter(Boolean))];
-      return `<a class="rrow" href="#${r.id}" style="--tint:${r.dark ? '#FFF1CF' : (r.tint || '#E8F0FA')}"><span class="ic">${r.rec ? `<img src="${r.rec}" alt="">` : ico(r.icon || r.id, 22, 1.9)}</span><span class="tx"><b>${esc(r.nombre)}</b><small>${esc(subs.join(' · ') || ' ')}</small></span><span class="n">${ps.length}</span><span class="chev">${ico('chev', 18, 2.4)}</span></a>`;
+      return `<a class="rrow" href="#${r.id}" style="--tint:${r.dark ? '#FFF1CF' : (r.tint || '#E8F0FA')}"><span class="ic">${r.rec ? `<img src="${r.rec}" alt="">` : ico(r.icon || r.id, 22, 1.9)}</span><span class="tx"><b>${esc(r.nombre)}</b><small>${esc(subs.map(subTxt).join(' · ') || ' ')}</small></span><span class="n">${ps.length}</span><span class="chev">${ico('chev', 18, 2.4)}</span></a>`;
     }).join('')}</section>`;
 }
 
@@ -553,7 +554,7 @@ function vRubro(id) {
       <div class="rban" style="--tint:${r.tint || '#E3ECF7'}"><div class="rbt"><h1>${esc(r.nombre)}</h1><p class="sub">${todos.length} producto${todos.length === 1 ? '' : 's'}</p></div>
         ${r.rec ? `<img src="${r.rec}" alt="">` : ''}
         <button class="icon-btn" type="button" id="share" aria-label="Copiar link de ${esc(r.nombre)}">${ico('share', 20)}</button></div>
-      ${subs.length > 1 ? `<div class="subs" role="group" aria-label="Tipo">${['Todos', ...subs].map(s => `<button type="button" data-s="${esc(s)}" aria-pressed="${s === subSel}">${esc(s)}</button>`).join('')}</div>` : ''}
+      ${subs.length > 1 ? `<div class="subs" role="group" aria-label="Tipo">${['Todos', ...subs].map(s => `<button type="button" data-s="${esc(s)}" aria-pressed="${s === subSel}">${esc(subTxt(s))}</button>`).join('')}</div>` : ''}
       ${id === 'celulares' ? promoCel(subSel) : ''}
       ${demo ? '<div class="nota">Rubro de ejemplo. Se completa con los productos que marques en TODO PC Listas.</div>' : ''}
       ${herramientas()}
@@ -561,6 +562,7 @@ function vRubro(id) {
     ${resultados(ps)}`;
   $('share').onclick = () => copiar(location.href.split('#')[0] + '#' + id, 'Link del rubro copiado');
   vista.querySelectorAll('.subs button').forEach(b => b.onclick = () => { subSel = b.dataset.s; vRubro(id); });
+  { const act = vista.querySelector('.subs [aria-pressed="true"]'), fila = act && act.parentElement; if (fila && act.offsetLeft + act.offsetWidth > fila.clientWidth) fila.scrollLeft = act.offsetLeft - 16; }
   conectarHerramientas(() => vRubro(id));
 }
 
