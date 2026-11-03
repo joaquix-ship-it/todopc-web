@@ -667,7 +667,23 @@
    "foto": "fotos/cel-redmi-note-15-256-gb.jpg",
    "id": "redmi-note-15-256-gb",
    "nuevo": false,
-   "alta": "2026-11-01"
+   "alta": "2026-11-01",
+   "specs": {
+    "pantalla": "6,77\"",
+    "traseras": [
+     [
+      "108 MP",
+      "principal"
+     ],
+     [
+      "2 MP",
+      "profundidad"
+     ]
+    ],
+    "frontal": "20 MP",
+    "bateria": "6.000",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
@@ -679,7 +695,23 @@
    "foto": "fotos/cel-redmi-note-15-pro-256-gb.jpg",
    "id": "redmi-note-15-pro-256-gb",
    "nuevo": false,
-   "alta": "2026-11-01"
+   "alta": "2026-11-01",
+   "specs": {
+    "pantalla": "6,77\"",
+    "traseras": [
+     [
+      "200 MP",
+      "principal"
+     ],
+     [
+      "8 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "32 MP",
+    "bateria": "6.500",
+    "bat_nota": "mAh"
+   }
   },
   {
    "rubro": "celulares",
