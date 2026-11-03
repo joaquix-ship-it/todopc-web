@@ -191,6 +191,7 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .subchips button[aria-pressed="true"] small { color: rgba(255, 255, 255, 0.75); }
 .subchips button[aria-pressed="true"] .cf { background: #FFFFFF; }
 .subtiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.subtiles.n2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .subtiles button { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px 9px; border: 0; border-radius: 16px; background: var(--card); color: var(--ink); font: inherit; cursor: pointer; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.06); }
 .subtiles .sf { width: 56px; height: 56px; display: grid; place-items: center; margin-bottom: 4px; color: var(--navy); }
 .subtiles .sf img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; }
@@ -204,7 +205,7 @@ h1 { margin: 0; font-size: 25px; font-weight: 800; font-stretch: 112%; letter-sp
 .grupo { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
 .grupo h2 { font-size: 18px; font-weight: 800; margin: 4px 2px 0; }
 .grupo h2 small { font-size: 13px; font-weight: 600; color: var(--muted); margin-left: 4px; }
-@media (min-width: 700px) { .subtiles { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+@media (min-width: 700px) { .subtiles { grid-template-columns: repeat(6, minmax(0, 1fr)); } .subtiles.n2 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .subs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); }
 .subs::-webkit-scrollbar { display: none; }
 .subs button { flex-shrink: 0; height: 36px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--card); font-size: 14px; font-weight: 700; cursor: pointer; white-space: nowrap; box-shadow: inset 0 0 0 1.5px var(--line); }
@@ -683,11 +684,10 @@ function vRubro(id) {
   const demo = todos.every(p => p.tag === 'ejemplo');
   const fotoSub = s => { const p = todos.find(x => x.sub === s && x.foto); return p ? `<img src="${p.foto}" alt="" loading="lazy">` : ico(r.icon || id, 26, 1.8); };
   let filtro = '';
-  if (subs.length > 2 && subSel !== 'Todos') filtro = `<div class="subchips" role="group" aria-label="Elegí qué buscás"><button type="button" data-s="Todos"><span class="cf">${ico('todos', 18, 2)}</span>Todos</button>${subs.map(s2 => `<button type="button" data-s="${esc(s2)}" aria-pressed="${s2 === subSel}"><span class="cf">${fotoSub(s2)}</span>${esc(subTxt(s2))}<small>${cuenta(s2)}</small></button>`).join('')}</div>`;
-  else if (subs.length > 2) filtro = `<div class="subtiles" role="group" aria-label="Elegí qué buscás">${subs.map(s => `<button type="button" data-s="${esc(s)}"><span class="sf">${fotoSub(s)}</span><b>${esc(subTxt(s))}</b><small>${cuenta(s)}</small></button>`).join('')}</div>`;
-  else if (subs.length === 2) filtro = `<div class="subs" role="group" aria-label="Tipo">${['Todos', ...subs].map(s => `<button type="button" data-s="${esc(s)}" aria-pressed="${s === subSel}">${esc(subTxt(s))}</button>`).join('')}</div>`;
+  if (subs.length > 1 && subSel !== 'Todos') filtro = `<div class="subchips" role="group" aria-label="Elegí qué buscás"><button type="button" data-s="Todos"><span class="cf">${ico('todos', 18, 2)}</span>Todos</button>${subs.map(s2 => `<button type="button" data-s="${esc(s2)}" aria-pressed="${s2 === subSel}"><span class="cf">${fotoSub(s2)}</span>${esc(subTxt(s2))}<small>${cuenta(s2)}</small></button>`).join('')}</div>`;
+  else if (subs.length > 1) filtro = `<div class="subtiles n${Math.min(subs.length, 3)}" role="group" aria-label="Elegí qué buscás">${subs.map(s => `<button type="button" data-s="${esc(s)}"><span class="sf">${fotoSub(s)}</span><b>${esc(subTxt(s))}</b><small>${cuenta(s)}</small></button>`).join('')}</div>`;
   // "Todos": agrupado por subrubro, para no mezclar un adaptador con los routers
-  const agrupar = subSel === 'Todos' && subs.length > 2;
+  const agrupar = subSel === 'Todos' && subs.length > 1;
   const lista = agrupar ? subs.map(s => `<section class="grupo"><h2>${esc(subTxt(s))} <small>${cuenta(s)}</small></h2>${resultados(ordenar(todos.filter(p => p.sub === s)))}</section>`).join('') : resultados(ps);
   vista.innerHTML = `
     <section style="display:flex;flex-direction:column;gap:12px">
