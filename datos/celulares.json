@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-02T18:56:54",
+ "generado": "2026-11-04T22:34:51",
  "origen": "Precios App",
  "productos": [
   {
@@ -289,6 +289,17 @@
    "ingreso": "2026-07-20 12:36:38"
   },
   {
+   "id": "iphone-13-128-gb-usado-2",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 13",
+   "det": "128 GB · Black · batería 89 %",
+   "precio": 639000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-04 21:41:56"
+  },
+  {
    "id": "iphone-14-128-gb-usado",
    "rubro": "celulares",
    "sub": "Usados",
@@ -300,23 +311,12 @@
    "ingreso": "2026-07-10 23:15:43"
   },
   {
-   "id": "iphone-14-plus-128-gb-usado",
-   "rubro": "celulares",
-   "sub": "Usados",
-   "nombre": "iPhone 14 Plus",
-   "det": "128 GB · Black · batería 100 % · Batería reemplazada original",
-   "precio": 729000,
-   "tag": "usado",
-   "foto": null,
-   "ingreso": "2026-10-19 13:11:54"
-  },
-  {
    "id": "iphone-15-128-gb-usado",
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 15",
-   "det": "128 GB · Blue 86 % (2) · Black 85 %",
-   "precio": 899000,
+   "det": "128 GB · Blue 86 % · Black 85 %",
+   "precio": 859000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-10-08 11:23:58"
@@ -327,32 +327,43 @@
    "sub": "Usados",
    "nombre": "iPhone 15 Pro",
    "det": "128 GB · Blue Titanium · batería 86 %",
-   "precio": 1070000,
+   "precio": 1049000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-07-10 23:17:02"
+  },
+  {
+   "id": "iphone-15-pro-256-gb-usado",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 15 Pro",
+   "det": "256 GB · Black · batería 89 %",
+   "precio": 1089000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-04 21:36:39"
   },
   {
    "id": "iphone-16-128-gb-usado",
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 16",
-   "det": "128 GB · White 92 % · White 91 %",
-   "precio": 1149000,
+   "det": "128 GB · Black · batería 87 %",
+   "precio": 1090000,
    "tag": "usado",
    "foto": null,
-   "ingreso": "2026-09-15 12:28:51"
+   "ingreso": "2026-09-15 12:24:25"
   },
   {
    "id": "iphone-16-128-gb-usado-2",
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 16",
-   "det": "128 GB · Black · batería 98 %",
-   "precio": 1189000,
+   "det": "128 GB · White 92 % · White 91 %",
+   "precio": 1109000,
    "tag": "usado",
    "foto": null,
-   "ingreso": "2026-09-15 12:24:25"
+   "ingreso": "2026-09-15 12:28:51"
   },
   {
    "id": "iphone-16-pro-128-gb-usado",
@@ -364,6 +375,17 @@
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-10-19 13:13:52"
+  },
+  {
+   "id": "iphone-17-256-gb-usado",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 17",
+   "det": "256 GB · Verde · batería 97 %",
+   "precio": 1399000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-04 21:40:02"
   }
  ]
 }
