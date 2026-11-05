@@ -94,7 +94,7 @@
       "tag": null,
       "foto": "fotos/cel-iphone-17-256-gb.jpg",
       "id": "iphone-17-256-gb",
-      "nuevo": false,
+      "nuevo": true,
       "alta": "2026-11-01",
       "specs": {
         "pantalla": "6,3\"",
@@ -954,7 +954,7 @@
       "tag": "usado",
       "foto": "https://youget.pt/245640-large_default/apple-iphone-17-63-256gb-verde-salvia.jpg",
       "id": "iphone-17-256-gb-usado",
-      "nuevo": true,
+      "nuevo": false,
       "alta": "2026-11-04",
       "specs": {
         "pantalla": "6,3\"",
@@ -971,7 +971,8 @@
         "frontal": "18 MP",
         "bateria": "Hasta 30 h",
         "bat_nota": "de video"
-      }
+      },
+      "estado": "vendido"
     },
     {
       "rubro": "mouses",
