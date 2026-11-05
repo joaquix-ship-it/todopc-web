@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="Cartucho de tóner genérico">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#394657"/>
+      <stop offset=".52" stop-color="#202c3b"/>
+      <stop offset="1" stop-color="#111c2a"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#536174"/>
+      <stop offset="1" stop-color="#263445"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#13233A" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M112 238 175 174h286l68 64v204l-56 52H158l-46-52z" fill="url(#body)"/>
+    <path d="m175 174 62-42h195l29 42z" fill="url(#top)"/>
+    <path d="m112 238 63-64h286l68 64-61 48H174z" fill="#344357"/>
+    <path d="M174 286h294v139H174z" fill="#202c3b"/>
+    <path d="M158 425h326l-41 69H196z" fill="#111c2a"/>
+    <path d="M204 205h229v44H204z" fill="#e9eef4" stroke="none"/>
+    <path d="M222 217h193" stroke="#7ABB4C" stroke-width="10"/>
+    <path d="M222 236h125" stroke="#aab5c2" stroke-width="7"/>
+    <path d="M148 262h-29v-31l43-43" fill="none"/>
+    <path d="M493 262h29v-31l-43-43" fill="none"/>
+    <path d="M202 307v92m27-92v92m27-92v92m27-92v92m27-92v92m27-92v92m27-92v92m27-92v92m27-92v92m27-92v92" stroke="#526174" stroke-width="8"/>
+    <path d="M176 460h290" stroke="#526174" stroke-width="7"/>
+    <circle cx="151" cy="300" r="13" fill="#7ABB4C"/>
+    <circle cx="489" cy="300" r="13" fill="#7ABB4C"/>
+    <path d="M246 139h146" stroke="#7ABB4C" stroke-width="16"/>
+    <path d="M230 520h180" stroke="#13233A" stroke-width="12"/>
+  </g>
+</svg>
