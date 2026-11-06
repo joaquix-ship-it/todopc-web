@@ -387,6 +387,81 @@ footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; hei
 .tab:active { background: var(--paper); }
 .crumb { display: inline-flex; align-self: flex-start; align-items: center; gap: 4px; height: 40px; padding: 0 14px 0 8px; border-radius: 999px; background: var(--card); font-size: 15px; font-weight: 800; color: var(--navy); box-shadow: 0 1px 2px rgba(19, 35, 58, 0.08); }
 .buy { bottom: calc(65px + env(safe-area-inset-bottom, 0px)) !important; padding-block: 10px !important; box-shadow: 0 -4px 16px rgba(19, 35, 58, 0.06); }
+
+/* Tomamos tu iPhone */
+.tm-ban { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 18px 18px 18px 20px; border-radius: 22px; background: linear-gradient(120deg, var(--night) 0%, #0A3A63 60%, var(--navy) 100%); color: #FFFFFF; overflow: hidden; isolation: isolate; }
+.tm-ban::after { content: ""; position: absolute; right: -40px; bottom: -60px; width: 190px; height: 190px; border-radius: 50%; background: radial-gradient(circle, rgba(122, 187, 76, 0.45), rgba(122, 187, 76, 0) 70%); z-index: -1; }
+.tm-ban .k { display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.tm-ban b { display: block; font-family: var(--wide); font-size: 23px; font-weight: 900; font-stretch: 118%; letter-spacing: -0.5px; line-height: 1.05; }
+.tm-ban small { display: block; margin-top: 6px; font-size: 13.5px; font-weight: 600; color: rgba(255, 255, 255, 0.78); line-height: 1.35; }
+.tm-ban .go { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; background: var(--gold); color: var(--night); flex-shrink: 0; }
+.tm-ban.mini { padding: 14px 14px 14px 16px; border-radius: 18px; }
+.tm-ban.mini b { font-size: 18px; }
+.tm { width: 100%; display: flex; flex-direction: column; gap: 16px; padding-top: 14px; padding-bottom: 28px; max-width: 620px; margin: 0 auto; }
+.tm-hero { position: relative; border-radius: 26px; padding: 26px 22px 24px; background: linear-gradient(150deg, var(--night) 0%, #0A3A63 55%, var(--navy) 100%); color: #FFFFFF; overflow: hidden; isolation: isolate; }
+.tm-hero::after { content: ""; position: absolute; right: -70px; top: -70px; width: 240px; height: 240px; border-radius: 50%; background: radial-gradient(circle, rgba(122, 187, 76, 0.4), rgba(122, 187, 76, 0) 70%); z-index: -1; }
+.tm-hero .k { font-size: 12px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); }
+.tm-hero h1 { color: #FFFFFF; margin: 10px 0 10px; font-family: var(--wide); font-size: 34px; font-weight: 900; font-stretch: 120%; letter-spacing: -1px; line-height: 1; }
+.tm-hero p { margin: 0; font-size: 16px; line-height: 1.45; color: rgba(255, 255, 255, 0.85); font-weight: 500; }
+.tm-ben { list-style: none; margin: 18px 0 20px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.tm-ben li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; }
+.tm-ben li i { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: rgba(122, 187, 76, 0.22); color: var(--gold); display: inline-flex; align-items: center; justify-content: center; font-style: normal; font-size: 15px; }
+.tm-cta { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 56px; border: 0; border-radius: 16px; background: var(--gold); color: var(--night); font-size: 17px; font-weight: 900; letter-spacing: 0.3px; cursor: pointer; }
+.tm-cta:disabled { background: #C9D3DF; color: #6B7A8C; cursor: not-allowed; }
+.tm-cta.wa { background: var(--green); color: #FFFFFF; }
+.tm-cond { margin: 14px 0 0; font-size: 13px; line-height: 1.4; color: rgba(255, 255, 255, 0.72); font-weight: 600; }
+.tm-top { display: flex; align-items: center; gap: 12px; }
+.tm-top .tt { flex: 1; min-width: 0; }
+.tm-top .tt small { display: block; font-size: 12.5px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+.tm-top .tt h1 { margin: 2px 0 0; font-size: 24px; font-weight: 900; letter-spacing: -0.4px; line-height: 1.1; color: var(--night); }
+.tm-prog { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.tm-prog span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--navy), var(--gold)); transition: width 0.35s ease; }
+.tm-card { background: var(--card); border-radius: 20px; padding: 18px 16px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.06); }
+.tm-q { margin: 0; font-size: 17px; font-weight: 800; color: var(--night); line-height: 1.25; }
+.tm-q small { display: block; margin-top: 4px; font-size: 13.5px; font-weight: 600; color: var(--muted); }
+.tm-gen { font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--faint); margin: 4px 0 -4px; }
+.tm-ops { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.tm-ops.cap { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tm-ops.dos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tm-ops.tres { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tm-op { min-height: 52px; padding: 8px 10px; border-radius: 14px; border: 0; background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--line); font-size: 15px; font-weight: 800; color: var(--ink); cursor: pointer; line-height: 1.15; }
+.tm-op[aria-pressed="true"] { background: #E6F0FA; color: var(--navy); box-shadow: inset 0 0 0 2.5px var(--navy); }
+.tm-est { display: flex; flex-direction: column; gap: 8px; }
+.tm-est .tm-op { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; padding: 12px 14px; }
+.tm-est .tm-op small { font-size: 13px; font-weight: 600; color: var(--muted); }
+.tm-in { width: 100%; min-height: 54px; padding: 0 16px; border: 0; border-radius: 14px; background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--line); font-size: 17px; font-weight: 700; }
+textarea.tm-in { font-family: inherit; padding: 14px 16px; min-height: 92px; resize: vertical; font-size: 16px; font-weight: 600; }
+select.tm-in { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2300508A' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 42px; font-size: 16px; }
+.tm-in:focus { outline: 2px solid var(--navy); background-color: var(--card); }
+.tm-bat { display: flex; align-items: center; gap: 10px; }
+.tm-bat .tm-in { width: 130px; font-size: 30px; font-weight: 900; text-align: center; letter-spacing: -0.5px; }
+.tm-bat b { font-size: 30px; font-weight: 900; color: var(--night); }
+.tm-ayuda { display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border-radius: 14px; background: #EEF5FC; font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+.tm-ayuda i { font-style: normal; font-size: 18px; line-height: 1.2; }
+.tm-ayuda b { color: var(--navy); }
+.tm-fotos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tm-fotos div { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 112px; padding: 12px; border-radius: 16px; background: var(--paper); text-align: center; font-size: 14px; font-weight: 800; color: var(--night); }
+.tm-fotos svg { color: var(--navy); }
+.tm-nav { display: grid; grid-template-columns: auto 1fr; gap: 10px; }
+.tm-nav .tm-back { min-height: 56px; padding: 0 18px; border: 0; border-radius: 16px; background: var(--card); box-shadow: inset 0 0 0 1.5px var(--line); font-size: 16px; font-weight: 800; color: var(--navy); cursor: pointer; }
+.tm-falta { margin: -6px 0 0; font-size: 13.5px; font-weight: 700; color: var(--red); text-align: center; }
+.tm-res { display: flex; flex-direction: column; }
+.tm-res div { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 12px 0; border-top: 1px solid var(--line); }
+.tm-res div:first-child { border-top: 0; padding-top: 2px; }
+.tm-res dt { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+.tm-res dd { grid-column: 1; margin: 0; font-size: 15px; font-weight: 700; color: var(--ink); line-height: 1.35; }
+.tm-res a { grid-column: 2; grid-row: 1 / 3; align-self: center; font-size: 14px; font-weight: 800; color: var(--navy); padding: 8px 4px; }
+.tm-aviso { border-radius: 20px; padding: 18px 16px; background: #FFF6DC; box-shadow: inset 0 0 0 1.5px #F3D27A; display: flex; flex-direction: column; gap: 10px; }
+.tm-aviso h2 { margin: 0; font-size: 17px; font-weight: 900; color: #5C4300; }
+.tm-aviso p { margin: 0; font-size: 15px; line-height: 1.45; font-weight: 600; color: #3D2F05; }
+.tm-chk { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 10px 14px; border-radius: 14px; background: var(--card); box-shadow: inset 0 0 0 1.5px #E9C766; font-size: 16px; font-weight: 800; color: var(--night); cursor: pointer; }
+.tm-chk input { width: 24px; height: 24px; accent-color: var(--green); flex-shrink: 0; }
+.tm-ok { text-align: center; padding: 28px 18px; }
+.tm-ok .big { font-size: 52px; line-height: 1; }
+.tm-ok h1 { margin: 12px 0 8px; font-size: 26px; font-weight: 900; color: var(--night); }
+.tm-ok p { margin: 0 0 16px; font-size: 16px; line-height: 1.45; color: var(--muted); font-weight: 600; }
+@media (min-width: 900px) { .tm { padding-top: 24px; } .tm-hero { padding: 36px 34px 32px; } .tm-hero h1 { font-size: 44px; } }
+.tm-cta.apagado { opacity: 0.55; }
 </style>
 
 <header class="top">
@@ -637,6 +712,159 @@ function infoLocal() {
   </div></section>`;
 }
 
+/* Tomamos tu iPhone: cotización de usados como parte de pago (arma el mensaje y abre WhatsApp) */
+const TM_MODELOS = [
+  ['17', [['iPhone 17 Pro Max', [256, 512, 1024, 2048]], ['iPhone 17 Pro', [256, 512, 1024]], ['iPhone Air', [256, 512, 1024]], ['iPhone 17', [256, 512]], ['iPhone 17e', [256, 512]]]],
+  ['16', [['iPhone 16 Pro Max', [256, 512, 1024]], ['iPhone 16 Pro', [128, 256, 512, 1024]], ['iPhone 16', [128, 256, 512]], ['iPhone 16e', [128, 256, 512]]]],
+  ['15', [['iPhone 15 Pro Max', [256, 512, 1024]], ['iPhone 15 Pro', [128, 256, 512, 1024]], ['iPhone 15', [128, 256, 512]]]],
+  ['14', [['iPhone 14 Pro Max', [128, 256, 512, 1024]], ['iPhone 14 Pro', [128, 256, 512, 1024]], ['iPhone 14', [128, 256, 512]]]],
+  ['13', [['iPhone 13 Pro Max', [128, 256, 512, 1024]], ['iPhone 13 Pro', [128, 256, 512, 1024]], ['iPhone 13', [128, 256, 512]]]]
+];
+const TM_CAP = Object.fromEntries(TM_MODELOS.flatMap(g => g[1]));
+const gb = n => n >= 1024 ? (n / 1024) + ' TB' : n + ' GB';
+const TM_REP = ['Pantalla', 'Batería', 'Cámara', 'Face ID', 'Tapa trasera', 'Placa', 'Otra'];
+const TM_EST = [['Excelente', 'Como nuevo, sin marcas visibles'], ['Muy bueno', 'Marcas mínimas, casi no se notan'], ['Bueno', 'Rayones o marcas de uso a la vista'], ['Regular', 'Golpes, rayones fuertes o vidrio dañado']];
+const TM_PASOS = ['Tu iPhone', 'Batería', 'Reparaciones y fallas', 'Estado y caja', 'Fotos', 'Tus datos'];
+const TM_AVISO = 'Cuando tomamos tu iPhone, nos encargamos de todo: revisión, puesta a punto, garantía y reventa. Por eso pagamos un poco menos que entre particulares.';
+const TM_AVISO2 = 'Vos te ahorrás todo el trámite: lo traés y te vas estrenando. 📱';
+let TM = (() => { try { return JSON.parse(localStorage.getItem('tp-toma')) || {}; } catch (e) { return {}; } })();
+const tmGuardar = () => { try { localStorage.setItem('tp-toma', JSON.stringify(TM)); } catch (e) {} };
+const tmBat = () => { const n = Number(TM.bat); return Number.isInteger(n) && n >= 1 && n <= 100; };
+const TM_OK = [
+  () => TM.modelo && TM_CAP[TM.modelo] && TM_CAP[TM.modelo].includes(TM.cap),
+  () => tmBat() && TM.batCambio,
+  () => TM.rep && (TM.rep !== 'Sí' || (TM.repCuales || []).length) && TM.falla && (TM.falla !== 'Sí' || (TM.fallaTxt || '').trim().length > 2),
+  () => TM.estado && TM.caja && TM.cable && TM.compra,
+  () => true,
+  () => (TM.nombre || '').trim().split(/\s+/).filter(Boolean).length >= 2
+];
+const TM_FALTA = ['Elegí el modelo y la capacidad', 'Cargá el % de batería (de 1 a 100) y si se la cambiaron', 'Contanos si tuvo reparaciones y si tiene alguna falla', 'Elegí el estado y contanos si tenés caja, cable y cómo lo compraste', '', 'Escribí tu nombre y apellido'];
+const tmBan = (mini) => `<a class="tm-ban${mini ? ' mini' : ''}" href="#tomamos"><span><span class="k">Tomamos tu iPhone</span><b>Usalo como parte de pago</b><small>Cotizalo en 2 minutos y llevate tu celular nuevo.</small></span><span class="go" aria-hidden="true">${ico('chev', 22, 2.8)}</span></a>`;
+const tmOp = (campo, v, txt, sub) => `<button type="button" class="tm-op" data-c="${campo}" data-v="${esc(v)}" aria-pressed="${TM[campo] === v}">${txt || esc(v)}${sub ? `<small>${esc(sub)}</small>` : ''}</button>`;
+const tmSiNo = (campo, nose) => `<div class="tm-ops ${nose ? 'tres' : 'dos'}">${['Sí', 'No', ...(nose ? ['No sé'] : [])].map(v => tmOp(campo, v)).join('')}</div>`;
+function tmCelus() {
+  const ps = DATA.productos.filter(p => p.rubro === 'celulares' && p.sub !== 'Usados');
+  const subs = [...new Set(ps.map(p => p.sub))];
+  return `<select class="tm-in" id="tm-quiere"><option value="">Todavía no sé</option>${subs.map(s => `<optgroup label="${esc(s)}">${ps.filter(p => p.sub === s).map(p => { const v = p.nombre + (p.det ? ' ' + p.det.split('·')[0].trim() : ''); return `<option value="${esc(v)}" ${TM.quiere === v ? 'selected' : ''}>${esc(v)}</option>`; }).join('')}</optgroup>`).join('')}</select>`;
+}
+function tmPaso(n) {
+  if (n === 0) return `<div class="tm-card"><p class="tm-q">¿Qué iPhone tenés?<small>Lo ves en Ajustes → General → Información.</small></p>
+      ${TM_MODELOS.map(g => `<p class="tm-gen">iPhone ${g[0]}</p><div class="tm-ops">${g[1].map(m => tmOp('modelo', m[0], esc(m[0].replace('iPhone ', '')))).join('')}</div>`).join('')}</div>
+    ${TM.modelo && TM_CAP[TM.modelo] ? `<div class="tm-card" id="tm-capbox"><p class="tm-q">¿De cuánto almacenamiento?</p><div class="tm-ops cap">${TM_CAP[TM.modelo].map(c => `<button type="button" class="tm-op" data-c="cap" data-v="${c}" aria-pressed="${TM.cap === c}">${gb(c)}</button>`).join('')}</div>
+      <p class="tm-q" style="margin-top:6px">Color <small>Opcional</small></p><input class="tm-in" id="tm-color" maxlength="30" placeholder="Ej: negro, azul, natural" value="${esc(TM.color || '')}"></div>` : ''}`;
+  if (n === 1) return `<div class="tm-card"><p class="tm-q">¿Qué estado de batería tiene?<small>Es el dato más importante para cotizarlo.</small></p>
+      <div class="tm-bat"><input class="tm-in" id="tm-bat" type="number" inputmode="numeric" min="1" max="100" placeholder="00" value="${esc(TM.bat || '')}"><b>%</b></div>
+      <div class="tm-ayuda"><i>💡</i><span>Lo ves en <b>Ajustes → Batería → Estado de la batería</b>, en “Capacidad máxima”.</span></div></div>
+    <div class="tm-card"><p class="tm-q">¿Le cambiaron la batería alguna vez?</p>${tmSiNo('batCambio', true)}</div>`;
+  if (n === 2) return `<div class="tm-card"><p class="tm-q">¿Tuvo alguna reparación?</p>${tmSiNo('rep', true)}
+      ${TM.rep === 'Sí' ? `<p class="tm-q" style="margin-top:6px">¿Qué le cambiaron o repararon?<small>Podés marcar varias.</small></p><div class="tm-ops">${TM_REP.map(r => `<button type="button" class="tm-op" data-m="repCuales" data-v="${esc(r)}" aria-pressed="${(TM.repCuales || []).includes(r)}">${esc(r)}</button>`).join('')}</div>` : ''}</div>
+    <div class="tm-card"><p class="tm-q">¿Tiene alguna falla hoy?<small>Por ejemplo: Face ID, cámaras, parlante, carga, señal.</small></p>${tmSiNo('falla')}
+      ${TM.falla === 'Sí' ? `<textarea class="tm-in" id="tm-fallatxt" maxlength="300" placeholder="Contanos qué le pasa">${esc(TM.fallaTxt || '')}</textarea>` : ''}</div>`;
+  if (n === 3) return `<div class="tm-card"><p class="tm-q">¿Cómo está por fuera?</p><div class="tm-est">${TM_EST.map(e => tmOp('estado', e[0], '<span>' + e[0] + '</span>', e[1])).join('')}</div></div>
+    <div class="tm-card"><p class="tm-q">¿Tenés la caja?</p>${tmSiNo('caja')}<p class="tm-q" style="margin-top:6px">¿Tenés el cable o cargador?</p>${tmSiNo('cable')}
+      <p class="tm-q" style="margin-top:6px">¿Lo compraste nuevo o usado?</p><div class="tm-ops dos">${tmOp('compra', 'Nuevo')}${tmOp('compra', 'Usado')}</div></div>`;
+  if (n === 4) { const cam = '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
+    return `<div class="tm-card"><p class="tm-q">Preparate estas fotos<small>Nos las mandás por WhatsApp apenas envíes la cotización. Con buena luz, sin funda.</small></p>
+      <div class="tm-fotos">${['Frente con la pantalla encendida', 'Parte de atrás', 'Bordes y costados', 'Golpes o marcas, si tiene'].map(t => `<div>${cam}${t}</div>`).join('')}</div>
+      <div class="tm-ayuda"><i>📸</i><span>Con buenas fotos la cotización es <b>más rápida y más precisa</b>.</span></div></div>`; }
+  return `<div class="tm-card"><p class="tm-q">Tu nombre y apellido</p><input class="tm-in" id="tm-nombre" maxlength="60" autocomplete="name" placeholder="Ej: Juan Pérez" value="${esc(TM.nombre || '')}"></div>
+    <div class="tm-card"><p class="tm-q">¿Te interesa algún celu?<small>Opcional. Elegí el que te querés llevar y te cotizamos la diferencia.</small></p>${tmCelus()}
+      <a href="#celulares" style="font-size:14px;font-weight:800;color:var(--navy)">Ver todos los celulares ${ico('chev', 14, 2.6)}</a></div>`;
+}
+function tmLineas() {
+  const rep = TM.rep === 'Sí' ? 'Sí: ' + (TM.repCuales || []).join(', ') : TM.rep;
+  return [
+    ['Tu iPhone', `${TM.modelo} · ${gb(TM.cap)}${TM.color ? ' · ' + TM.color.trim() : ''}`, 0],
+    ['Batería', `${TM.bat}% · ${TM.batCambio === 'Sí' ? 'Batería cambiada' : TM.batCambio === 'No' ? 'Batería original' : 'No sabe si se la cambiaron'}`, 1],
+    ['Reparaciones', rep, 2],
+    ['Fallas', TM.falla === 'Sí' ? (TM.fallaTxt || '').trim() : 'No tiene', 2],
+    ['Estado', `${TM.estado} · Caja: ${TM.caja} · Cable/cargador: ${TM.cable} · Comprado ${TM.compra.toLowerCase()}`, 3],
+    ['Te interesa', TM.quiere || 'Todavía no sabe', 5],
+    ['Nombre', TM.nombre.trim(), 5]
+  ];
+}
+function tmMensaje() {
+  const rep = TM.rep === 'Sí' ? 'Sí (' + (TM.repCuales || []).join(', ') + ')' : TM.rep;
+  return ['Hola TODO PC! Quiero cotizar mi iPhone como parte de pago.', '',
+    `📱 ${TM.modelo} · ${gb(TM.cap)}${TM.color ? ' · ' + TM.color.trim() : ''}`,
+    `🔋 Batería: ${TM.bat}% · ¿Cambiada?: ${TM.batCambio}`,
+    `🔧 Reparaciones: ${rep}`,
+    `⚠️ Fallas: ${TM.falla === 'Sí' ? (TM.fallaTxt || '').trim() : 'No'}`,
+    `✨ Estado: ${TM.estado}`,
+    `📦 Caja: ${TM.caja} · Cable/cargador: ${TM.cable}`,
+    `🛒 Lo compré: ${TM.compra}`,
+    `💙 Me interesa: ${TM.quiere || 'Todavía no sé'}`,
+    `👤 ${TM.nombre.trim()}`, '',
+    '✅ Leí y acepto las condiciones de toma.', 'Ahora les mando las fotos.'].join('\n');
+}
+function vTomamos(h) {
+  const m = h.match(/^tomamos\/(\d|resumen|listo)$/), paso = m ? m[1] : '';
+  // si entran directo a un paso sin completar los anteriores, los llevamos al primero que falta
+  const primero = TM_OK.findIndex(f => !f());
+  if (/^\d$/.test(paso) && primero !== -1 && Number(paso) > primero) { location.replace('#tomamos/' + primero); return; }
+  if (paso === 'resumen' && primero !== -1) { location.replace('#tomamos/' + primero); return; }
+  if (!paso) {
+    vista.innerHTML = `<section class="tm"><div class="tm-hero"><span class="k">Tomamos tu iPhone</span>
+      <h1>Tu iPhone vale. Usalo para llevarte uno mejor.</h1>
+      <p>Entregá tu iPhone usado como parte de pago y llevate un celular nuevo o un iPhone usado de TODO PC, con garantía.</p>
+      <ul class="tm-ben"><li><i>✓</i>Cotizalo en 2 minutos desde el celu</li><li><i>✓</i>Te respondemos por WhatsApp</li><li><i>✓</i>Sin publicar, sin esperas, sin riesgos</li></ul>
+      <button class="tm-cta" type="button" id="tm-ir">COTIZÁ TU IPHONE ${ico('chev', 20, 3)}</button>
+      <p class="tm-cond">Tomamos iPhone 13 en adelante, solo como parte de pago y libres de iCloud. El valor de toma es menor al de venta entre particulares.</p></div></section>`;
+    $('tm-ir').onclick = () => location.hash = '#tomamos/' + (TM.modelo ? Math.max(0, primero === -1 ? 5 : primero) : 0);
+    return;
+  }
+  if (paso === 'listo') {
+    vista.innerHTML = `<section class="tm"><div class="tm-card tm-ok"><div class="big">🙌</div><h1>¡Gracias, ${esc((TM.nombre || '').trim().split(' ')[0])}!</h1>
+      <p>Se abrió WhatsApp con tu cotización. <b>Envianos el mensaje y después las fotos</b> de tu iPhone en el mismo chat. Te respondemos a la brevedad.</p>
+      <a class="tm-cta wa" href="${wa(tmMensaje())}" target="_blank" rel="noopener">${ICO_WA} Abrir WhatsApp de nuevo</a>
+      <a class="tm-back" href="#celulares" style="display:flex;align-items:center;justify-content:center;margin-top:10px;min-height:52px;border-radius:16px;box-shadow:inset 0 0 0 1.5px var(--line);font-weight:800;color:var(--navy)">Mirá los celulares mientras tanto</a></div></section>`;
+    return;
+  }
+  if (paso === 'resumen') {
+    vista.innerHTML = `<section class="tm"><div class="tm-top"><a class="crumb" href="#tomamos/5" aria-label="Volver">${ico('back', 18, 2.4)}</a><div class="tt"><small>Último paso</small><h1>Revisá tu cotización</h1></div></div>
+      <div class="tm-prog"><span style="width:100%"></span></div>
+      <div class="tm-card"><dl class="tm-res" style="margin:0">${tmLineas().map(l => `<div><dt>${l[0]}</dt><dd>${esc(l[1])}</dd><a href="#tomamos/${l[2]}">Editar</a></div>`).join('')}</dl></div>
+      <div class="tm-aviso"><h2>Antes de enviar</h2><p>${TM_AVISO}</p><p>${TM_AVISO2}</p>
+        <label class="tm-chk"><input type="checkbox" id="tm-acepto">Entendido, quiero mi cotización</label></div>
+      <button class="tm-cta wa" type="button" id="tm-enviar" disabled>${ICO_WA} ENVIAR POR WHATSAPP</button>
+      <p class="tm-falta" id="tm-falta">Marcá “Entendido” para poder enviarla.</p></section>`;
+    $('tm-acepto').onchange = e => { $('tm-enviar').disabled = !e.target.checked; $('tm-falta').hidden = e.target.checked; };
+    $('tm-enviar').onclick = () => { window.open(wa(tmMensaje()), '_blank', 'noopener'); location.hash = '#tomamos/listo'; };
+    return;
+  }
+  const n = Number(paso);
+  const pintar = () => {
+    vista.innerHTML = `<section class="tm"><div class="tm-top"><a class="crumb" href="#tomamos${n ? '/' + (n - 1) : ''}" aria-label="Volver">${ico('back', 18, 2.4)}</a><div class="tt"><small>Paso ${n + 1} de ${TM_PASOS.length}</small><h1>${TM_PASOS[n]}</h1></div></div>
+      <div class="tm-prog"><span style="width:${((n + 1) / (TM_PASOS.length + 1)) * 100}%"></span></div>
+      ${tmPaso(n)}
+      <div class="tm-nav"><a class="tm-back" href="#tomamos${n ? '/' + (n - 1) : ''}" style="display:inline-flex;align-items:center">Atrás</a><button class="tm-cta" type="button" id="tm-sig">${n === TM_PASOS.length - 1 ? 'VER RESUMEN' : 'SIGUIENTE'} ${ico('chev', 20, 3)}</button></div>
+      <p class="tm-falta" id="tm-falta" hidden></p></section>`;
+    conectar();
+  };
+  const estado = () => { const ok = TM_OK[n](); $('tm-sig').classList.toggle('apagado', !ok); return ok; };
+  function conectar() {
+    vista.querySelectorAll('[data-c]').forEach(b => b.onclick = () => {
+      const c = b.dataset.c, v = c === 'cap' ? Number(b.dataset.v) : b.dataset.v;
+      TM[c] = v;
+      if (c === 'modelo' && !(TM_CAP[v] || []).includes(TM.cap)) TM.cap = null;
+      tmGuardar(); const y = window.scrollY; pintar(); window.scrollTo(0, y);
+      if (c === 'modelo' && $('tm-capbox')) $('tm-capbox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    vista.querySelectorAll('[data-m]').forEach(b => b.onclick = () => {
+      const s = new Set(TM[b.dataset.m] || []); s.has(b.dataset.v) ? s.delete(b.dataset.v) : s.add(b.dataset.v);
+      TM[b.dataset.m] = TM_REP.filter(r => s.has(r)); tmGuardar(); b.setAttribute('aria-pressed', String(s.has(b.dataset.v))); estado();
+    });
+    const txt = { 'tm-color': 'color', 'tm-bat': 'bat', 'tm-fallatxt': 'fallaTxt', 'tm-nombre': 'nombre', 'tm-quiere': 'quiere' };
+    Object.entries(txt).forEach(([id, k]) => { const el = $(id); if (el) el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', () => { TM[k] = el.value; tmGuardar(); estado(); }); });
+    $('tm-sig').onclick = () => {
+      if (!TM_OK[n]()) { const f = $('tm-falta'); f.textContent = TM_FALTA[n]; f.hidden = false; return; }
+      location.hash = n === TM_PASOS.length - 1 ? '#tomamos/resumen' : '#tomamos/' + (n + 1);
+    };
+    estado();
+  }
+  pintar();
+}
+
 /* Vistas */
 function celCard() {
   const ps = DATA.productos.filter(p => p.rubro === 'celulares');
@@ -652,6 +880,7 @@ function vInicio() {
   vista.innerHTML = `
     ${vidriera()}
     ${celCard()}
+    ${tmBan()}
     <section class="tiles" aria-label="Rubros">${(() => { const rs = DATA.rubros.filter(r => r.inicio && r.id !== 'celulares'); return rs.map((r, i) => {
       const n = DATA.productos.filter(p => p.rubro === r.id).length;
       const img = r.rec || (r.portada && BY_ID[r.portada] && BY_ID[r.portada].foto);
@@ -699,6 +928,7 @@ function vRubro(id) {
         <button class="icon-btn" type="button" id="share" aria-label="Copiar link de ${esc(r.nombre)}">${ico('share', 20)}</button></div>
       ${filtro}
       ${id === 'celulares' ? promoCel(subSel) : ''}
+      ${id === 'celulares' ? tmBan(true) : ''}
       ${demo ? '<div class="nota">Rubro de ejemplo. Se completa con los productos que marques en TODO PC Listas.</div>' : ''}
       ${herramientas()}
     </section>
@@ -787,10 +1017,11 @@ function toast(m) { const el = $('toast'); el.textContent = m; el.hidden = false
 function router() {
   const h = location.hash.slice(1) || 'inicio';
   buscar.value = ''; $('limpiar').hidden = true;
-  const tabSel = h.startsWith('p-') ? '' : (h === 'inicio' ? 'inicio' : 'rubros');
+  const tabSel = h.startsWith('p-') || h.startsWith('tomamos') ? '' : (h === 'inicio' ? 'inicio' : 'rubros');
   ['inicio', 'rubros'].forEach(k => { const el = $('tab-' + k); if (k === tabSel) el.setAttribute('aria-current', 'page'); else el.removeAttribute('aria-current'); });
   vista.style.paddingBottom = h.startsWith('p-') ? '200px' : '';
   if (h.startsWith('p-') && BY_ID[h.slice(2)]) vFicha(BY_ID[h.slice(2)]);
+  else if (h.startsWith('tomamos')) vTomamos(h);
   else if (h === 'rubros') vRubros();
   else if (RUBRO[h]) vRubro(h);
   else vInicio();
