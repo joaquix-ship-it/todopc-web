@@ -225,14 +225,14 @@ pre.msg{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--f-
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-const LIST_DATE = "Noviembre 2026";
+const LIST_DATE = "7 de noviembre 2026";
 // Lista de Precios App (precio de contado). Usados con batería y color.
 const EQUIPOS = [
- ["Samsung",[["Samsung A07 64GB",239000],["Samsung A16 4/128GB",309000],["Samsung A17 6/128GB",349000],["Samsung A27 128GB",499000],["Samsung A37 256GB",699000],["Samsung A57 256GB",799000]]],
- ["Motorola",[["Moto E15 64GB",209000],["Moto G06 64GB",229000],["Moto G06 128GB",279000],["Moto G35 256GB",349000],["Moto G57 256GB",449000],["Moto G86 Power 256GB",499000]]],
- ["Xiaomi",[["Xiaomi Redmi A5 / Poco C71 3/64GB",209000],["Xiaomi Redmi A5 / Poco C71 4/128GB",239000],["Xiaomi Redmi 15C 256GB",299000],["Redmi Note 15 8/256GB",459000],["Redmi Note 15 Pro 8/256GB",529000]]],
- ["iPhone nuevos",[["iPhone 13 128GB · Nuevo sellado",899000],["iPhone 15 128GB · Nuevo sellado",1269000],["iPhone 16 128GB · Nuevo sellado",1469000],["iPhone 17 256GB · Nuevo sellado",1699000],["iPhone 17 Pro 256GB · Nuevo sellado",2099000],["iPhone 17 Pro Max 256GB · Nuevo sellado",2299000],["iPhone 18 Pro 256GB · Nuevo sellado",2450000],["iPhone 18 Pro Max 256GB · Nuevo sellado",2750000]]],
- ["iPhone usados",[["iPhone 13 128GB · Usado · 87% batería · Black",629000],["iPhone 13 128GB · Usado · 89% batería · Black",639000],["iPhone 14 128GB · Usado · 86% batería · Starlight",699000],["iPhone 15 128GB · Usado · 86% batería · Blue",859000],["iPhone 15 128GB · Usado · 85% batería · Black",859000],["iPhone 15 Pro 128GB · Usado · 86% batería · Blue Titanium",1049000],["iPhone 15 Pro 256GB · Usado · 89% batería · Black",1089000],["iPhone 16 128GB · Usado · 87% batería · Black",1090000],["iPhone 16 128GB · Usado · 91% batería · White",1109000],["iPhone 16 128GB · Usado · 92% batería · White",1109000],["iPhone 16 Pro 128GB · Usado · 89% batería · Natural Titanium",1299000],["iPhone 17 256GB · Usado · 97% batería · Verde",1399000]]]
+ ["Samsung",[["Samsung A07 64GB",269000],["Samsung A16 4/128GB",339000],["Samsung A17 6/128GB",349000],["Samsung A37 256GB",719000],["Samsung A57 256GB",819000]]],
+ ["Motorola",[["Moto E15 64GB",229000],["Moto G06 64GB",249000],["Moto G06 128GB",299000],["Moto G35 256GB",399000],["Moto G57 256GB",469000]]],
+ ["Xiaomi",[["Xiaomi Redmi A5 / Poco C71 3/64GB",249000],["Xiaomi Redmi A5 / Poco C71 4/128GB",289000],["Xiaomi Redmi 15C 256GB",299000],["Redmi Note 15 8/256GB",459000]]],
+ ["iPhone nuevos",[["iPhone 13 128GB · Nuevo sellado",899000],["iPhone 15 128GB · Nuevo sellado",1269000],["iPhone 16 128GB · Nuevo sellado",1459000],["iPhone 17 256GB · Nuevo sellado",1699000],["iPhone 17 Pro 256GB · Nuevo sellado",2149000],["iPhone 17 Pro Max 256GB · Nuevo sellado",2349000],["iPhone 18 Pro 256GB · Nuevo sellado",2349000],["iPhone 18 Pro Max 256GB · Nuevo sellado",2699000]]],
+ ["iPhone usados",[["iPhone 13 128GB · Usado · 87% batería · Black",629000],["iPhone 13 128GB · Usado · 89% batería · Black",639000],["iPhone 14 128GB · Usado · 86% batería · Starlight",699000],["iPhone 15 128GB · Usado · 86% batería · Blue",859000],["iPhone 15 128GB · Usado · 85% batería · Black",859000],["iPhone 15 Pro 128GB · Usado · 86% batería · Blue Titanium",1050000],["iPhone 15 Pro 256GB · Usado · 89% batería · Black",1090000],["iPhone 16 128GB · Usado · 87% batería · Black",1100000],["iPhone 16 128GB · Usado · 91% batería · White",1130000],["iPhone 16 128GB · Usado · 92% batería · White",1130000],["iPhone 16 Pro 128GB · Usado · 90% batería · Natural Titanium",1319000]]]
 ];
 const DEF_CFG = {tar:{3:25,6:45,12:85}, celu:{3:[25,30,35],6:[50,60,70]}};
 const $ = id => document.getElementById(id);
