@@ -225,9 +225,10 @@ pre.msg{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--f-
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-const LIST_DATE = "7 de noviembre 2026";
+let LIST_DATE = "7 de noviembre 2026";
 // Lista de Precios App (precio de contado). Usados con batería y color.
-const EQUIPOS = [
+// Copia de respaldo: se usa solo si no se puede leer datos/celulares.json
+let EQUIPOS = [
  ["Samsung",[["Samsung A07 64GB",269000],["Samsung A16 4/128GB",339000],["Samsung A17 6/128GB",349000],["Samsung A37 256GB",719000],["Samsung A57 256GB",819000]]],
  ["Motorola",[["Moto E15 64GB",229000],["Moto G06 64GB",249000],["Moto G06 128GB",299000],["Moto G35 256GB",399000],["Moto G57 256GB",469000]]],
  ["Xiaomi",[["Xiaomi Redmi A5 / Poco C71 3/64GB",249000],["Xiaomi Redmi A5 / Poco C71 4/128GB",289000],["Xiaomi Redmi 15C 256GB",299000],["Redmi Note 15 8/256GB",459000]]],
@@ -247,9 +248,36 @@ function saveCfg(){ try{ localStorage.setItem("tpc_cfg",JSON.stringify(cfg)); }c
 
 // Equipos
 const sel = $("equipo");
-sel.innerHTML = '<option value="">— Elegí un celular —</option>' + EQUIPOS.map((g,gi)=>
-  `<optgroup label="${g[0]}">`+g[1].map((e,ei)=>`<option value="${gi}.${ei}">${e[0]}</option>`).join("")+`</optgroup>`).join("");
-$("listDate").textContent = LIST_DATE;
+function llenarLista(){
+  const antes = (equipoSel()||[])[0];
+  sel.innerHTML = '<option value="">— Elegí un celular —</option>' + EQUIPOS.map((g,gi)=>
+    `<optgroup label="${esc(g[0])}">`+g[1].map((e,ei)=>`<option value="${gi}.${ei}">${esc(e[0])}</option>`).join("")+`</optgroup>`).join("");
+  if(antes){ EQUIPOS.forEach((g,gi)=>g[1].forEach((e,ei)=>{ if(e[0]===antes) sel.value=gi+"."+ei; })); }
+  $("listDate").textContent = LIST_DATE;
+}
+// Lista siempre al día: se lee de datos/celulares.json (lo que hay disponible en Precios App) cada vez que se abre la app.
+const GRUPOS = {"Samsung":"Samsung","Motorola":"Motorola","Xiaomi":"Xiaomi","iPhone":"iPhone nuevos","Usados":"iPhone usados"};
+function cargarLista(){
+  fetch("../datos/celulares.json?t="+Date.now(), {cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{
+    if(!d||!Array.isArray(d.productos)) return;
+    const orden=[], mapa={};
+    d.productos.forEach(p=>{
+      if(p.estado==="vendido"||p.estado==="agotado"||!p.precio) return;
+      const g=GRUPOS[p.sub]||p.sub;
+      if(!mapa[g]){ mapa[g]=[]; orden.push(g); }
+      mapa[g].push([(p.nombre+" "+(p.det||"")).trim(), p.precio]);
+    });
+    const pref=["Samsung","Motorola","Xiaomi","iPhone nuevos","iPhone usados"];
+    orden.sort((a,b)=>(pref.indexOf(a)<0?99:pref.indexOf(a))-(pref.indexOf(b)<0?99:pref.indexOf(b)));
+    if(!orden.length) return;
+    EQUIPOS = orden.map(g=>[g,mapa[g]]);
+    if(d.generado){ const f=new Date(d.generado); if(!isNaN(f)) LIST_DATE = f.getDate()+"/"+(f.getMonth()+1)+"/"+f.getFullYear(); }
+    llenarLista();
+    const e=equipoSel(); if(!st.manual && e) $("precio").value=e[1].toLocaleString("es-AR");
+    render();
+  }).catch(()=>{});
+}
+document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") cargarLista(); });
 function equipoSel(){ const v=sel.value; if(!v) return null; const [g,e]=v.split(".").map(Number); return EQUIPOS[g][1][e]; }
 sel.addEventListener("change",()=>{ const e=equipoSel(); $("precio").value = e? e[1].toLocaleString("es-AR"):""; render(); });
 
@@ -381,7 +409,7 @@ function limpiar(){
 }
 $("btnNew").addEventListener("click",()=>{ limpiar(); window.scrollTo({top:0}); toast("Cotización nueva"); });
 window.addEventListener("pageshow",e=>{ if(e.persisted) limpiar(); });
-renderCfg(); limpiar();
+renderCfg(); llenarLista(); limpiar(); cargarLista();
 // Acceso con PIN (se recuerda en este dispositivo)
 const PIN_HASH="308bcd969cd03e84fe34f28796746ffc60aef73617c47612c27f6442316417b1";
 async function hashPin(p){ const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("todopc:"+p)); return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join(""); }
