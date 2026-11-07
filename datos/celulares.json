@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-04T22:34:51",
+ "generado": "2026-11-07T14:45:00",
  "origen": "Precios App",
  "productos": [
   {
@@ -30,7 +30,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 16",
    "det": "128 GB · Nuevo sellado",
-   "precio": 1469000,
+   "precio": 1459000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-08-03 00:10:36"
@@ -52,7 +52,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 17 Pro",
    "det": "256 GB · Nuevo sellado",
-   "precio": 2099000,
+   "precio": 2149000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -63,7 +63,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 17 Pro Max",
    "det": "256 GB · Nuevo sellado",
-   "precio": 2299000,
+   "precio": 2349000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -74,7 +74,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 18 Pro",
    "det": "256 GB · Nuevo sellado",
-   "precio": 2450000,
+   "precio": 2349000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-10-08 11:27:30"
@@ -85,7 +85,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 18 Pro Max",
    "det": "256 GB · Nuevo sellado",
-   "precio": 2750000,
+   "precio": 2699000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-10-19 12:43:24"
@@ -96,7 +96,7 @@
    "sub": "Samsung",
    "nombre": "Galaxy A07",
    "det": "64 GB",
-   "precio": 239000,
+   "precio": 269000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -107,7 +107,7 @@
    "sub": "Samsung",
    "nombre": "Galaxy A16",
    "det": "128 GB · 4 GB RAM",
-   "precio": 309000,
+   "precio": 339000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -124,23 +124,12 @@
    "ingreso": "2026-06-26 14:10:26"
   },
   {
-   "id": "galaxy-a27-128-gb",
-   "rubro": "celulares",
-   "sub": "Samsung",
-   "nombre": "Galaxy A27",
-   "det": "128 GB",
-   "precio": 499000,
-   "tag": null,
-   "foto": null,
-   "ingreso": "2026-06-26 14:10:26"
-  },
-  {
    "id": "galaxy-a37-256-gb",
    "rubro": "celulares",
    "sub": "Samsung",
    "nombre": "Galaxy A37",
    "det": "256 GB",
-   "precio": 699000,
+   "precio": 719000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-08-31 12:47:32"
@@ -151,7 +140,7 @@
    "sub": "Samsung",
    "nombre": "Galaxy A57",
    "det": "256 GB",
-   "precio": 799000,
+   "precio": 819000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -162,7 +151,7 @@
    "sub": "Motorola",
    "nombre": "Moto E15",
    "det": "64 GB",
-   "precio": 209000,
+   "precio": 229000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-07-10 21:30:48"
@@ -173,7 +162,7 @@
    "sub": "Motorola",
    "nombre": "Moto G06",
    "det": "64 GB",
-   "precio": 229000,
+   "precio": 249000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-09-26 14:45:33"
@@ -184,7 +173,7 @@
    "sub": "Motorola",
    "nombre": "Moto G06",
    "det": "128 GB",
-   "precio": 279000,
+   "precio": 299000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -195,7 +184,7 @@
    "sub": "Motorola",
    "nombre": "Moto G35",
    "det": "256 GB",
-   "precio": 349000,
+   "precio": 399000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-07-16 18:47:03"
@@ -206,21 +195,10 @@
    "sub": "Motorola",
    "nombre": "Moto G57",
    "det": "256 GB",
-   "precio": 449000,
+   "precio": 469000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-07-10 21:32:30"
-  },
-  {
-   "id": "moto-g86-power-256-gb",
-   "rubro": "celulares",
-   "sub": "Motorola",
-   "nombre": "Moto G86 Power",
-   "det": "256 GB",
-   "precio": 499000,
-   "tag": null,
-   "foto": null,
-   "ingreso": "2026-08-31 17:54:19"
   },
   {
    "id": "redmi-a5-poco-c71-64-gb",
@@ -228,7 +206,7 @@
    "sub": "Xiaomi",
    "nombre": "Redmi A5 / POCO C71",
    "det": "64 GB · 3 GB RAM · a elección",
-   "precio": 209000,
+   "precio": 249000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -239,7 +217,7 @@
    "sub": "Xiaomi",
    "nombre": "Redmi A5 / POCO C71",
    "det": "128 GB · 4 GB RAM · a elección",
-   "precio": 239000,
+   "precio": 289000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -265,17 +243,6 @@
    "tag": null,
    "foto": null,
    "ingreso": "2026-07-10 21:35:45"
-  },
-  {
-   "id": "redmi-note-15-pro-256-gb",
-   "rubro": "celulares",
-   "sub": "Xiaomi",
-   "nombre": "Redmi Note 15 Pro",
-   "det": "256 GB · 8 GB RAM",
-   "precio": 529000,
-   "tag": null,
-   "foto": null,
-   "ingreso": "2026-07-10 21:33:51"
   },
   {
    "id": "iphone-13-128-gb-usado",
@@ -327,7 +294,7 @@
    "sub": "Usados",
    "nombre": "iPhone 15 Pro",
    "det": "128 GB · Blue Titanium · batería 86 %",
-   "precio": 1049000,
+   "precio": 1050000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-07-10 23:17:02"
@@ -338,7 +305,7 @@
    "sub": "Usados",
    "nombre": "iPhone 15 Pro",
    "det": "256 GB · Black · batería 89 %",
-   "precio": 1089000,
+   "precio": 1090000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-11-04 21:36:39"
@@ -349,7 +316,7 @@
    "sub": "Usados",
    "nombre": "iPhone 16",
    "det": "128 GB · Black · batería 87 %",
-   "precio": 1090000,
+   "precio": 1100000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-09-15 12:24:25"
@@ -360,7 +327,7 @@
    "sub": "Usados",
    "nombre": "iPhone 16",
    "det": "128 GB · White 92 % · White 91 %",
-   "precio": 1109000,
+   "precio": 1130000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-09-15 12:28:51"
@@ -370,22 +337,11 @@
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 16 Pro",
-   "det": "128 GB · Natural Titanium · batería 89 %",
-   "precio": 1299000,
+   "det": "128 GB · Natural Titanium · batería 90 %",
+   "precio": 1319000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-10-19 13:13:52"
-  },
-  {
-   "id": "iphone-17-256-gb-usado",
-   "rubro": "celulares",
-   "sub": "Usados",
-   "nombre": "iPhone 17",
-   "det": "256 GB · Verde · batería 97 %",
-   "precio": 1399000,
-   "tag": "usado",
-   "foto": null,
-   "ingreso": "2026-11-04 21:40:02"
   }
  ]
 }

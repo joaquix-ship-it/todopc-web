@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-11-04",
+  "fecha": "2026-11-07",
   "productos": [
     {
       "rubro": "celulares",
@@ -62,7 +62,7 @@
       "sub": "iPhone",
       "nombre": "iPhone 16",
       "det": "128 GB · Nuevo sellado",
-      "precio": 1469000,
+      "precio": 1459000,
       "tag": null,
       "foto": "fotos/cel-iphone-16-128-gb.jpg",
       "id": "iphone-16-128-gb",
@@ -118,7 +118,7 @@
       "sub": "iPhone",
       "nombre": "iPhone 17 Pro",
       "det": "256 GB · Nuevo sellado",
-      "precio": 2099000,
+      "precio": 2149000,
       "tag": null,
       "foto": "fotos/cel-iphone-17-pro-256-gb.jpg",
       "id": "iphone-17-pro-256-gb",
@@ -150,7 +150,7 @@
       "sub": "iPhone",
       "nombre": "iPhone 17 Pro Max",
       "det": "256 GB · Nuevo sellado",
-      "precio": 2299000,
+      "precio": 2349000,
       "tag": null,
       "foto": "fotos/cel-iphone-17-pro-max-256-gb.jpg",
       "id": "iphone-17-pro-max-256-gb",
@@ -182,7 +182,7 @@
       "sub": "iPhone",
       "nombre": "iPhone 18 Pro",
       "det": "256 GB · Nuevo sellado",
-      "precio": 2450000,
+      "precio": 2349000,
       "tag": null,
       "foto": "fotos/cel-iphone-18-pro-256-gb.jpg",
       "id": "iphone-18-pro-256-gb",
@@ -214,7 +214,7 @@
       "sub": "iPhone",
       "nombre": "iPhone 18 Pro Max",
       "det": "256 GB · Nuevo sellado",
-      "precio": 2750000,
+      "precio": 2699000,
       "tag": null,
       "foto": "fotos/cel-iphone-18-pro-max-256-gb.jpg",
       "id": "iphone-18-pro-max-256-gb",
@@ -246,7 +246,7 @@
       "sub": "Samsung",
       "nombre": "Galaxy A07",
       "det": "64 GB",
-      "precio": 239000,
+      "precio": 269000,
       "tag": null,
       "foto": "fotos/cel-galaxy-a07-64-gb.jpg",
       "id": "galaxy-a07-64-gb",
@@ -274,7 +274,7 @@
       "sub": "Samsung",
       "nombre": "Galaxy A16",
       "det": "128 GB · 4 GB RAM",
-      "precio": 309000,
+      "precio": 339000,
       "tag": null,
       "foto": "fotos/cel-galaxy-a16-128-gb.jpg",
       "id": "galaxy-a16-128-gb",
@@ -336,41 +336,9 @@
     {
       "rubro": "celulares",
       "sub": "Samsung",
-      "nombre": "Galaxy A27",
-      "det": "128 GB",
-      "precio": 499000,
-      "tag": null,
-      "foto": "fotos/cel-galaxy-a27-128-gb.jpg",
-      "id": "galaxy-a27-128-gb",
-      "nuevo": false,
-      "alta": "2026-11-01",
-      "specs": {
-        "pantalla": "6,7\"",
-        "traseras": [
-          [
-            "50 MP",
-            "principal"
-          ],
-          [
-            "5 MP",
-            "ultra gran angular"
-          ],
-          [
-            "2 MP",
-            "macro"
-          ]
-        ],
-        "frontal": "12 MP",
-        "bateria": "5.000",
-        "bat_nota": "mAh"
-      }
-    },
-    {
-      "rubro": "celulares",
-      "sub": "Samsung",
       "nombre": "Galaxy A37",
       "det": "256 GB",
-      "precio": 699000,
+      "precio": 719000,
       "tag": null,
       "foto": "fotos/cel-galaxy-a37-256-gb.jpg",
       "id": "galaxy-a37-256-gb",
@@ -402,7 +370,7 @@
       "sub": "Samsung",
       "nombre": "Galaxy A57",
       "det": "256 GB",
-      "precio": 799000,
+      "precio": 819000,
       "tag": null,
       "foto": "fotos/cel-galaxy-a57-256-gb.jpg",
       "id": "galaxy-a57-256-gb",
@@ -434,7 +402,7 @@
       "sub": "Motorola",
       "nombre": "Moto E15",
       "det": "64 GB",
-      "precio": 209000,
+      "precio": 229000,
       "tag": null,
       "foto": "fotos/cel-moto-e15-64-gb.jpg",
       "id": "moto-e15-64-gb",
@@ -458,7 +426,7 @@
       "sub": "Motorola",
       "nombre": "Moto G06",
       "det": "64 GB",
-      "precio": 229000,
+      "precio": 249000,
       "tag": null,
       "foto": "fotos/cel-moto-g06-64-gb.jpg",
       "id": "moto-g06-64-gb",
@@ -482,7 +450,7 @@
       "sub": "Motorola",
       "nombre": "Moto G06",
       "det": "128 GB",
-      "precio": 279000,
+      "precio": 299000,
       "tag": null,
       "foto": "fotos/cel-moto-g06-128-gb.jpg",
       "id": "moto-g06-128-gb",
@@ -506,7 +474,7 @@
       "sub": "Motorola",
       "nombre": "Moto G35",
       "det": "256 GB",
-      "precio": 349000,
+      "precio": 399000,
       "tag": null,
       "foto": "fotos/cel-moto-g35-256-gb.jpg",
       "id": "moto-g35-256-gb",
@@ -534,7 +502,7 @@
       "sub": "Motorola",
       "nombre": "Moto G57",
       "det": "256 GB",
-      "precio": 449000,
+      "precio": 469000,
       "tag": null,
       "foto": "fotos/cel-moto-g57-256-gb.jpg",
       "id": "moto-g57-256-gb",
@@ -559,38 +527,10 @@
     },
     {
       "rubro": "celulares",
-      "sub": "Motorola",
-      "nombre": "Moto G86 Power",
-      "det": "256 GB",
-      "precio": 499000,
-      "tag": null,
-      "foto": "fotos/cel-moto-g86-power-256-gb.jpg",
-      "id": "moto-g86-power-256-gb",
-      "nuevo": false,
-      "alta": "2026-11-01",
-      "specs": {
-        "pantalla": "6,67\"",
-        "traseras": [
-          [
-            "50 MP",
-            "principal"
-          ],
-          [
-            "8 MP",
-            "ultra gran angular y macro"
-          ]
-        ],
-        "frontal": "32 MP",
-        "bateria": "6.720",
-        "bat_nota": "mAh"
-      }
-    },
-    {
-      "rubro": "celulares",
       "sub": "Xiaomi",
       "nombre": "Redmi A5 / POCO C71",
       "det": "64 GB · 3 GB RAM · a elección",
-      "precio": 209000,
+      "precio": 249000,
       "tag": null,
       "foto": "fotos/cel-redmi-a5-poco-c71-64-gb.jpg",
       "id": "redmi-a5-poco-c71-64-gb",
@@ -614,7 +554,7 @@
       "sub": "Xiaomi",
       "nombre": "Redmi A5 / POCO C71",
       "det": "128 GB · 4 GB RAM · a elección",
-      "precio": 239000,
+      "precio": 289000,
       "tag": null,
       "foto": "fotos/cel-redmi-a5-poco-c71-128-gb.jpg",
       "id": "redmi-a5-poco-c71-128-gb",
@@ -682,34 +622,6 @@
         ],
         "frontal": "20 MP",
         "bateria": "6.000",
-        "bat_nota": "mAh"
-      }
-    },
-    {
-      "rubro": "celulares",
-      "sub": "Xiaomi",
-      "nombre": "Redmi Note 15 Pro",
-      "det": "256 GB · 8 GB RAM",
-      "precio": 529000,
-      "tag": null,
-      "foto": "fotos/cel-redmi-note-15-pro-256-gb.jpg",
-      "id": "redmi-note-15-pro-256-gb",
-      "nuevo": false,
-      "alta": "2026-11-01",
-      "specs": {
-        "pantalla": "6,77\"",
-        "traseras": [
-          [
-            "200 MP",
-            "principal"
-          ],
-          [
-            "8 MP",
-            "ultra gran angular"
-          ]
-        ],
-        "frontal": "32 MP",
-        "bateria": "6.500",
         "bat_nota": "mAh"
       }
     },
@@ -830,7 +742,7 @@
       "sub": "Usados",
       "nombre": "iPhone 15 Pro",
       "det": "128 GB · Blue Titanium · batería 86 %",
-      "precio": 1049000,
+      "precio": 1050000,
       "tag": "usado",
       "foto": "fotos/cel-iphone-15-pro-128-gb-usado.jpg",
       "id": "iphone-15-pro-128-gb-usado",
@@ -860,9 +772,41 @@
     {
       "rubro": "celulares",
       "sub": "Usados",
+      "nombre": "iPhone 15 Pro",
+      "det": "256 GB · Black · batería 89 %",
+      "precio": 1090000,
+      "tag": "usado",
+      "foto": "fotos/cel-iphone-15-pro-128-gb-usado.jpg",
+      "id": "iphone-15-pro-256-gb-usado",
+      "nuevo": true,
+      "alta": "2026-11-07",
+      "specs": {
+        "pantalla": "6,1\"",
+        "traseras": [
+          [
+            "48 MP",
+            "principal"
+          ],
+          [
+            "12 MP",
+            "ultra gran angular"
+          ],
+          [
+            "12 MP",
+            "teleobjetivo 3x"
+          ]
+        ],
+        "frontal": "12 MP",
+        "bateria": "Hasta 23 h",
+        "bat_nota": "de video"
+      }
+    },
+    {
+      "rubro": "celulares",
+      "sub": "Usados",
       "nombre": "iPhone 16",
       "det": "128 GB · Black · batería 87 %",
-      "precio": 1090000,
+      "precio": 1100000,
       "tag": "usado",
       "foto": "fotos/cel-iphone-16-128-gb-usado.jpg",
       "id": "iphone-16-128-gb-usado",
@@ -890,7 +834,7 @@
       "sub": "Usados",
       "nombre": "iPhone 16",
       "det": "128 GB · White 92 % · White 91 %",
-      "precio": 1109000,
+      "precio": 1130000,
       "tag": "usado",
       "foto": "fotos/cel-iphone-16-128-gb-usado-2.jpg",
       "id": "iphone-16-128-gb-usado-2",
@@ -917,8 +861,8 @@
       "rubro": "celulares",
       "sub": "Usados",
       "nombre": "iPhone 16 Pro",
-      "det": "128 GB · Natural Titanium · batería 89 %",
-      "precio": 1299000,
+      "det": "128 GB · Natural Titanium · batería 90 %",
+      "precio": 1319000,
       "tag": "usado",
       "foto": "fotos/cel-iphone-16-pro-128-gb-usado.jpg",
       "id": "iphone-16-pro-128-gb-usado",
@@ -944,35 +888,6 @@
         "bateria": "Hasta 27 h",
         "bat_nota": "de video"
       }
-    },
-    {
-      "rubro": "celulares",
-      "sub": "Usados",
-      "nombre": "iPhone 17",
-      "det": "256 GB · Verde · batería 97 %",
-      "precio": 1399000,
-      "tag": "usado",
-      "foto": "https://youget.pt/245640-large_default/apple-iphone-17-63-256gb-verde-salvia.jpg",
-      "id": "iphone-17-256-gb-usado",
-      "nuevo": false,
-      "alta": "2026-11-04",
-      "specs": {
-        "pantalla": "6,3\"",
-        "traseras": [
-          [
-            "48 MP",
-            "principal"
-          ],
-          [
-            "48 MP",
-            "ultra gran angular"
-          ]
-        ],
-        "frontal": "18 MP",
-        "bateria": "Hasta 30 h",
-        "bat_nota": "de video"
-      },
-      "estado": "vendido"
     },
     {
       "rubro": "mouses",
