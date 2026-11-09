@@ -743,7 +743,7 @@ let TM_SRV = null;   // { modelos: {modelo: [caps]}, textos } de la planilla
 let TM_RES = null;   // última cotización
 const tmTxt = k => (TM_RES && TM_RES.textos && TM_RES.textos[k]) || (TM_SRV && TM_SRV.textos && TM_SRV.textos[k]) || TM_TXT0[k] || '';
 const tmModelos = () => TM_SRV && TM_SRV.modelos && Object.keys(TM_SRV.modelos).length ? TM_SRV.modelos : Object.fromEntries(TM_MODELOS.map(m => [m[0], [128, 256]]));
-const tmOrden = () => { const M = tmModelos(), o = TM_MODELOS.map(m => m[0]); return Object.keys(M).sort((a, b) => (o.indexOf(a) + 1 || 99) - (o.indexOf(b) + 1 || 99)); };
+const tmOrden = () => { const M = tmModelos(), o = TM_MODELOS.map(m => m[0]).reverse();   /* del 13 al más nuevo */ return Object.keys(M).sort((a, b) => (o.indexOf(a) + 1 || 99) - (o.indexOf(b) + 1 || 99)); };
 // El formulario arranca vacío cada vez que se abre la página (se cotiza también desde los equipos del local): no se guarda nada en el navegador.
 let TM = {};
 try { localStorage.removeItem('tp-toma'); } catch (e) {}
