@@ -757,7 +757,7 @@ const TM_OPC = {
   rep: ['No', 'Sí'], funciona: ['Sí', 'No'], caja: ['Sí', 'No'], factura: ['Sí', 'No'],
   chip: ['Chip físico', 'Solo eSIM'], garantia: ['Sí', 'No'], compra: ['Nuevo', 'Usado']
 };
-const TM_REQ = [['modelo', 'el modelo'], ['cap', 'la capacidad'], ['bat', 'la batería'], ['pantalla', 'la pantalla'], ['marco', 'el marco'], ['rep', 'si tuvo reparaciones'], ['funciona', 'si funciona todo'], ['caja', 'si tiene caja'], ['factura', 'si tiene factura'], ['chip', 'el chip'], ['garantia', 'la garantía'], ['compra', 'si lo compraste nuevo o usado'], ['nombre', 'tu nombre y apellido'], ['whatsapp', 'tu WhatsApp']];
+const TM_REQ = [['modelo', 'el modelo'], ['cap', 'la capacidad'], ['bat', 'la batería'], ['pantalla', 'la pantalla'], ['marco', 'el marco'], ['rep', 'si tuvo reparaciones'], ['funciona', 'si funciona todo'], ['caja', 'si tiene caja'], ['compra', 'si lo compraste nuevo o usado'], ['nombre', 'tu nombre y apellido'], ['whatsapp', 'tu WhatsApp']];
 const tmOkCampo = k => k === 'bat' ? tmBatOk() : k === 'nombre' ? (TM.nombre || '').trim().split(/\s+/).filter(Boolean).length >= 2
   : k === 'whatsapp' ? tmTel().length >= 10 : k === 'cap' ? !!((tmModelos()[TM.modelo] || []).map(Number).includes(Number(TM.cap))) : !!TM[k];
 const tmBan = () => (TM_SRV || setTimeout(() => tmCargarSrv('tomamos'), 1500), '') + `<a class="tm-ban" href="#tomamos"><span class="tm-ic" aria-hidden="true">🔄</span><span><b>Tomamos tu iPhone</b> como parte de pago</span><em>Cotizalo ${ico('chev', 14, 2.8)}</em></a>`;
@@ -777,8 +777,7 @@ function tmMensaje(tipo) {
     `🔋 Batería: ${TM.bat}%`,
     `✨ Pantalla: ${TM.pantalla} · Marco: ${TM.marco}`,
     `🔧 Reparaciones: ${TM.rep}${TM.rep === 'Sí' && TM.repCuales ? ' (' + TM.repCuales.trim() + ')' : ''} · Funciona todo: ${TM.funciona}`,
-    `📦 Caja: ${TM.caja} · Factura: ${TM.factura} · ${TM.chip}`,
-    `🛡️ Garantía Apple: ${TM.garantia} · Lo compré ${String(TM.compra || '').toLowerCase()}`,
+    `📦 Caja: ${TM.caja} · Lo compré ${String(TM.compra || '').toLowerCase()}`,
     `💙 Me interesa: ${TM.quiere || 'Todavía no sé'}`,
     ...(R ? [`💵 Valor de referencia de la web: ${R}`] : []),
     `👤 ${String(TM.nombre || '').trim()}${TM_RES && TM_RES.id ? ' · Cotización ' + TM_RES.id : ''}`].join('\n');
@@ -844,9 +843,7 @@ function vTomamos(h) {
       <div class="tm-2">${tmOp('pantalla', 'Pantalla')}${tmOp('marco', 'Marco')}</div>
       ${tmOp('rep', '¿Tuvo reparaciones?')}
       ${TM.rep === 'Sí' ? `<input class="tm-in" data-k="repCuales" maxlength="80" placeholder="¿Qué se cambió? (pantalla, batería…)" value="${esc(TM.repCuales || '')}">` : ''}
-      <div class="tm-2">${tmOp('caja', '¿Tiene caja?')}${tmOp('factura', '¿Tiene factura?')}</div>
-      <div class="tm-2">${tmOp('chip', 'Chip')}${tmOp('garantia', '¿Garantía Apple?')}</div>
-      ${tmOp('compra', '¿Lo compraste nuevo o usado?')}
+      <div class="tm-2">${tmOp('caja', '¿Tiene caja?')}${tmOp('compra', '¿Lo compraste?')}</div>
       <label class="tm-foto"><input type="file" id="tm-file" accept="image/*" multiple hidden>📷 Adjuntar fotos <span>(opcional)</span></label>
       <div class="tm-thumbs" id="tm-thumbs"></div>
     </div>
@@ -881,7 +878,7 @@ function vTomamos(h) {
     if (TM_SRV && TM_SRV.fallo) { window.open(wa(tmMensaje()), '_blank', 'noopener'); return; }
     const b = $('tm-enviar'); b.disabled = true; b.textContent = 'Calculando…';
     try {
-      const r = await tmPost({ accion: 'cotizar', modelo: TM.modelo, cap: Number(TM.cap), color: TM.color || '', bat: Number(TM.bat), pantalla: TM.pantalla, marco: TM.marco, rep: TM.rep, repCuales: TM.rep === 'Sí' ? (TM.repCuales || '').trim() : '', funciona: TM.funciona, caja: TM.caja, factura: TM.factura, chip: TM.chip, garantia: TM.garantia, compra: TM.compra, nombre: TM.nombre.trim(), whatsapp: tmTel(), quiere: TM.quiere || '' });
+      const r = await tmPost({ accion: 'cotizar', modelo: TM.modelo, cap: Number(TM.cap), color: TM.color || '', bat: Number(TM.bat), pantalla: TM.pantalla, marco: TM.marco, rep: TM.rep, repCuales: TM.rep === 'Sí' ? (TM.repCuales || '').trim() : '', funciona: TM.funciona, caja: TM.caja, factura: '', chip: '', garantia: '', compra: TM.compra, nombre: TM.nombre.trim(), whatsapp: tmTel(), quiere: TM.quiere || '' });
       if (!r || !r.ok) throw new Error('cotizar');
       TM_RES = { id: r.id, sinValor: !!r.sinValor, min: r.min, max: r.max, mensajes: r.mensajes || [], detalles: r.detalles || [], textos: r.textos || {} };
       location.hash = '#tomamos/valor'; scrollTo(0, 0);
