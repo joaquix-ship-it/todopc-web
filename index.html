@@ -425,7 +425,7 @@ select.tm-in option { color: var(--ink); }
 .tm-ok p { margin: 0 0 4px; font-size: 15.5px; line-height: 1.45; color: var(--muted); font-weight: 600; }
 .tm-link { display: block; padding: 10px; font-size: 14.5px; font-weight: 800; color: var(--navy); }
 .tm-f { position: relative; display: block; min-width: 0; }
-.tm-f small { position: absolute; left: 14px; top: 7px; z-index: 1; max-width: calc(100% - 44px); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 11.5px; font-weight: 700; color: var(--muted); pointer-events: none; }
+.tm-f small { position: absolute; left: 14px; top: 7px; z-index: 1; max-width: calc(100% - 18px); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 11px; letter-spacing: -0.1px; font-weight: 700; color: var(--muted); pointer-events: none; }
 .tm-f select.tm-in { height: 56px; padding-top: 22px; line-height: normal; }
 .tm-sec { margin: 0 2px -2px; font-size: 12.5px; font-weight: 900; letter-spacing: 0.6px; text-transform: uppercase; color: var(--muted); }
 a.tm-cta { text-decoration: none; text-align: center; padding: 0 14px; }
@@ -838,12 +838,12 @@ function vTomamos(h) {
       <p class="tm-sec">Tu iPhone</p>
       ${tmSel('modelo', TM_SRV && TM_SRV.cargando ? 'Cargando modelos…' : 'Modelo', tmOrden(), TM.modelo)}
       <div class="tm-2">${tmSel('cap', 'Capacidad', caps.map(c => [c, gb(c)]), TM.cap)}${tmSel('color', 'Color', cols, TM.color)}</div>
-      <div class="tm-2"><label class="tm-bat"><input class="tm-in" data-k="bat" type="number" inputmode="numeric" min="1" max="100" placeholder="Batería" aria-label="Batería" value="${esc(TM.bat || '')}"><span>%</span></label>${tmOp('funciona', '¿Funciona todo?')}</div>
+      <div class="tm-2"><label class="tm-bat"><input class="tm-in" data-k="bat" type="number" inputmode="numeric" min="1" max="100" placeholder="Batería" aria-label="Batería" value="${esc(TM.bat || '')}"><span>%</span></label>${tmOp('rep', '¿Tuvo reparaciones?')}</div>
       <p class="tm-ayuda">La batería la ves en Ajustes → Batería → Estado.</p>
-      <div class="tm-2">${tmOp('pantalla', 'Pantalla')}${tmOp('marco', 'Marco')}</div>
-      ${tmOp('rep', '¿Tuvo reparaciones?')}
       ${TM.rep === 'Sí' ? `<input class="tm-in" data-k="repCuales" maxlength="80" placeholder="¿Qué se cambió? (pantalla, batería…)" value="${esc(TM.repCuales || '')}">` : ''}
-      <div class="tm-2">${tmOp('caja', '¿Tiene caja?')}${tmOp('compra', '¿Lo compraste nuevo?')}</div>
+      <div class="tm-2">${tmOp('pantalla', 'Pantalla')}${tmOp('marco', 'Marco')}</div>
+      <div class="tm-2">${tmOp('caja', '¿Tiene caja?')}${tmOp('funciona', '¿Funciona todo?')}</div>
+      ${tmOp('compra', '¿Lo compraste nuevo?')}
       <label class="tm-foto"><input type="file" id="tm-file" accept="image/*" multiple hidden>📷 Adjuntar fotos <span>(opcional)</span></label>
       <div class="tm-thumbs" id="tm-thumbs"></div>
     </div>
