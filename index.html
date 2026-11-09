@@ -755,7 +755,7 @@ const TM_OPC = {
   pantalla: ['Impecable', 'Rayas leves', 'Rayas marcadas', 'Rota o con manchas'],
   marco: ['Impecable', 'Marcas leves', 'Golpes o abolladuras'],
   rep: ['No', 'Sí'], funciona: ['Sí', 'No'], caja: ['Sí', 'No'], factura: ['Sí', 'No'],
-  chip: ['Chip físico', 'Solo eSIM'], garantia: ['Sí', 'No'], compra: ['Nuevo', 'Usado']
+  chip: ['Chip físico', 'Solo eSIM'], garantia: ['Sí', 'No'], compra: [['Nuevo', 'Sí, nuevo'], ['Usado', 'No, usado']]
 };
 const TM_REQ = [['modelo', 'el modelo'], ['cap', 'la capacidad'], ['bat', 'la batería'], ['pantalla', 'la pantalla'], ['marco', 'el marco'], ['rep', 'si tuvo reparaciones'], ['funciona', 'si funciona todo'], ['caja', 'si tiene caja'], ['compra', 'si lo compraste nuevo o usado'], ['nombre', 'tu nombre y apellido'], ['whatsapp', 'tu WhatsApp']];
 const tmOkCampo = k => k === 'bat' ? tmBatOk() : k === 'nombre' ? (TM.nombre || '').trim().split(/\s+/).filter(Boolean).length >= 2
@@ -843,7 +843,7 @@ function vTomamos(h) {
       <div class="tm-2">${tmOp('pantalla', 'Pantalla')}${tmOp('marco', 'Marco')}</div>
       ${tmOp('rep', '¿Tuvo reparaciones?')}
       ${TM.rep === 'Sí' ? `<input class="tm-in" data-k="repCuales" maxlength="80" placeholder="¿Qué se cambió? (pantalla, batería…)" value="${esc(TM.repCuales || '')}">` : ''}
-      <div class="tm-2">${tmOp('caja', '¿Tiene caja?')}${tmOp('compra', '¿Lo compraste?')}</div>
+      <div class="tm-2">${tmOp('caja', '¿Tiene caja?')}${tmOp('compra', '¿Lo compraste nuevo?')}</div>
       <label class="tm-foto"><input type="file" id="tm-file" accept="image/*" multiple hidden>📷 Adjuntar fotos <span>(opcional)</span></label>
       <div class="tm-thumbs" id="tm-thumbs"></div>
     </div>
