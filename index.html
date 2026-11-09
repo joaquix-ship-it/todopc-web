@@ -424,6 +424,23 @@ select.tm-in option { color: var(--ink); }
 .tm-ok h1 { margin: 6px 0 0; font-size: 24px; font-weight: 900; color: var(--night); }
 .tm-ok p { margin: 0 0 4px; font-size: 15.5px; line-height: 1.45; color: var(--muted); font-weight: 600; }
 .tm-link { display: block; padding: 10px; font-size: 14.5px; font-weight: 800; color: var(--navy); }
+.tm-sec { margin: 0 2px -2px; font-size: 12.5px; font-weight: 900; letter-spacing: 0.6px; text-transform: uppercase; color: var(--muted); }
+a.tm-cta { text-decoration: none; text-align: center; padding: 0 14px; }
+.tm-cta.sec { background: var(--card); color: var(--navy); box-shadow: inset 0 0 0 1.5px var(--line); font-size: 15.5px; font-weight: 800; }
+.tm-cta:disabled { opacity: 0.7; cursor: wait; }
+.tm-res { text-align: center; padding: 20px 16px; gap: 6px; background: var(--night); color: #FFFFFF; }
+.tm-k { margin: 0; font-size: 14.5px; font-weight: 700; line-height: 1.35; }
+.tm-res .tm-k { color: rgba(255, 255, 255, 0.82); }
+.tm-rango { margin: 2px 0; font-size: 31px; font-weight: 900; letter-spacing: -0.6px; line-height: 1.1; color: var(--gold); }
+.tm-rango span { font-size: 17px; font-weight: 700; color: rgba(255, 255, 255, 0.75); }
+.tm-rango.chico { font-size: 23px; color: #FFFFFF; }
+.tm-acl { margin: 2px 0 0; font-size: 13px; font-weight: 600; line-height: 1.4; color: rgba(255, 255, 255, 0.72); }
+.tm-dif { margin-top: 10px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.16); display: flex; flex-direction: column; gap: 4px; }
+.tm-res .tm-msj { margin: 0; background: none; padding: 0; box-shadow: none; color: #FFFFFF; }
+.tm-msj { margin: 0; padding: 12px 14px; border-radius: 14px; background: var(--card); box-shadow: 0 1px 2px rgba(19, 35, 58, 0.06); font-size: 14.5px; font-weight: 600; line-height: 1.45; color: var(--ink); }
+.tm-det { padding: 14px 16px; border-radius: 16px; background: #EAF2FB; box-shadow: inset 4px 0 0 var(--navy); font-size: 14.5px; line-height: 1.45; font-weight: 600; color: var(--ink); }
+.tm-det ul { margin: 4px 0 8px; padding-left: 20px; font-weight: 800; }
+.tm-det p:last-child { margin: 0; }
 
 /* Vendido / agotado: cartel sobre la foto, precio tachado, al final de la lista y fuera de la portada */
 .ph, .foto { position: relative; }
@@ -687,55 +704,79 @@ function infoLocal() {
   </div></section>`;
 }
 
-/* Tomamos tu iPhone: cotización de usados como parte de pago. Una sola pantalla; arma el mensaje y abre WhatsApp.
-   Las fotos (opcionales) se mandan después con el menú de compartir del celular: el link de WhatsApp lleva solo texto. */
+/* Tomamos tu iPhone: cotizador de usados como parte de pago. Una sola pantalla.
+   Los valores, el dólar y los textos viven en la planilla de Google "TODO PC · Tomamos tu iPhone" (Apps Script):
+   la web solo manda los datos y muestra el rango en pesos que devuelve. Cada cotización queda guardada en la hoja Solicitudes.
+   Si la planilla no responde, se manda todo por WhatsApp como antes. Las fotos (opcionales) se comparten después. */
+const TM_API = 'https://script.google.com/macros/s/AKfycbzXNMM2u4yUW7UILgDt2g_a7NaC9bwHR7Zf8AQZrTo4aZsycx5JR8Kbc5NxrrhzZ2FM/exec';
 const TM_MODELOS = [
-  ['iPhone 17 Pro Max', [256, 512, 1024, 2048], ['Plata', 'Naranja cósmico', 'Azul profundo']],
-  ['iPhone 17 Pro', [256, 512, 1024], ['Plata', 'Naranja cósmico', 'Azul profundo']],
-  ['iPhone Air', [256, 512, 1024], ['Negro espacial', 'Blanco nube', 'Oro claro', 'Azul cielo']],
-  ['iPhone 17', [256, 512], ['Negro', 'Blanco', 'Lavanda', 'Azul niebla', 'Salvia']],
-  ['iPhone 17e', [256, 512], ['Negro', 'Blanco', 'Rosa claro']],
-  ['iPhone 16 Pro Max', [256, 512, 1024], ['Titanio negro', 'Titanio blanco', 'Titanio natural', 'Titanio del desierto']],
-  ['iPhone 16 Pro', [128, 256, 512, 1024], ['Titanio negro', 'Titanio blanco', 'Titanio natural', 'Titanio del desierto']],
-  ['iPhone 16', [128, 256, 512], ['Negro', 'Blanco', 'Rosa', 'Verde azulado', 'Ultramarino']],
-  ['iPhone 16e', [128, 256, 512], ['Negro', 'Blanco']],
-  ['iPhone 15 Pro Max', [256, 512, 1024], ['Titanio natural', 'Titanio azul', 'Titanio blanco', 'Titanio negro']],
-  ['iPhone 15 Pro', [128, 256, 512, 1024], ['Titanio natural', 'Titanio azul', 'Titanio blanco', 'Titanio negro']],
-  ['iPhone 15', [128, 256, 512], ['Negro', 'Azul', 'Verde', 'Amarillo', 'Rosa']],
-  ['iPhone 14 Pro Max', [128, 256, 512, 1024], ['Negro espacial', 'Plata', 'Oro', 'Morado oscuro']],
-  ['iPhone 14 Pro', [128, 256, 512, 1024], ['Negro espacial', 'Plata', 'Oro', 'Morado oscuro']],
-  ['iPhone 14', [128, 256, 512], ['Medianoche', 'Blanco estelar', 'Azul', 'Morado', 'Rojo', 'Amarillo']],
-  ['iPhone 13 Pro Max', [128, 256, 512, 1024], ['Grafito', 'Oro', 'Plata', 'Azul sierra', 'Verde alpino']],
-  ['iPhone 13 Pro', [128, 256, 512, 1024], ['Grafito', 'Oro', 'Plata', 'Azul sierra', 'Verde alpino']],
-  ['iPhone 13', [128, 256, 512], ['Medianoche', 'Blanco estelar', 'Azul', 'Rosa', 'Rojo', 'Verde']]
+  ['iPhone 17 Pro Max', ['Plata', 'Naranja cósmico', 'Azul profundo']],
+  ['iPhone 17 Pro', ['Plata', 'Naranja cósmico', 'Azul profundo']],
+  ['iPhone Air', ['Negro espacial', 'Blanco nube', 'Oro claro', 'Azul cielo']],
+  ['iPhone 17', ['Negro', 'Blanco', 'Lavanda', 'Azul niebla', 'Salvia']],
+  ['iPhone 17e', ['Negro', 'Blanco', 'Rosa claro']],
+  ['iPhone 16 Pro Max', ['Titanio negro', 'Titanio blanco', 'Titanio natural', 'Titanio del desierto']],
+  ['iPhone 16 Pro', ['Titanio negro', 'Titanio blanco', 'Titanio natural', 'Titanio del desierto']],
+  ['iPhone 16', ['Negro', 'Blanco', 'Rosa', 'Verde azulado', 'Ultramarino']],
+  ['iPhone 16e', ['Negro', 'Blanco']],
+  ['iPhone 15 Pro Max', ['Titanio natural', 'Titanio azul', 'Titanio blanco', 'Titanio negro']],
+  ['iPhone 15 Pro', ['Titanio natural', 'Titanio azul', 'Titanio blanco', 'Titanio negro']],
+  ['iPhone 15', ['Negro', 'Azul', 'Verde', 'Amarillo', 'Rosa']],
+  ['iPhone 14 Pro Max', ['Negro espacial', 'Plata', 'Oro', 'Morado oscuro']],
+  ['iPhone 14 Pro', ['Negro espacial', 'Plata', 'Oro', 'Morado oscuro']],
+  ['iPhone 14', ['Medianoche', 'Blanco estelar', 'Azul', 'Morado', 'Rojo', 'Amarillo']],
+  ['iPhone 13 Pro Max', ['Grafito', 'Oro', 'Plata', 'Azul sierra', 'Verde alpino']],
+  ['iPhone 13 Pro', ['Grafito', 'Oro', 'Plata', 'Azul sierra', 'Verde alpino']],
+  ['iPhone 13', ['Medianoche', 'Blanco estelar', 'Azul', 'Rosa', 'Rojo', 'Verde']]
 ];
-const TM_M = Object.fromEntries(TM_MODELOS.map(m => [m[0], { cap: m[1], col: m[2] }]));
+const TM_COL = Object.fromEntries(TM_MODELOS);
 const gb = n => n >= 1024 ? (n / 1024) + ' TB' : n + ' GB';
-const TM_EST = [['Excelente', 'como nuevo'], ['Muy bueno', 'marcas mínimas'], ['Bueno', 'rayones de uso'], ['Regular', 'golpes o vidrio dañado']];
-const TM_AVISO = 'Cuando tomamos tu iPhone, nos encargamos de todo: revisión, puesta a punto, garantía y reventa. Por eso pagamos un poco menos que entre particulares. Vos te ahorrás todo el trámite: lo traés y te vas estrenando. 📱';
+const TM_TXT0 = {   // por si la planilla no responde (los textos reales se editan en la hoja Textos)
+  aviso: 'Cuando tomamos tu iPhone, nos encargamos de todo: revisión, puesta a punto, garantía y reventa. Por eso pagamos un poco menos que entre particulares. Vos te ahorrás todo el trámite: lo traés y te vas estrenando. 📱',
+  titulo: 'Tomamos tu {modelo} por aproximadamente', aclaracion: 'Es un valor de referencia del día de hoy. La tasación definitiva la hacemos en el local, con el equipo en la mano.',
+  diferencia: 'Por el {celular} te quedaría una diferencia aproximada de', boton1: 'Me interesa, quiero avanzar', boton2: 'Prefiero consultarlo con ustedes'
+};
+let TM_SRV = null;   // { modelos: {modelo: [caps]}, textos } de la planilla
+let TM_RES = null;   // última cotización
+const tmTxt = k => (TM_RES && TM_RES.textos && TM_RES.textos[k]) || (TM_SRV && TM_SRV.textos && TM_SRV.textos[k]) || TM_TXT0[k] || '';
+const tmModelos = () => TM_SRV && TM_SRV.modelos && Object.keys(TM_SRV.modelos).length ? TM_SRV.modelos : Object.fromEntries(TM_MODELOS.map(m => [m[0], [128, 256]]));
+const tmOrden = () => { const M = tmModelos(), o = TM_MODELOS.map(m => m[0]); return Object.keys(M).sort((a, b) => (o.indexOf(a) + 1 || 99) - (o.indexOf(b) + 1 || 99)); };
 let TM = (() => { try { return JSON.parse(localStorage.getItem('tp-toma')) || {}; } catch (e) { return {}; } })();
 let TM_FOTOS = [];   // fotos achicadas (File), solo en memoria
 const tmGuardar = () => { try { localStorage.setItem('tp-toma', JSON.stringify(TM)); } catch (e) {} };
 const tmBatOk = () => { const n = Number(TM.bat); return Number.isInteger(n) && n >= 1 && n <= 100; };
-const TM_REQ = [['modelo', 'el modelo'], ['cap', 'la capacidad'], ['bat', 'la batería'], ['rep', 'si tuvo reparaciones'], ['estado', 'el estado'], ['caja', 'si tiene caja'], ['compra', 'si lo compraste nuevo o usado'], ['nombre', 'tu nombre y apellido']];
-const tmOkCampo = k => k === 'bat' ? tmBatOk() : k === 'nombre' ? (TM.nombre || '').trim().split(/\s+/).filter(Boolean).length >= 2 : k === 'cap' ? !!(TM_M[TM.modelo] && TM_M[TM.modelo].cap.includes(Number(TM.cap))) : !!TM[k];
+const tmTel = () => String(TM.whatsapp || '').replace(/\D/g, '');
+const TM_OPC = {
+  pantalla: ['Impecable', 'Rayas leves', 'Rayas marcadas', 'Rota o con manchas'],
+  marco: ['Impecable', 'Marcas leves', 'Golpes o abolladuras'],
+  rep: ['No', 'Sí'], funciona: ['Sí', 'No'], caja: ['Sí', 'No'], factura: ['Sí', 'No'],
+  chip: ['Chip físico', 'Solo eSIM'], garantia: ['Sí', 'No'], compra: ['Nuevo', 'Usado']
+};
+const TM_REQ = [['modelo', 'el modelo'], ['cap', 'la capacidad'], ['bat', 'la batería'], ['pantalla', 'la pantalla'], ['marco', 'el marco'], ['rep', 'si tuvo reparaciones'], ['funciona', 'si funciona todo'], ['caja', 'si tiene caja'], ['factura', 'si tiene factura'], ['chip', 'el chip'], ['garantia', 'la garantía'], ['compra', 'si lo compraste nuevo o usado'], ['nombre', 'tu nombre y apellido'], ['whatsapp', 'tu WhatsApp']];
+const tmOkCampo = k => k === 'bat' ? tmBatOk() : k === 'nombre' ? (TM.nombre || '').trim().split(/\s+/).filter(Boolean).length >= 2
+  : k === 'whatsapp' ? tmTel().length >= 10 : k === 'cap' ? !!((tmModelos()[TM.modelo] || []).map(Number).includes(Number(TM.cap))) : !!TM[k];
 const tmBan = () => `<a class="tm-ban" href="#tomamos"><span class="tm-ic" aria-hidden="true">🔄</span><span><b>Tomamos tu iPhone</b> como parte de pago</span><em>Cotizalo ${ico('chev', 14, 2.8)}</em></a>`;
-const tmSel = (k, ph, ops, val) => `<select class="tm-in${val ? '' : ' vacio'}" data-k="${k}"><option value="">${ph}</option>${ops.map(o => { const [v, t] = Array.isArray(o) ? o : [o, o]; return `<option value="${esc(v)}" ${String(val) === String(v) ? 'selected' : ''}>${esc(t)}</option>`; }).join('')}</select>`;
+const tmSel = (k, ph, ops, val) => `<select class="tm-in${val ? '' : ' vacio'}" data-k="${k}" aria-label="${esc(ph)}"><option value="">${ph}</option>${ops.map(o => { const [v, t] = Array.isArray(o) ? o : [o, o]; return `<option value="${esc(v)}" ${String(val) === String(v) ? 'selected' : ''}>${esc(t)}</option>`; }).join('')}</select>`;
+const tmOp = (k, ph, pre) => tmSel(k, ph, TM_OPC[k].map(o => [o, (pre || '') + o]), TM[k]);
+const tmCelusPs = () => DATA.productos.filter(p => p.rubro === 'celulares' && p.sub !== 'Usados' && !p.estado);
+const tmCelNom = p => p.nombre + (p.det ? ' ' + p.det.split('·')[0].trim() : '');
 function tmCelus() {
-  const ps = DATA.productos.filter(p => p.rubro === 'celulares' && p.sub !== 'Usados' && !p.estado);
-  const subs = [...new Set(ps.map(p => p.sub))];
-  return `<select class="tm-in${TM.quiere ? '' : ' vacio'}" data-k="quiere"><option value="">¿Te interesa algún celu? (opcional)</option>${subs.map(s => `<optgroup label="${esc(s)}">${ps.filter(p => p.sub === s).map(p => { const v = p.nombre + (p.det ? ' ' + p.det.split('·')[0].trim() : ''); return `<option value="${esc(v)}" ${TM.quiere === v ? 'selected' : ''}>${esc(v)}</option>`; }).join('')}</optgroup>`).join('')}</select>`;
+  const ps = tmCelusPs(), subs = [...new Set(ps.map(p => p.sub))];
+  return `<select class="tm-in${TM.quiere ? '' : ' vacio'}" data-k="quiere" aria-label="Celu que te interesa"><option value="">¿Te interesa algún celu? (opcional)</option>${subs.map(s => `<optgroup label="${esc(s)}">${ps.filter(p => p.sub === s).map(p => { const v = tmCelNom(p); return `<option value="${esc(v)}" ${TM.quiere === v ? 'selected' : ''}>${esc(v)}</option>`; }).join('')}</optgroup>`).join('')}</select>`;
 }
-function tmMensaje() {
-  return ['Hola TODO PC! Quiero cotizar mi iPhone como parte de pago.', '',
+const tmCelPrecio = () => { const p = tmCelusPs().find(p => tmCelNom(p) === TM.quiere); return p && p.precio ? p.precio : 0; };
+function tmMensaje(tipo) {
+  const R = TM_RES && !TM_RES.sinValor ? `${fmt(TM_RES.min)} a ${fmt(TM_RES.max)}` : '';
+  return [tipo === 'consultar' ? 'Hola TODO PC! Coticé mi iPhone en la web y quiero consultarlo con ustedes.' : tipo === 'interes' ? 'Hola TODO PC! Coticé mi iPhone en la web y me interesa avanzar.' : 'Hola TODO PC! Quiero cotizar mi iPhone como parte de pago.', '',
     `📱 ${TM.modelo} · ${gb(Number(TM.cap))}${TM.color ? ' · ' + TM.color : ''}`,
     `🔋 Batería: ${TM.bat}%`,
-    `🔧 Reparaciones: ${TM.rep}`,
-    `✨ Estado: ${TM.estado}`,
-    `📦 Caja: ${TM.caja}`,
-    `🛒 Lo compré: ${TM.compra}`,
+    `✨ Pantalla: ${TM.pantalla} · Marco: ${TM.marco}`,
+    `🔧 Reparaciones: ${TM.rep}${TM.rep === 'Sí' && TM.repCuales ? ' (' + TM.repCuales.trim() + ')' : ''} · Funciona todo: ${TM.funciona}`,
+    `📦 Caja: ${TM.caja} · Factura: ${TM.factura} · ${TM.chip}`,
+    `🛡️ Garantía Apple: ${TM.garantia} · Lo compré ${String(TM.compra || '').toLowerCase()}`,
     `💙 Me interesa: ${TM.quiere || 'Todavía no sé'}`,
-    `👤 ${TM.nombre.trim()}`].join('\n');
+    ...(R ? [`💵 Valor de referencia de la web: ${R}`] : []),
+    `👤 ${String(TM.nombre || '').trim()}${TM_RES && TM_RES.id ? ' · Cotización ' + TM_RES.id : ''}`].join('\n');
 }
 async function tmAchicar(file) {
   try {
@@ -747,35 +788,70 @@ async function tmAchicar(file) {
   } catch (e) { return file; }
 }
 const tmPuedeCompartir = () => { try { return TM_FOTOS.length && navigator.canShare && navigator.canShare({ files: TM_FOTOS }); } catch (e) { return false; } };
-function vTomamos(h) {
-  if (h === 'tomamos/listo' && TM.nombre) {
-    const fotos = tmPuedeCompartir();
-    vista.innerHTML = `<section class="tm"><div class="tm-card tm-ok"><div class="big">🙌</div><h1>¡Gracias, ${esc(TM.nombre.trim().split(' ')[0])}!</h1>
-      ${fotos ? `<p>Ahora mandanos las fotos: tocá el botón y elegí el chat de <b>TODO PC</b>.</p><button class="tm-cta wa" type="button" id="tm-fotos-env">📷 Enviar las ${TM_FOTOS.length} fotos</button>`
-        : `<p>Te respondemos a la brevedad por WhatsApp.${TM_FOTOS.length ? ' Adjuntá las fotos en el mismo chat.' : ' Si querés, mandanos fotos por el chat.'}</p>`}
-      <a class="tm-link" href="${wa(tmMensaje())}" target="_blank" rel="noopener">Abrir WhatsApp de nuevo</a>
-      <a class="tm-link" href="#celulares">Ver los celulares</a></div></section>`;
-    if (fotos) $('tm-fotos-env').onclick = async () => { try { await navigator.share({ files: TM_FOTOS, text: `Fotos de mi ${TM.modelo} · ${TM.nombre.trim()}` }); toast('¡Gracias! Ya tenemos todo'); } catch (e) {} };
-    return;
-  }
-  if (TM._env) { TM = {}; TM_FOTOS = []; }   // volvió al formulario después de enviar: arranca vacío
-  const M = TM_M[TM.modelo];
+const tmPost = (o, keep) => fetch(TM_API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(o), keepalive: !!keep }).then(r => r.json());
+function tmCargarSrv(h) {
+  if (TM_SRV) return;
+  TM_SRV = { cargando: true };
+  fetch(TM_API).then(r => r.json()).then(d => { TM_SRV = d && d.ok ? d : { fallo: true }; })
+    .catch(() => { TM_SRV = { fallo: true }; })
+    .finally(() => { if ((location.hash || '').startsWith('#tomamos') && !TM_RES && !(document.activeElement && document.activeElement.tagName === 'INPUT')) { const y = scrollY; vTomamos(h); scrollTo(0, y); } });
+}
+function tmResultado() {
+  const R = TM_RES, nom = esc(String(TM.nombre || '').trim().split(' ')[0]);
+  const pc = tmCelPrecio(), dif = !R.sinValor && pc ? [pc - R.max, pc - R.min] : null;
+  const fotos = tmPuedeCompartir();
+  const lista = R.mensajes.length || R.detalles.length ? '' : (tmTxt('impecable') ? `<p class="tm-msj">${esc(tmTxt('impecable'))}</p>` : '');
   vista.innerHTML = `<section class="tm">
-    <div class="tm-top"><a class="crumb" href="#inicio" aria-label="Volver">${ico('back', 18, 2.4)}</a><div class="tt"><h1>Tomamos tu iPhone</h1><small>Como parte de pago · iPhone 13 en adelante · libre de iCloud</small></div></div>
+    <div class="tm-top"><a class="crumb" href="#tomamos" aria-label="Volver al formulario">${ico('back', 18, 2.4)}</a><div class="tt"><h1>¡Listo, ${nom}!</h1><small>${esc(TM.modelo)} · ${gb(Number(TM.cap))} · Batería ${esc(TM.bat)}%</small></div></div>
+    ${R.sinValor ? `<div class="tm-card tm-res"><p class="tm-msj">${esc(tmTxt('sin_valor'))}</p></div>`
+      : `<div class="tm-card tm-res"><p class="tm-k">${esc(tmTxt('titulo').replace('{modelo}', TM.modelo))}</p>
+        <p class="tm-rango">${fmt(R.min)} <span>a</span> ${fmt(R.max)}</p>
+        <p class="tm-acl">${esc(tmTxt('aclaracion'))}</p>
+        ${dif && dif[1] > 0 ? `<div class="tm-dif"><p class="tm-k">${esc(tmTxt('diferencia').replace('{celular}', TM.quiere))}</p><p class="tm-rango chico">${fmt(Math.max(0, dif[0]))} <span>a</span> ${fmt(dif[1])}</p></div>` : ''}
+      </div>`}
+    ${R.mensajes.map(m => `<p class="tm-msj">${esc(m)}</p>`).join('')}${lista}
+    ${R.detalles.length ? `<div class="tm-det"><p class="tm-k">Nos contaste:</p><ul>${R.detalles.map(d => `<li>${esc(d)}</li>`).join('')}</ul><p>${esc(tmTxt('detalles'))}</p></div>` : ''}
+    <div class="tm-aviso">${esc(tmTxt('aviso'))}</div>
+    <a class="tm-cta wa" id="tm-b1" href="${wa(tmMensaje('interes'))}" target="_blank" rel="noopener">${ICO_WA} ${esc(tmTxt('boton1'))}</a>
+    <a class="tm-cta sec" id="tm-b2" href="${wa(tmMensaje('consultar'))}" target="_blank" rel="noopener">${esc(tmTxt('boton2'))}</a>
+    ${fotos ? `<button class="tm-cta sec" type="button" id="tm-fotos-env">📷 Enviar las ${TM_FOTOS.length} fotos por WhatsApp</button>` : TM_FOTOS.length ? '<p class="tm-ayuda" style="text-align:center">Adjuntá las fotos en el mismo chat de WhatsApp.</p>' : ''}
+    <a class="tm-link" href="#celulares">Ver los celulares</a>
+  </section>`;
+  const marcar = tipo => () => { try { localStorage.removeItem('tp-toma'); } catch (e) {} if (R.id) tmPost({ accion: 'interes', id: R.id, tipo }, true).catch(() => {}); };
+  $('tm-b1').addEventListener('click', marcar('interes'));
+  $('tm-b2').addEventListener('click', marcar('consultar'));
+  if (fotos) $('tm-fotos-env').onclick = async () => { try { await navigator.share({ files: TM_FOTOS, text: `Fotos de mi ${TM.modelo} · ${String(TM.nombre || '').trim()}` }); toast('¡Gracias! Ya tenemos todo'); } catch (e) {} };
+}
+function vTomamos(h) {
+  if (h === 'tomamos/valor' && TM_RES) return tmResultado();
+  TM_RES = null;
+  tmCargarSrv(h);
+  const M = tmModelos(), caps = (M[TM.modelo] || []).map(Number), cols = TM_COL[TM.modelo] || [];
+  vista.innerHTML = `<section class="tm">
+    <div class="tm-top"><a class="crumb" href="#inicio" aria-label="Volver">${ico('back', 18, 2.4)}</a><div class="tt"><h1>Tomamos tu iPhone</h1><small>Como parte de pago · Cotizalo en 1 minuto</small></div></div>
     <div class="tm-card">
-      ${tmSel('modelo', 'Modelo', TM_MODELOS.map(m => m[0]), TM.modelo)}
-      <div class="tm-2">${tmSel('cap', 'Capacidad', M ? M.cap.map(c => [c, gb(c)]) : [], TM.cap)}${tmSel('color', 'Color', M ? M.col : [], TM.color)}</div>
-      <div class="tm-2"><label class="tm-bat"><input class="tm-in" data-k="bat" type="number" inputmode="numeric" min="1" max="100" placeholder="Batería" value="${esc(TM.bat || '')}"><span>%</span></label>${tmSel('rep', 'Reparaciones', ['No', 'Sí'], TM.rep)}</div>
+      <p class="tm-sec">Tu iPhone</p>
+      ${tmSel('modelo', TM_SRV && TM_SRV.cargando ? 'Cargando modelos…' : 'Modelo', tmOrden(), TM.modelo)}
+      <div class="tm-2">${tmSel('cap', 'Capacidad', caps.map(c => [c, gb(c)]), TM.cap)}${tmSel('color', 'Color', cols, TM.color)}</div>
+      <div class="tm-2"><label class="tm-bat"><input class="tm-in" data-k="bat" type="number" inputmode="numeric" min="1" max="100" placeholder="Batería" aria-label="Batería" value="${esc(TM.bat || '')}"><span>%</span></label>${tmOp('funciona', '¿Funciona todo?', 'Funciona todo: ')}</div>
       <p class="tm-ayuda">La batería la ves en Ajustes → Batería → Estado.</p>
-      ${tmSel('estado', 'Estado', TM_EST.map(e => [e[0], e[0] + ' · ' + e[1]]), TM.estado)}
-      <div class="tm-2">${tmSel('caja', '¿Tiene caja?', ['Sí', 'No'], TM.caja)}${tmSel('compra', 'Nuevo o usado', ['Nuevo', 'Usado'], TM.compra)}</div>
-      <input class="tm-in" data-k="nombre" maxlength="60" autocomplete="name" placeholder="Nombre y apellido" value="${esc(TM.nombre || '')}">
-      ${tmCelus()}
+      <div class="tm-2">${tmOp('pantalla', 'Pantalla', 'Pantalla: ')}${tmOp('marco', 'Marco', 'Marco: ')}</div>
+      ${tmOp('rep', '¿Tuvo reparaciones?', 'Reparaciones: ')}
+      ${TM.rep === 'Sí' ? `<input class="tm-in" data-k="repCuales" maxlength="80" placeholder="¿Qué se cambió? (pantalla, batería…)" value="${esc(TM.repCuales || '')}">` : ''}
+      <div class="tm-2">${tmOp('caja', '¿Tiene caja?', 'Caja: ')}${tmOp('factura', '¿Tiene factura?', 'Factura: ')}</div>
+      <div class="tm-2">${tmOp('chip', 'Chip')}${tmOp('garantia', '¿Garantía Apple?', 'Garantía Apple: ')}</div>
+      ${tmOp('compra', '¿Lo compraste nuevo o usado?', 'Lo compré ')}
       <label class="tm-foto"><input type="file" id="tm-file" accept="image/*" multiple hidden>📷 Adjuntar fotos <span>(opcional)</span></label>
       <div class="tm-thumbs" id="tm-thumbs"></div>
     </div>
-    <div class="tm-aviso">${TM_AVISO}</div>
-    <button class="tm-cta wa" type="button" id="tm-enviar">${ICO_WA} Enviar por WhatsApp</button>
+    <div class="tm-card">
+      <p class="tm-sec">Tus datos</p>
+      <input class="tm-in" data-k="nombre" maxlength="60" autocomplete="name" placeholder="Nombre y apellido" value="${esc(TM.nombre || '')}">
+      <input class="tm-in" data-k="whatsapp" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="Tu WhatsApp (ej: 3405 123456)" value="${esc(TM.whatsapp || '')}">
+      ${tmCelus()}
+    </div>
+    <div class="tm-aviso">${esc(tmTxt('aviso'))}</div>
+    <button class="tm-cta" type="button" id="tm-enviar">${TM_SRV && TM_SRV.fallo ? ICO_WA + ' Enviar por WhatsApp' : 'Ver cuánto me toman'}</button>
     <p class="tm-falta" id="tm-falta" hidden></p>
   </section>`;
   const thumbs = () => { $('tm-thumbs').innerHTML = TM_FOTOS.map((f, i) => `<span><img src="${URL.createObjectURL(f)}" alt=""><button type="button" data-i="${i}" aria-label="Quitar foto">×</button></span>`).join('');
@@ -783,17 +859,31 @@ function vTomamos(h) {
   thumbs();
   vista.querySelectorAll('[data-k]').forEach(el => el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', () => {
     const k = el.dataset.k; TM[k] = el.value; el.classList.toggle('vacio', !el.value); el.classList.remove('falta');
-    if (k === 'modelo') { const m = TM_M[TM.modelo]; if (!m || !m.cap.includes(Number(TM.cap))) TM.cap = ''; if (!m || !m.col.includes(TM.color)) TM.color = ''; tmGuardar(); const y = scrollY; vTomamos(h); scrollTo(0, y); return; }
+    if (k === 'modelo' || k === 'rep') {
+      if (k === 'modelo') { if (!(tmModelos()[TM.modelo] || []).map(Number).includes(Number(TM.cap))) TM.cap = ''; if (!(TM_COL[TM.modelo] || []).includes(TM.color)) TM.color = ''; }
+      tmGuardar(); const y = scrollY; vTomamos(h); scrollTo(0, y); return;
+    }
     tmGuardar();
   }));
   $('tm-file').onchange = async e => { for (const f of [...e.target.files].slice(0, 6 - TM_FOTOS.length)) TM_FOTOS.push(await tmAchicar(f)); e.target.value = ''; thumbs(); };
-  $('tm-enviar').onclick = () => {
+  $('tm-enviar').onclick = async () => {
     const faltan = TM_REQ.filter(([k]) => !tmOkCampo(k));
     vista.querySelectorAll('.tm-in').forEach(el => el.classList.toggle('falta', faltan.some(([k]) => k === el.dataset.k)));
-    if (faltan.length) { const f = $('tm-falta'); f.textContent = 'Falta completar: ' + faltan.map(x => x[1]).join(', ') + '.'; f.hidden = false; const el = vista.querySelector('.tm-in.falta'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-    window.open(wa(tmMensaje()), '_blank', 'noopener');
-    try { localStorage.removeItem('tp-toma'); } catch (e) {}   // enviado: no queda nada guardado en el celular
-    TM._env = true; location.hash = '#tomamos/listo';
+    const f = $('tm-falta');
+    if (faltan.length) { f.textContent = 'Falta completar: ' + faltan.map(x => x[1]).join(', ') + '.'; f.hidden = false; const el = vista.querySelector('.tm-in.falta'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    f.hidden = true;
+    if (TM_SRV && TM_SRV.fallo) { window.open(wa(tmMensaje()), '_blank', 'noopener'); return; }
+    const b = $('tm-enviar'); b.disabled = true; b.textContent = 'Calculando…';
+    try {
+      const r = await tmPost({ accion: 'cotizar', modelo: TM.modelo, cap: Number(TM.cap), color: TM.color || '', bat: Number(TM.bat), pantalla: TM.pantalla, marco: TM.marco, rep: TM.rep, repCuales: TM.rep === 'Sí' ? (TM.repCuales || '').trim() : '', funciona: TM.funciona, caja: TM.caja, factura: TM.factura, chip: TM.chip, garantia: TM.garantia, compra: TM.compra, nombre: TM.nombre.trim(), whatsapp: tmTel(), quiere: TM.quiere || '' });
+      if (!r || !r.ok) throw new Error('cotizar');
+      TM_RES = { id: r.id, sinValor: !!r.sinValor, min: r.min, max: r.max, mensajes: r.mensajes || [], detalles: r.detalles || [], textos: r.textos || {} };
+      location.hash = '#tomamos/valor'; scrollTo(0, 0);
+    } catch (e) {
+      b.disabled = false; b.innerHTML = ICO_WA + ' Enviar por WhatsApp';
+      f.textContent = 'No pudimos calcular el valor ahora. Mandanos los datos por WhatsApp y te respondemos enseguida.'; f.hidden = false;
+      TM_SRV = { fallo: true, textos: TM_SRV && TM_SRV.textos, modelos: TM_SRV && TM_SRV.modelos };
+    }
   };
 }
 /* Vistas */
