@@ -77,6 +77,9 @@
   }
   .plan { @apply flex flex-wrap items-center gap-3 rounded-xl border border-linea px-3 py-2 transition-colors duration-150; }
   .plan:has(> label input:checked) { @apply border-marca bg-marca/5; }
+  .marca { @apply relative flex min-h-12 flex-[1_1_9rem] cursor-pointer items-center justify-center rounded-lg border border-linea bg-fondo px-3 text-center text-base font-bold text-tinta transition-colors duration-150 hover:border-marca; }
+  .marca:has(input:checked) { @apply border-marca bg-marca text-sobre-marca; }
+  .marca:has(input:focus-visible) { @apply outline outline-2 outline-offset-2 outline-marca; }
   .opcion { @apply relative flex min-h-toque min-w-toque cursor-pointer items-center justify-center rounded-lg border border-linea bg-fondo px-3 font-semibold tabular-nums text-tinta transition-colors duration-150; }
   .opcion:has(input:checked) { @apply border-marca bg-marca text-sobre-marca; }
   .opcion:has(input:disabled) { @apply cursor-not-allowed opacity-40; }

@@ -13,7 +13,7 @@ export interface NodosResultado {
 
 export function textoMotivo(m: Motivo, tipo: Operacion['producto']['tipo']): string {
   switch (m.tipo) {
-    case 'sin-precio': return tipo === 'lista' ? 'Elegí un celular de la lista.' : 'Cargá el monto a financiar.';
+    case 'sin-precio': return tipo === 'lista' ? 'Elegí la marca y el modelo del celular.' : 'Cargá el monto a financiar.';
     case 'entrega-excede': return `La entrega supera el precio por ${pesos(m.exceso)}. No queda saldo para financiar.`;
     case 'sin-saldo': return 'La entrega cubre el precio completo. No queda saldo para financiar.';
     case 'sin-medio': return 'Elegí Tarjeta o CeluCuotas.';

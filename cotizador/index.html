@@ -12,8 +12,8 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="icon" href="../apple-touch-icon.png">
-  <link rel="stylesheet" href="app.css?v=25d878bf64">
-  <script src="app.js?v=25d878bf64" defer></script>
+  <link rel="stylesheet" href="app.css?v=25f541c54f">
+  <script src="app.js?v=25f541c54f" defer></script>
 </head>
 <body>
   <main id="bloqueo" class="contenedor flex min-h-screen items-center justify-center py-8">
@@ -70,9 +70,15 @@
               <label class="segmento"><input class="oculto-accesible" type="radio" name="tipo" value="otro">Otro / Monto</label>
             </div>
           </fieldset>
-          <div id="bloque-lista" class="campo">
-            <label for="equipo" class="etiqueta">Celular</label>
-            <select id="equipo" class="entrada"></select>
+          <div id="bloque-lista" class="flex flex-col gap-4">
+            <fieldset class="campo">
+              <legend class="etiqueta mb-1.5">Marca</legend>
+              <div id="marcas" class="flex flex-wrap gap-2"></div>
+            </fieldset>
+            <div class="campo">
+              <label for="equipo" class="etiqueta">Modelo</label>
+              <select id="equipo" class="entrada disabled:cursor-not-allowed disabled:opacity-50" disabled></select>
+            </div>
           </div>
           <div id="bloque-otro" class="campo" hidden>
             <label for="nombre-otro" class="etiqueta">Producto <span class="font-normal">(opcional)</span></label>

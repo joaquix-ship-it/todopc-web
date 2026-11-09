@@ -3,6 +3,7 @@ import type { Medio, OpcionCelu, Operacion, Plazo, PlazoCelu } from './dominio/t
 
 export interface Estado {
   readonly tipo: 'lista' | 'otro';
+  readonly marca: string;
   readonly equipoId: string;
   readonly nombreOtro: string;
   readonly precio: number;
@@ -17,6 +18,7 @@ export interface Estado {
 
 export const ESTADO_VACIO: Estado = {
   tipo: 'lista',
+  marca: '',
   equipoId: '',
   nombreOtro: '',
   precio: 0,

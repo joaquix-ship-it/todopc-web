@@ -1,6 +1,6 @@
 import { accesoVigente, HASH_ACCESO, pinValido } from './acceso.js';
 import { accesoGuardado, guardarAcceso, guardarTasas, leerTasas } from './almacen.js';
-import { buscarEquipo, FECHA_LISTA, LISTA } from './datos/equipos.js';
+import { buscarEquipo, equiposDe, FECHA_LISTA, LISTA } from './datos/equipos.js';
 import { cotizar, TASAS_INICIALES } from './dominio/financiacion.js';
 import { leerMonto, miles } from './dominio/formato.js';
 import { armarMensaje } from './dominio/mensaje.js';
@@ -17,6 +17,7 @@ let tasas: Tasas = leerTasas();
 
 const el = {
   equipo: porId('equipo', HTMLSelectElement),
+  marcas: porId('marcas', HTMLDivElement),
   bloqueLista: porId('bloque-lista', HTMLDivElement),
   bloqueOtro: porId('bloque-otro', HTMLDivElement),
   nombreOtro: porId('nombre-otro', HTMLInputElement),
@@ -102,9 +103,24 @@ function elegirTipo(tipo: Estado['tipo']): void {
   actualizar({ tipo, precio });
 }
 
+function cargarModelos(marca: string): void {
+  el.equipo.replaceChildren(
+    crear('option', { value: '' }, marca ? 'Elegí un modelo' : 'Primero elegí la marca'),
+    ...equiposDe(marca).map((e) => crear('option', { value: e.id }, e.nombre)),
+  );
+  el.equipo.disabled = marca === '';
+}
+
+function elegirMarca(marca: string): void {
+  cargarModelos(marca);
+  if (estado.tipo === 'lista') el.precio.value = '';
+  actualizar({ marca, equipoId: '', ...(estado.tipo === 'lista' ? { precio: 0 } : {}) });
+}
+
 function limpiar(): void {
   for (const entrada of [el.precio, el.nombreOtro, el.usadoDesc, el.usadoValor, el.efectivo, el.telefono]) entrada.value = '';
-  el.equipo.value = '';
+  cargarModelos('');
+  for (const r of radios('marca')) r.checked = false;
   for (const r of radios('medio')) r.checked = false;
   for (const r of radios('tipo')) r.checked = r.value === 'lista';
   estado = ESTADO_VACIO;
@@ -113,10 +129,11 @@ function limpiar(): void {
 }
 
 function iniciar(): void {
-  el.equipo.replaceChildren(
-    crear('option', { value: '' }, 'Elegí un celular'),
-    ...LISTA.map((g) => crear('optgroup', { label: g.grupo }, ...g.equipos.map((e) => crear('option', { value: e.id }, e.nombre)))),
-  );
+  el.marcas.replaceChildren(...LISTA.map((g) => {
+    const radio = crear('input', { type: 'radio', name: 'marca', value: g.grupo, class: 'oculto-accesible' });
+    radio.addEventListener('change', () => elegirMarca(g.grupo));
+    return crear('label', { class: 'marca' }, radio, g.grupo);
+  }));
   porId('fecha-lista', HTMLSpanElement).textContent = FECHA_LISTA;
 
   el.equipo.addEventListener('change', () => {

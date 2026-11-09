@@ -49,3 +49,5 @@ export const LISTA: readonly GrupoEquipos[] = [
 
 export const buscarEquipo = (id: string): Equipo | undefined =>
   LISTA.flatMap((g) => g.equipos).find((e) => e.id === id);
+
+export const equiposDe = (grupo: string): readonly Equipo[] => LISTA.find((g) => g.grupo === grupo)?.equipos ?? [];
