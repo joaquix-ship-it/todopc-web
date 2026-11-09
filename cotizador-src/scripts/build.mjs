@@ -8,7 +8,8 @@ const pin = process.env.PIN_COTIZADOR ?? '4834';
 const hashPin = createHash('sha256').update(`todopc:${pin}`).digest('hex');
 
 mkdirSync(salida, { recursive: true });
-const js = await build({ entryPoints: ['src/main.ts'], bundle: true, minify: true, format: 'iife', target: 'es2020', write: false });
+const respaldo = readFileSync('../datos/celulares.json', 'utf8');
+const js = await build({ entryPoints: ['src/main.ts'], bundle: true, minify: true, format: 'iife', target: 'es2020', write: false, define: { __RESPALDO__: respaldo } });
 const codigo = js.outputFiles[0].text.replace('__HASH_PIN__', hashPin);
 writeFileSync(`${salida}/app.js`, codigo);
 execFileSync('npx', ['tailwindcss', '-i', 'src/estilos.css', '-o', `${salida}/app.css`, '--minify'], { stdio: 'ignore' });

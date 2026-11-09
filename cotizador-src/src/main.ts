@@ -1,8 +1,9 @@
 import { accesoVigente, HASH_ACCESO, pinValido } from './acceso.js';
 import { accesoGuardado, guardarAcceso, guardarTasas, leerTasas } from './almacen.js';
-import { buscarEquipo, equiposDe, FECHA_LISTA, LISTA } from './datos/equipos.js';
+import { cargarLista, LISTA_RESPALDO } from './catalogo.js';
 import { cotizar, TASAS_INICIALES } from './dominio/financiacion.js';
 import { leerMonto, miles } from './dominio/formato.js';
+import { buscarEquipo, equiposDe, type Lista } from './dominio/lista.js';
 import { armarMensaje } from './dominio/mensaje.js';
 import type { Medio, Tasas } from './dominio/tipos.js';
 import { alternarPlazo, ESTADO_VACIO, operacionDe, type Estado } from './estado.js';
@@ -14,6 +15,7 @@ import { pintarTasas } from './vista/tasas.js';
 
 let estado: Estado = ESTADO_VACIO;
 let tasas: Tasas = leerTasas();
+let lista: Lista = LISTA_RESPALDO;
 
 const el = {
   equipo: porId('equipo', HTMLSelectElement),
@@ -54,7 +56,7 @@ let textoActual: string | null = null;
 function actualizar(cambios: Partial<Estado>, repintarPlanes = false): void {
   estado = { ...estado, ...cambios };
   if (repintarPlanes) planes();
-  const op = operacionDe(estado);
+  const op = operacionDe(estado, lista);
   const r = cotizar(op, tasas);
   pintarResultado(nodosResultado, op, r);
   textoActual = r.ok ? armarMensaje(op, r, new Date()) : null;
@@ -98,15 +100,38 @@ function elegirTipo(tipo: Estado['tipo']): void {
   el.bloqueLista.hidden = tipo !== 'lista';
   el.bloqueOtro.hidden = tipo !== 'otro';
   el.etiquetaPrecio.textContent = tipo === 'lista' ? 'Precio de contado' : 'Monto';
-  const precio = tipo === 'lista' ? (buscarEquipo(estado.equipoId)?.precio ?? 0) : estado.precio;
+  const precio = tipo === 'lista' ? (buscarEquipo(lista, estado.equipoId)?.precio ?? 0) : estado.precio;
   el.precio.value = miles(precio);
   actualizar({ tipo, precio });
+}
+
+function pintarMarcas(): void {
+  el.marcas.replaceChildren(...lista.grupos.map((g) => {
+    const radio = crear('input', { type: 'radio', name: 'marca', value: g.grupo, class: 'oculto-accesible', checked: g.grupo === estado.marca });
+    radio.addEventListener('change', () => elegirMarca(g.grupo));
+    return crear('label', { class: 'marca' }, radio, g.grupo);
+  }));
+  porId('fecha-lista', HTMLSpanElement).textContent = lista.fecha ? `del ${lista.fecha}` : 'sin fecha';
+}
+
+function usarLista(nueva: Lista): void {
+  lista = nueva;
+  const marca = lista.grupos.some((g) => g.grupo === estado.marca) ? estado.marca : '';
+  const equipo = marca ? buscarEquipo(lista, estado.equipoId) : undefined;
+  estado = { ...estado, marca, equipoId: equipo?.id ?? '' };
+  pintarMarcas();
+  cargarModelos(marca);
+  el.equipo.value = estado.equipoId;
+  if (estado.tipo === 'lista') {
+    el.precio.value = miles(equipo?.precio ?? 0);
+    actualizar({ precio: equipo?.precio ?? 0 });
+  }
 }
 
 function cargarModelos(marca: string): void {
   el.equipo.replaceChildren(
     crear('option', { value: '' }, marca ? 'Elegí un modelo' : 'Primero elegí la marca'),
-    ...equiposDe(marca).map((e) => crear('option', { value: e.id }, e.nombre)),
+    ...equiposDe(lista, marca).map((e) => crear('option', { value: e.id }, e.nombre)),
   );
   el.equipo.disabled = marca === '';
 }
@@ -129,15 +154,10 @@ function limpiar(): void {
 }
 
 function iniciar(): void {
-  el.marcas.replaceChildren(...LISTA.map((g) => {
-    const radio = crear('input', { type: 'radio', name: 'marca', value: g.grupo, class: 'oculto-accesible' });
-    radio.addEventListener('change', () => elegirMarca(g.grupo));
-    return crear('label', { class: 'marca' }, radio, g.grupo);
-  }));
-  porId('fecha-lista', HTMLSpanElement).textContent = FECHA_LISTA;
+  pintarMarcas();
 
   el.equipo.addEventListener('change', () => {
-    const precio = buscarEquipo(el.equipo.value)?.precio ?? 0;
+    const precio = buscarEquipo(lista, el.equipo.value)?.precio ?? 0;
     el.precio.value = miles(precio);
     actualizar({ equipoId: el.equipo.value, precio });
   });
@@ -185,6 +205,7 @@ function iniciar(): void {
   });
   window.addEventListener('pageshow', (ev) => { if (ev.persisted) limpiar(); });
   limpiar();
+  void cargarLista().then((l) => { if (l) usarLista(l); });
 }
 
 function abrirApp(): void {

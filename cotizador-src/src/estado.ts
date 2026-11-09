@@ -1,4 +1,4 @@
-import { buscarEquipo } from './datos/equipos.js';
+import { buscarEquipo, type Lista } from './dominio/lista.js';
 import type { Medio, OpcionCelu, Operacion, Plazo, PlazoCelu } from './dominio/tipos.js';
 
 export interface Estado {
@@ -31,8 +31,8 @@ export const ESTADO_VACIO: Estado = {
   telefono: '',
 };
 
-export function operacionDe(e: Estado): Operacion {
-  const nombre = e.tipo === 'lista' ? (buscarEquipo(e.equipoId)?.nombre ?? '') : e.nombreOtro.trim();
+export function operacionDe(e: Estado, lista: Lista): Operacion {
+  const nombre = e.tipo === 'lista' ? (buscarEquipo(lista, e.equipoId)?.nombre ?? '') : e.nombreOtro.trim();
   return {
     producto: { tipo: e.tipo, nombre, precio: e.precio },
     usado: { descripcion: e.usadoDesc.trim(), valor: e.usadoValor },
