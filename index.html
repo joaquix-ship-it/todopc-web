@@ -744,9 +744,11 @@ let TM_RES = null;   // última cotización
 const tmTxt = k => (TM_RES && TM_RES.textos && TM_RES.textos[k]) || (TM_SRV && TM_SRV.textos && TM_SRV.textos[k]) || TM_TXT0[k] || '';
 const tmModelos = () => TM_SRV && TM_SRV.modelos && Object.keys(TM_SRV.modelos).length ? TM_SRV.modelos : Object.fromEntries(TM_MODELOS.map(m => [m[0], [128, 256]]));
 const tmOrden = () => { const M = tmModelos(), o = TM_MODELOS.map(m => m[0]); return Object.keys(M).sort((a, b) => (o.indexOf(a) + 1 || 99) - (o.indexOf(b) + 1 || 99)); };
-let TM = (() => { try { return JSON.parse(localStorage.getItem('tp-toma')) || {}; } catch (e) { return {}; } })();
+// El formulario arranca vacío cada vez que se abre la página (se cotiza también desde los equipos del local): no se guarda nada en el navegador.
+let TM = {};
+try { localStorage.removeItem('tp-toma'); } catch (e) {}
 let TM_FOTOS = [];   // fotos achicadas (File), solo en memoria
-const tmGuardar = () => { try { localStorage.setItem('tp-toma', JSON.stringify(TM)); } catch (e) {} };
+const tmGuardar = () => {};
 const tmBatOk = () => { const n = Number(TM.bat); return Number.isInteger(n) && n >= 1 && n <= 100; };
 const tmTel = () => String(TM.whatsapp || '').replace(/\D/g, '');
 const TM_OPC = {
@@ -820,13 +822,14 @@ function tmResultado() {
     ${fotos ? `<button class="tm-cta sec" type="button" id="tm-fotos-env">📷 Enviar las ${TM_FOTOS.length} fotos por WhatsApp</button>` : TM_FOTOS.length ? '<p class="tm-ayuda" style="text-align:center">Adjuntá las fotos en el mismo chat de WhatsApp.</p>' : ''}
     <a class="tm-link" href="#celulares">Ver los celulares</a>
   </section>`;
-  const marcar = tipo => () => { try { localStorage.removeItem('tp-toma'); } catch (e) {} if (R.id) tmPost({ accion: 'interes', id: R.id, tipo }, true).catch(() => {}); };
+  const marcar = tipo => () => { TM._env = true; if (R.id) tmPost({ accion: 'interes', id: R.id, tipo }, true).catch(() => {}); };
   $('tm-b1').addEventListener('click', marcar('interes'));
   $('tm-b2').addEventListener('click', marcar('consultar'));
   if (fotos) $('tm-fotos-env').onclick = async () => { try { await navigator.share({ files: TM_FOTOS, text: `Fotos de mi ${TM.modelo} · ${String(TM.nombre || '').trim()}` }); toast('¡Gracias! Ya tenemos todo'); } catch (e) {} };
 }
 function vTomamos(h) {
   if (h === 'tomamos/valor' && TM_RES) return tmResultado();
+  if (TM._env) { TM = {}; TM_FOTOS = []; }   // ya mandó la consulta: la próxima cotización arranca vacía
   TM_RES = null;
   tmCargarSrv(h);
   const M = tmModelos(), caps = (M[TM.modelo] || []).map(Number), cols = TM_COL[TM.modelo] || [];
