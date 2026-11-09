@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --fondo: 237 241 246;
+    --superficie: 255 255 255;
+    --hundido: 226 232 240;
+    --tinta: 20 35 58;
+    --tenue: 74 87 107;
+    --linea: 205 214 226;
+    --marca: 24 58 107;
+    --sobre-marca: 255 255 255;
+    --exito: 33 112 45;
+    --aviso: 150 68 16;
+    --aviso-fondo: 252 239 228;
+    --whatsapp: 18 120 70;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: 13 20 31;
+      --superficie: 22 32 46;
+      --hundido: 31 44 62;
+      --tinta: 231 237 245;
+      --tenue: 162 176 196;
+      --linea: 46 61 82;
+      --marca: 150 186 240;
+      --sobre-marca: 13 20 31;
+      --exito: 112 204 98;
+      --aviso: 243 170 112;
+      --aviso-fondo: 58 37 22;
+      --whatsapp: 18 120 70;
+      color-scheme: dark;
+    }
+  }
+  html {
+    @apply bg-fondo font-sans text-tinta antialiased;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    -webkit-tap-highlight-color: transparent;
+  }
+  body { @apply min-h-screen bg-fondo; }
+  [hidden] { display: none !important; }
+  ::selection { @apply bg-marca text-sobre-marca; }
+  input, select, textarea { caret-color: rgb(var(--marca)); }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-marca; }
+  * { scrollbar-color: rgb(var(--linea)) transparent; }
+}
+
+@layer components {
+  .contenedor {
+    @apply mx-auto w-full max-w-app;
+    padding-left: max(1rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+  }
+  .panel { @apply flex min-w-0 flex-col gap-4 rounded-xl border border-linea bg-superficie p-4 sm:p-5; }
+  .titulo { @apply text-lg font-semibold text-tinta; }
+  .campo { @apply flex min-w-0 flex-col gap-1.5; }
+  .etiqueta { @apply text-sm font-medium text-tenue; }
+  .entrada {
+    @apply min-h-toque w-full min-w-0 rounded-lg border border-linea bg-fondo px-3 text-base text-tinta placeholder:text-tenue;
+    @apply transition-colors duration-150 focus:border-marca focus:outline-none focus:ring-2 focus:ring-marca/30;
+  }
+  .monto { @apply relative; }
+  .monto::before { @apply pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-semibold text-tenue; content: '$'; }
+  .monto .entrada { @apply pl-7 font-semibold tabular-nums; }
+  .segmentos { @apply grid grid-cols-2 gap-1 rounded-xl bg-hundido p-1; }
+  .segmento { @apply relative flex min-h-toque cursor-pointer items-center justify-center rounded-lg px-3 text-center text-base font-semibold text-tenue transition-colors duration-150; }
+  .segmento:hover { @apply text-tinta; }
+  .segmento:has(input:checked) { @apply bg-superficie text-tinta shadow-sm; }
+  .segmento:has(input:focus-visible) { @apply outline outline-2 outline-offset-2 outline-marca; }
+  .boton {
+    @apply inline-flex min-h-toque items-center justify-center gap-2 rounded-lg border border-linea bg-superficie px-4 text-base font-semibold text-tinta;
+    @apply transition-colors duration-150 hover:border-marca disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .plan { @apply flex flex-wrap items-center gap-3 rounded-xl border border-linea px-3 py-2 transition-colors duration-150; }
+  .plan:has(> label input:checked) { @apply border-marca bg-marca/5; }
+  .opcion { @apply relative flex min-h-toque min-w-toque cursor-pointer items-center justify-center rounded-lg border border-linea bg-fondo px-3 font-semibold tabular-nums text-tinta transition-colors duration-150; }
+  .opcion:has(input:checked) { @apply border-marca bg-marca text-sobre-marca; }
+  .opcion:has(input:disabled) { @apply cursor-not-allowed opacity-40; }
+  .opcion:has(input:focus-visible) { @apply outline outline-2 outline-offset-2 outline-marca; }
+  .oculto-accesible { @apply absolute h-px w-px overflow-hidden whitespace-nowrap border-0 p-0; clip: rect(0 0 0 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0ms !important; }
+}

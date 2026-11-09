@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#183a6b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Cotizador">
+  <title>Cotizador TODO PC</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="app.css?v=__VERSION__">
+  <script src="app.js?v=__VERSION__" defer></script>
+</head>
+<body>
+  <main id="bloqueo" class="contenedor flex min-h-screen items-center justify-center py-8">
+    <form id="form-pin" class="panel w-full max-w-sm text-center" novalidate>
+      <h1 class="text-2xl font-bold text-marca">TODO <span class="text-exito">PC</span></h1>
+      <p class="text-tenue">Cotizador de financiación</p>
+      <div class="campo text-left">
+        <label for="pin" class="etiqueta">PIN de acceso</label>
+        <input id="pin" class="entrada text-center text-xl tracking-[0.4em]" type="password" inputmode="numeric" autocomplete="off" maxlength="8" aria-describedby="error-pin" required>
+        <p id="error-pin" class="min-h-5 text-sm font-medium text-aviso" aria-live="assertive"></p>
+      </div>
+      <button type="submit" class="boton border-marca bg-marca text-sobre-marca">Entrar</button>
+    </form>
+  </main>
+
+  <div id="app" hidden>
+    <header class="contenedor flex items-center justify-between gap-3 py-4">
+      <div>
+        <h1 class="text-xl font-bold leading-none text-marca">TODO <span class="text-exito">PC</span></h1>
+        <p class="mt-1 text-sm text-tenue">Cotizador de financiación</p>
+      </div>
+      <div class="flex gap-2">
+        <button id="btn-nueva" type="button" class="boton">Nueva</button>
+        <button id="btn-tasas" type="button" class="boton" aria-expanded="false" aria-controls="tasas">Tasas</button>
+      </div>
+    </header>
+
+    <div class="contenedor">
+      <section id="tasas" class="panel mb-4" aria-labelledby="t-tasas" hidden>
+        <h2 id="t-tasas" class="titulo">Tasas de recargo</h2>
+        <fieldset class="flex flex-col gap-3 border-t border-linea pt-4">
+          <legend class="float-left mb-3 w-full font-semibold text-marca">Tarjeta <span class="font-normal text-tenue">· una tasa fija por plazo</span></legend>
+          <div id="tasas-tarjeta" class="flex flex-col gap-2"></div>
+        </fieldset>
+        <fieldset class="flex flex-col gap-3 border-t border-linea pt-4">
+          <legend class="float-left mb-3 w-full font-semibold text-marca">CeluCuotas <span class="font-normal text-tenue">· tres opciones por plazo</span></legend>
+          <div id="tasas-celu" class="flex flex-col gap-2"></div>
+        </fieldset>
+        <div class="flex flex-wrap items-center justify-between gap-3 border-t border-linea pt-4">
+          <p class="text-sm text-tenue">Se guardan en este dispositivo. Lista de equipos: <span id="fecha-lista" class="font-semibold text-tinta"></span>.</p>
+          <button id="btn-restaurar" type="button" class="boton">Volver a las originales</button>
+        </div>
+      </section>
+    </div>
+
+    <main class="contenedor grid grid-cols-1 gap-4 pb-10 lg:grid-cols-[1fr_minmax(0,26rem)] lg:items-start">
+      <div class="flex min-w-0 flex-col gap-4">
+        <section class="panel" aria-labelledby="t-producto">
+          <h2 id="t-producto" class="titulo">Qué financia</h2>
+          <fieldset>
+            <legend class="oculto-accesible">Tipo de producto</legend>
+            <div class="segmentos">
+              <label class="segmento"><input class="oculto-accesible" type="radio" name="tipo" value="lista" checked>Celular de la lista</label>
+              <label class="segmento"><input class="oculto-accesible" type="radio" name="tipo" value="otro">Otro / Monto</label>
+            </div>
+          </fieldset>
+          <div id="bloque-lista" class="campo">
+            <label for="equipo" class="etiqueta">Celular</label>
+            <select id="equipo" class="entrada"></select>
+          </div>
+          <div id="bloque-otro" class="campo" hidden>
+            <label for="nombre-otro" class="etiqueta">Producto <span class="font-normal">(opcional)</span></label>
+            <input id="nombre-otro" class="entrada" type="text" autocomplete="off" placeholder="Ej.: Notebook Lenovo i5">
+          </div>
+          <div class="campo">
+            <label id="etiqueta-precio" for="precio" class="etiqueta">Precio de contado</label>
+            <div class="monto"><input id="precio" class="entrada" inputmode="numeric" autocomplete="off" placeholder="0"></div>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="t-entrega">
+          <h2 id="t-entrega" class="titulo">Entrega del cliente</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="campo">
+              <label for="usado-desc" class="etiqueta">Equipo usado</label>
+              <input id="usado-desc" class="entrada" type="text" autocomplete="off" placeholder="Ej.: iPhone 15 128GB">
+            </div>
+            <div class="campo">
+              <label for="usado-valor" class="etiqueta">Valor que tomamos</label>
+              <div class="monto"><input id="usado-valor" class="entrada" inputmode="numeric" autocomplete="off" placeholder="0"></div>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="efectivo" class="etiqueta">Efectivo</label>
+            <div class="monto"><input id="efectivo" class="entrada" inputmode="numeric" autocomplete="off" placeholder="0"></div>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="t-financiacion">
+          <h2 id="t-financiacion" class="titulo">Financiación</h2>
+          <fieldset>
+            <legend class="oculto-accesible">Medio de financiación</legend>
+            <div class="segmentos">
+              <label class="segmento"><input class="oculto-accesible" type="radio" name="medio" value="tarjeta">Tarjeta</label>
+              <label class="segmento"><input class="oculto-accesible" type="radio" name="medio" value="celucuotas">CeluCuotas</label>
+            </div>
+          </fieldset>
+          <fieldset id="planes" class="flex flex-col gap-2">
+            <legend class="oculto-accesible">Planes de cuotas</legend>
+          </fieldset>
+        </section>
+      </div>
+
+      <div class="flex min-w-0 flex-col gap-4 lg:sticky lg:top-4">
+        <section class="panel" aria-labelledby="t-resultado">
+          <h2 id="t-resultado" class="oculto-accesible">Resultado</h2>
+          <dl id="resumen" class="flex flex-col text-base tabular-nums"></dl>
+          <div class="flex items-baseline justify-between gap-3 rounded-lg bg-hundido px-4 py-3">
+            <span class="font-semibold text-tenue">Saldo a financiar</span>
+            <strong id="saldo" class="text-2xl font-bold tabular-nums">$0</strong>
+          </div>
+          <div role="status" aria-live="polite"><p id="aviso" class="rounded-lg bg-aviso-fondo px-4 py-3 font-medium text-aviso"></p></div>
+          <div id="cuotas" class="flex flex-col gap-2" hidden>
+            <h3 id="medio-titulo" class="font-semibold text-marca"></h3>
+            <ul id="lista-cuotas" class="grid grid-cols-[repeat(auto-fit,minmax(8.5rem,1fr))] gap-2"></ul>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="t-mensaje">
+          <h2 id="t-mensaje" class="titulo">Mensaje para el cliente</h2>
+          <pre id="mensaje" class="max-h-80 overflow-auto whitespace-pre-wrap break-words rounded-lg border border-linea bg-fondo p-3 font-sans text-sm text-tinta" tabindex="0" aria-label="Vista previa del mensaje"></pre>
+          <div class="campo">
+            <label for="telefono" class="etiqueta">WhatsApp del cliente <span class="font-normal">(opcional)</span></label>
+            <input id="telefono" class="entrada" type="tel" inputmode="tel" autocomplete="off" placeholder="Ej.: 3405 123456" aria-describedby="ayuda-telefono">
+            <p id="ayuda-telefono" class="text-sm text-tenue"></p>
+          </div>
+          <a id="btn-whatsapp" class="flex min-h-12 items-center justify-center gap-3 rounded-lg bg-whatsapp px-4 text-lg font-bold text-white transition-opacity duration-150 aria-disabled:opacity-50" target="_blank" rel="noopener" aria-disabled="true">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.2z"/></svg>
+            Compartir por WhatsApp
+          </a>
+          <button id="btn-copiar" type="button" class="boton" disabled>Copiar texto</button>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <p id="toast" class="pointer-events-none fixed bottom-[calc(1.5rem+env(safe-area-inset-bottom,0px))] left-1/2 -translate-x-1/2 rounded-lg bg-tinta px-4 py-2 font-semibold text-fondo opacity-0 shadow-lg transition-opacity duration-200" role="status" aria-live="polite"></p>
+</body>
+</html>
