@@ -400,7 +400,7 @@ footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; hei
 .tm-card { background: var(--card); border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 1px 2px rgba(19, 35, 58, 0.06); }
 .tm-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .tm-in { width: 100%; height: 50px; padding: 0 14px; border: 0; border-radius: 12px; background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--line); font-family: inherit; font-size: 16px; font-weight: 700; color: var(--ink); }
-.tm-in::placeholder, select.tm-in.vacio { color: var(--faint); font-weight: 600; }
+.tm-in::placeholder, select.tm-in.tm-vacio { color: var(--faint); font-weight: 600; }
 select.tm-in { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2300508A' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 34px; text-overflow: ellipsis; white-space: nowrap; line-height: 50px; padding-top: 0; padding-bottom: 0; }
 select.tm-in option { color: var(--ink); }
 .tm-in:focus { outline: 2px solid var(--navy); background-color: var(--card); }
@@ -425,8 +425,8 @@ select.tm-in option { color: var(--ink); }
 .tm-ok p { margin: 0 0 4px; font-size: 15.5px; line-height: 1.45; color: var(--muted); font-weight: 600; }
 .tm-link { display: block; padding: 10px; font-size: 14.5px; font-weight: 800; color: var(--navy); }
 .tm-f { position: relative; display: block; min-width: 0; }
-.tm-f small { position: absolute; left: 14px; top: 6px; z-index: 1; max-width: calc(100% - 44px); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 11.5px; font-weight: 700; color: var(--muted); pointer-events: none; }
-.tm-f select.tm-in { height: 54px; padding-top: 18px; line-height: normal; }
+.tm-f small { position: absolute; left: 14px; top: 7px; z-index: 1; max-width: calc(100% - 44px); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 11.5px; font-weight: 700; color: var(--muted); pointer-events: none; }
+.tm-f select.tm-in { height: 56px; padding-top: 22px; line-height: normal; }
 .tm-sec { margin: 0 2px -2px; font-size: 12.5px; font-weight: 900; letter-spacing: 0.6px; text-transform: uppercase; color: var(--muted); }
 a.tm-cta { text-decoration: none; text-align: center; padding: 0 14px; }
 .tm-cta.sec { background: var(--card); color: var(--navy); box-shadow: inset 0 0 0 1.5px var(--line); font-size: 15.5px; font-weight: 800; }
@@ -759,13 +759,13 @@ const TM_REQ = [['modelo', 'el modelo'], ['cap', 'la capacidad'], ['bat', 'la ba
 const tmOkCampo = k => k === 'bat' ? tmBatOk() : k === 'nombre' ? (TM.nombre || '').trim().split(/\s+/).filter(Boolean).length >= 2
   : k === 'whatsapp' ? tmTel().length >= 10 : k === 'cap' ? !!((tmModelos()[TM.modelo] || []).map(Number).includes(Number(TM.cap))) : !!TM[k];
 const tmBan = () => `<a class="tm-ban" href="#tomamos"><span class="tm-ic" aria-hidden="true">🔄</span><span><b>Tomamos tu iPhone</b> como parte de pago</span><em>Cotizalo ${ico('chev', 14, 2.8)}</em></a>`;
-const tmSel = (k, ph, ops, val) => `<select class="tm-in${val ? '' : ' vacio'}" data-k="${k}" aria-label="${esc(ph)}"><option value="">${ph}</option>${ops.map(o => { const [v, t] = Array.isArray(o) ? o : [o, o]; return `<option value="${esc(v)}" ${String(val) === String(v) ? 'selected' : ''}>${esc(t)}</option>`; }).join('')}</select>`;
+const tmSel = (k, ph, ops, val) => `<select class="tm-in${val ? '' : ' tm-vacio'}" data-k="${k}" aria-label="${esc(ph)}"><option value="">${ph}</option>${ops.map(o => { const [v, t] = Array.isArray(o) ? o : [o, o]; return `<option value="${esc(v)}" ${String(val) === String(v) ? 'selected' : ''}>${esc(t)}</option>`; }).join('')}</select>`;
 const tmOp = (k, lab) => `<label class="tm-f"><small>${lab}</small>${tmSel(k, 'Elegí', TM_OPC[k], TM[k])}</label>`;
 const tmCelusPs = () => DATA.productos.filter(p => p.rubro === 'celulares' && p.sub !== 'Usados' && !p.estado);
 const tmCelNom = p => p.nombre + (p.det ? ' ' + p.det.split('·')[0].trim() : '');
 function tmCelus() {
   const ps = tmCelusPs(), subs = [...new Set(ps.map(p => p.sub))];
-  return `<select class="tm-in${TM.quiere ? '' : ' vacio'}" data-k="quiere" aria-label="Celu que te interesa"><option value="">¿Te interesa algún celu? (opcional)</option>${subs.map(s => `<optgroup label="${esc(s)}">${ps.filter(p => p.sub === s).map(p => { const v = tmCelNom(p); return `<option value="${esc(v)}" ${TM.quiere === v ? 'selected' : ''}>${esc(v)}</option>`; }).join('')}</optgroup>`).join('')}</select>`;
+  return `<select class="tm-in${TM.quiere ? '' : ' tm-vacio'}" data-k="quiere" aria-label="Celu que te interesa"><option value="">¿Te interesa algún celu? (opcional)</option>${subs.map(s => `<optgroup label="${esc(s)}">${ps.filter(p => p.sub === s).map(p => { const v = tmCelNom(p); return `<option value="${esc(v)}" ${TM.quiere === v ? 'selected' : ''}>${esc(v)}</option>`; }).join('')}</optgroup>`).join('')}</select>`;
 }
 const tmCelPrecio = () => { const p = tmCelusPs().find(p => tmCelNom(p) === TM.quiere); return p && p.precio ? p.precio : 0; };
 function tmMensaje(tipo) {
@@ -861,7 +861,7 @@ function vTomamos(h) {
     $('tm-thumbs').querySelectorAll('button').forEach(b => b.onclick = () => { TM_FOTOS.splice(Number(b.dataset.i), 1); thumbs(); }); };
   thumbs();
   vista.querySelectorAll('[data-k]').forEach(el => el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', () => {
-    const k = el.dataset.k; TM[k] = el.value; el.classList.toggle('vacio', !el.value); el.classList.remove('falta');
+    const k = el.dataset.k; TM[k] = el.value; el.classList.toggle('tm-vacio', !el.value); el.classList.remove('falta');
     if (k === 'modelo' || k === 'rep') {
       if (k === 'modelo') { if (!(tmModelos()[TM.modelo] || []).map(Number).includes(Number(TM.cap))) TM.cap = ''; if (!(TM_COL[TM.modelo] || []).includes(TM.color)) TM.color = ''; }
       tmGuardar(); const y = scrollY; vTomamos(h); scrollTo(0, y); return;
