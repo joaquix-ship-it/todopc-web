@@ -1,11 +1,12 @@
 import { accesoVigente, HASH_ACCESO, pinValido } from './acceso.js';
 import { accesoGuardado, guardarAcceso, guardarTasas, leerTasas } from './almacen.js';
-import { cargarLista, LISTA_RESPALDO } from './catalogo.js';
+import { cargarLista, cargarTarjeta, LISTA_RESPALDO } from './catalogo.js';
 import { cotizar, TASAS_INICIALES } from './dominio/financiacion.js';
 import { leerMonto, miles } from './dominio/formato.js';
 import { buscarEquipo, equiposDe, type Lista } from './dominio/lista.js';
 import { armarMensaje } from './dominio/mensaje.js';
 import type { Medio, Tasas } from './dominio/tipos.js';
+import type { TasasTarjeta } from './dominio/valores.js';
 import { alternarPlazo, ESTADO_VACIO, operacionDe, type Estado } from './estado.js';
 import { crear, porId } from './vista/dom.js';
 import { pintarMensaje } from './vista/mensaje.js';
@@ -16,6 +17,8 @@ import { pintarTasas } from './vista/tasas.js';
 let estado: Estado = ESTADO_VACIO;
 let tasas: Tasas = leerTasas();
 let lista: Lista = LISTA_RESPALDO;
+let tarjetaOficial: TasasTarjeta | null = null;
+const conOficial = (t: Tasas): Tasas => (tarjetaOficial ? { ...t, tarjeta: tarjetaOficial } : t);
 
 const el = {
   equipo: porId('equipo', HTMLSelectElement),
@@ -170,8 +173,8 @@ function iniciar(): void {
   campoTexto(el.usadoDesc, 'usadoDesc');
   campoTexto(el.telefono, 'telefono');
 
-  const tasasUI = (): void => pintarTasas(porId('tasas-tarjeta', HTMLDivElement), porId('tasas-celu', HTMLDivElement), tasas, (t) => {
-    tasas = t;
+  const tasasUI = (): void => pintarTasas(porId('tasas-tarjeta', HTMLDivElement), porId('tasas-celu', HTMLDivElement), tasas, tarjetaOficial !== null, (t) => {
+    tasas = conOficial(t);
     guardarTasas(t);
     actualizar({}, true);
   });
@@ -182,7 +185,7 @@ function iniciar(): void {
     el.btnTasas.setAttribute('aria-expanded', String(abrir));
   });
   porId('btn-restaurar', HTMLButtonElement).addEventListener('click', () => {
-    tasas = TASAS_INICIALES;
+    tasas = conOficial(TASAS_INICIALES);
     guardarTasas(tasas);
     tasasUI();
     actualizar({}, true);
@@ -206,6 +209,14 @@ function iniciar(): void {
   window.addEventListener('pageshow', (ev) => { if (ev.persisted) limpiar(); });
   limpiar();
   void cargarLista().then((l) => { if (l) usarLista(l); });
+  void cargarTarjeta().then((t) => {
+    if (!t) return;
+    tarjetaOficial = t;
+    tasas = conOficial(tasas);
+    porId('nota-tarjeta', HTMLElement).hidden = false;
+    tasasUI();
+    actualizar({}, true);
+  });
 }
 
 function abrirApp(): void {

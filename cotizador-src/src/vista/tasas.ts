@@ -25,12 +25,16 @@ const filaTasas = (plazo: Plazo, ...campos: HTMLElement[]): HTMLElement =>
     crear('span', { class: 'font-semibold' }, `${plazo} cuotas`),
     crear('div', { class: 'grid grid-cols-3 gap-2' }, ...campos));
 
-export function pintarTasas(tarjeta: HTMLElement, celu: HTMLElement, tasas: Tasas, alCambiar: (t: Tasas) => void): void {
+const valorFijo = (valor: number, etiqueta: string): HTMLElement =>
+  crear('p', { class: 'py-2 text-lg font-semibold tabular-nums', 'aria-label': etiqueta }, `${valor}%`);
+
+export function pintarTasas(tarjeta: HTMLElement, celu: HTMLElement, tasas: Tasas, tarjetaFija: boolean, alCambiar: (t: Tasas) => void): void {
   let actual = tasas;
   const cambiar = (t: Tasas): void => { actual = t; alCambiar(t); };
 
-  tarjeta.replaceChildren(...([3, 6, 12] as const).map((p) => filaTasas(p,
-    campoPorcentaje(`cfg-tarjeta-${p}`, tasas.tarjeta[p], `Tarjeta, ${p} cuotas`,
+  tarjeta.replaceChildren(...([3, 6, 12] as const).map((p) => filaTasas(p, tarjetaFija
+    ? valorFijo(tasas.tarjeta[p], `Tarjeta, ${p} cuotas`)
+    : campoPorcentaje(`cfg-tarjeta-${p}`, tasas.tarjeta[p], `Tarjeta, ${p} cuotas`,
       (n) => cambiar({ ...actual, tarjeta: { ...actual.tarjeta, [p]: n } })))));
 
   celu.replaceChildren(...([3, 6] as const).map((p: PlazoCelu) => filaTasas(p,

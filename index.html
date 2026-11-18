@@ -1063,6 +1063,35 @@ buscar.addEventListener('input', () => {
 $('limpiar').onclick = () => { buscar.value = ''; $('limpiar').hidden = true; router(); buscar.focus(); };
 window.addEventListener('hashchange', () => { subSel = marcaPend || 'Todos'; marcaPend = null; router(); });
 router();
+/* Teléfonos en vivo: Precios App publica datos/celulares.json y la página lo toma al abrirse.
+   Precio, detalle y qué equipos hay salen de ahí; la foto y la ficha siguen saliendo de esta página. */
+function mezclarCelulares(pub) {
+  const lista = pub && Array.isArray(pub.productos) ? pub.productos.filter(p => p && p.id && p.precio > 0) : [];
+  if (!lista.length) return false;
+  const viejos = DATA.productos.filter(p => p.rubro === 'celulares');
+  const porId = Object.fromEntries(viejos.map(p => [p.id, p]));
+  const nuevos = lista.map(p => {
+    const e = porId[p.id], b = e || porId[p.id.replace(/-\d+$/, '')] || {};
+    return { ...(e || {}), rubro: 'celulares', id: p.id, sub: tit(p.sub), nombre: p.nombre, det: p.det || '',
+      precio: p.precio, tag: p.tag || null, foto: b.foto || null, specs: b.specs,
+      nuevo: e ? e.nuevo : true, alta: e ? e.alta : String(p.ingreso || '').slice(0, 10) };
+  });
+  const clave = ps => JSON.stringify(ps.map(p => [p.id, p.precio, p.det, p.nombre, p.sub, p.tag]));
+  if (clave(nuevos) === clave(viejos)) return false;
+  const pos = DATA.productos.findIndex(p => p.rubro === 'celulares');
+  const resto = DATA.productos.filter(p => p.rubro !== 'celulares');
+  resto.splice(pos < 0 ? resto.length : pos, 0, ...nuevos);
+  DATA.productos.splice(0, DATA.productos.length, ...resto);
+  viejos.forEach(p => { delete BY_ID[p.id]; });
+  nuevos.forEach(p => { BY_ID[p.id] = p; });
+  (DATA.portada || []).forEach(v => { if (v.rubro === 'celulares' && BY_ID[v.id]) v.precio = BY_ID[v.id].precio; });
+  (DATA.marcas || []).forEach(m => { m.n = nuevos.filter(p => p.sub === m.sub).length; });
+  return true;
+}
+fetch('datos/celulares.json', { cache: 'no-cache' })
+  .then(r => r.ok ? r.json() : null)
+  .then(d => { if (mezclarCelulares(d) && !buscar.value) router(); })
+  .catch(() => {});
 </script>
 
 <!-- Cloudflare Web Analytics (sin cookies) --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "208f75a512f644e69d52cda4d78f8f64"}'></script><!-- End Cloudflare Web Analytics -->
