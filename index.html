@@ -1067,7 +1067,10 @@ router();
    Precio, detalle y qué equipos hay salen de ahí; la foto y la ficha siguen saliendo de esta página. */
 const FOTOS_CEL = {
   'redmi-note-17-256-gb': 'fotos/cel-redmi-note-17-256-gb.jpg',
-  'iphone-16-pro-max-256-gb-usado': 'fotos/cel-iphone-16-pro-128-gb-usado.jpg',
+  'iphone-16-pro-max-256-gb-usado': 'fotos/cel-iphone-16-pro-max-256-gb-usado.jpg',
+  'iphone-17-256-gb-usado': 'fotos/cel-iphone-17-256-gb-usado.jpg',
+  'iphone-17-pro-256-gb-usado': 'fotos/cel-iphone-17-pro-256-gb-usado.jpg',
+  'galaxy-s26-ultra-512-gb': 'fotos/cel-galaxy-s26-ultra-512-gb.jpg',
 };
 function mezclarCelulares(pub) {
   const lista = pub && Array.isArray(pub.productos) ? pub.productos.filter(p => p && p.id && p.precio > 0) : [];
