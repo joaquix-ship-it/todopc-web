@@ -1065,6 +1065,10 @@ window.addEventListener('hashchange', () => { subSel = marcaPend || 'Todos'; mar
 router();
 /* Teléfonos en vivo: Precios App publica datos/celulares.json y la página lo toma al abrirse.
    Precio, detalle y qué equipos hay salen de ahí; la foto y la ficha siguen saliendo de esta página. */
+const FOTOS_CEL = {
+  'redmi-note-17-256-gb': 'fotos/cel-redmi-note-17-256-gb.jpg',
+  'iphone-16-pro-max-256-gb-usado': 'fotos/cel-iphone-16-pro-128-gb-usado.jpg',
+};
 function mezclarCelulares(pub) {
   const lista = pub && Array.isArray(pub.productos) ? pub.productos.filter(p => p && p.id && p.precio > 0) : [];
   if (!lista.length) return false;
@@ -1072,11 +1076,12 @@ function mezclarCelulares(pub) {
   const porId = Object.fromEntries(viejos.map(p => [p.id, p]));
   const nuevos = lista.map(p => {
     const e = porId[p.id], b = e || porId[p.id.replace(/-\d+$/, '')] || {};
+    const foto = b.foto || FOTOS_CEL[p.id.replace(/-\d+$/, '')] || null;
     return { ...(e || {}), rubro: 'celulares', id: p.id, sub: tit(p.sub), nombre: p.nombre, det: p.det || '',
-      precio: p.precio, tag: p.tag || null, foto: b.foto || null, specs: b.specs,
+      precio: p.precio, tag: p.tag || null, foto, specs: b.specs,
       nuevo: e ? e.nuevo : true, alta: e ? e.alta : String(p.ingreso || '').slice(0, 10) };
   });
-  const clave = ps => JSON.stringify(ps.map(p => [p.id, p.precio, p.det, p.nombre, p.sub, p.tag]));
+  const clave = ps => JSON.stringify(ps.map(p => [p.id, p.precio, p.det, p.nombre, p.sub, p.tag, p.foto]));
   if (clave(nuevos) === clave(viejos)) return false;
   const pos = DATA.productos.findIndex(p => p.rubro === 'celulares');
   const resto = DATA.productos.filter(p => p.rubro !== 'celulares');
