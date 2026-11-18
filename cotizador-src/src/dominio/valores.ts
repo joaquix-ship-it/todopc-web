@@ -1,6 +1,6 @@
-import type { Plazo } from './tipos.js';
+import type { PlazoTarjeta } from './tipos.js';
 
-export type TasasTarjeta = Readonly<Record<Plazo, number>>;
+export type TasasTarjeta = Readonly<Record<PlazoTarjeta, number>>;
 
 const esTasa = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v) && v >= 0;
 

@@ -1,12 +1,14 @@
 export type Medio = 'tarjeta' | 'celucuotas';
-export type Plazo = 3 | 6 | 12;
+export type Plazo = 3 | 6 | 12 | 22;
 export type PlazoCelu = 3 | 6;
+export type PlazoTarjeta = 3 | 6 | 12;
 export type OpcionCelu = 0 | 1 | 2;
 export type TresTasas = readonly [number, number, number];
 
 export interface Tasas {
-  readonly tarjeta: Readonly<Record<Plazo, number>>;
+  readonly tarjeta: Readonly<Record<PlazoTarjeta, number>>;
   readonly celucuotas: Readonly<Record<PlazoCelu, TresTasas>>;
+  readonly semanas: number;
 }
 
 export interface Producto {

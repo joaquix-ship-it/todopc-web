@@ -43,5 +43,9 @@ export function pintarTasas(tarjeta: HTMLElement, celu: HTMLElement, tasas: Tasa
       tres[i] = n;
       const nuevas: TresTasas = tres;
       cambiar({ ...actual, celucuotas: { ...actual.celucuotas, [p]: nuevas } });
-    })))));
+    }))),
+  ), crear('div', { class: 'grid max-w-lg grid-cols-[5.5rem_1fr] items-center gap-3' },
+    crear('span', { class: 'font-semibold' }, '22 semanas'),
+    crear('div', { class: 'grid grid-cols-3 gap-2' },
+      campoPorcentaje('cfg-celu-22', tasas.semanas, 'CeluCuotas, 22 semanas', (n) => cambiar({ ...actual, semanas: n })))));
 }

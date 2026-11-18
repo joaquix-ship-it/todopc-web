@@ -20,7 +20,8 @@ function validar(v: unknown): Tasas | null {
   if (!tarjeta || !celucuotas) return null;
   const [t3, t6, t12, c3, c6] = [tarjeta['3'], tarjeta['6'], tarjeta['12'], celucuotas['3'], celucuotas['6']];
   if (!esNumero(t3) || !esNumero(t6) || !esNumero(t12) || !esTres(c3) || !esTres(c6)) return null;
-  return { tarjeta: { 3: t3, 6: t6, 12: t12 }, celucuotas: { 3: c3, 6: c6 } };
+  const semanas = (v as { semanas?: unknown }).semanas;
+  return { tarjeta: { 3: t3, 6: t6, 12: t12 }, celucuotas: { 3: c3, 6: c6 }, semanas: esNumero(semanas) ? semanas : TASAS_INICIALES.semanas };
 }
 
 export function leerTasas(): Tasas {

@@ -47,7 +47,7 @@ export function pintarResultado(n: NodosResultado, op: Operacion, r: Resultado):
   if (!r.ok) return;
   n.medio.textContent = `Financiación con ${r.medio === 'tarjeta' ? 'Tarjeta' : 'CeluCuotas'}`;
   n.lista.replaceChildren(...r.planes.map((p) => crear('li', { class: 'flex flex-col gap-0.5 rounded-xl border border-linea p-3' },
-    crear('span', { class: 'font-semibold text-tenue' }, `${p.plazo} cuotas de`),
+    crear('span', { class: 'font-semibold text-tenue' }, `${p.plazo} cuotas${p.plazo === 22 ? ' semanales' : ''} de`),
     crear('span', { class: 'text-2xl font-bold tabular-nums text-exito' }, pesos(p.cuota)),
     crear('span', { class: 'text-sm tabular-nums text-tenue' }, `Total ${pesos(p.total)} · ${p.tasa}%`))));
 }

@@ -14,11 +14,14 @@ function filaPlan(estado: Estado, tasas: Tasas, plazo: Plazo, acciones: Acciones
   const marcado = estado.plazos.includes(plazo);
   const casilla = crear('input', { type: 'checkbox', id: `plazo-${plazo}`, class: 'h-5 w-5 accent-marca', checked: marcado });
   casilla.addEventListener('change', () => acciones.marcar(plazo, casilla.checked));
-  const etiqueta = crear('label', { for: `plazo-${plazo}`, class: 'flex min-h-toque flex-1 cursor-pointer items-center gap-3 text-lg font-semibold' }, casilla, `${plazo} cuotas`);
+  const etiqueta = crear('label', { for: `plazo-${plazo}`, class: 'flex min-h-toque flex-1 cursor-pointer items-center gap-3 text-lg font-semibold' }, casilla, plazo === 22 ? '22 semanas' : `${plazo} cuotas`);
   const fila = crear('div', { class: 'plan' }, etiqueta);
 
+  const recargo = (t: number): HTMLElement => crear('span', { class: 'text-sm font-medium tabular-nums text-tenue' }, `recargo ${t}%`);
+  if (plazo === 22) { fila.append(recargo(tasas.semanas)); return fila; }
   if (estado.medio === 'tarjeta') {
-    fila.append(crear('span', { class: 'text-sm font-medium tabular-nums text-tenue' }, `recargo ${tasas.tarjeta[plazo]}%`));
+    if (plazo !== 12 && plazo !== 3 && plazo !== 6) return fila;
+    fila.append(recargo(tasas.tarjeta[plazo]));
     return fila;
   }
   if (plazo === 12) return fila;

@@ -62,3 +62,10 @@ test('otro producto con descripción la muestra', () => {
   const texto = mensaje({ ...op, producto: { tipo: 'otro', nombre: 'Notebook Lenovo i5', precio: 900_000 }, usado: { descripcion: '', valor: 0 }, efectivo: 0, medio: 'tarjeta', plazos: [3] });
   assert.match(texto, /Producto: Notebook Lenovo i5 → \$900\.000/);
 });
+
+test('las 22 semanas se leen como cuotas semanales', () => {
+  const op = { producto: { tipo: 'lista' as const, nombre: 'Moto G57 256 GB', precio: 469_000 }, usado: { descripcion: '', valor: 0 }, efectivo: 0, medio: 'celucuotas' as const, plazos: [22] as const, opcionCelu: {} };
+  const r = { ok: true as const, entregado: 0, saldo: 469_000, medio: 'celucuotas' as const, planes: [{ plazo: 22 as const, tasa: 70, cuota: 36_300, total: 798_600 }] };
+  const texto = armarMensaje(op, r, new Date(2026, 10, 17));
+  assert.match(texto, /• 22 cuotas semanales de \$\s?36\.300/);
+});

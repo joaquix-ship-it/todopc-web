@@ -57,7 +57,7 @@ test('CeluCuotas sin tasa elegida avisa qué plazo falta', () => {
 });
 
 test('CeluCuotas no admite 12 cuotas', () => {
-  assert.deepEqual(plazosDe('celucuotas'), [3, 6]);
+  assert.deepEqual(plazosDe('celucuotas'), [3, 6, 22]);
   assert.deepEqual(plazosDe('tarjeta'), [3, 6, 12]);
   const r = cotizar({ ...base, medio: 'celucuotas', plazos: [12], opcionCelu: {} }, TASAS_INICIALES);
   assert.deepEqual(r.ok ? null : r.motivo, { tipo: 'sin-planes' });
@@ -79,3 +79,21 @@ function motivo(op: Operacion) {
   const r = cotizar(op, TASAS_INICIALES);
   return r.ok ? null : r.motivo;
 }
+
+test('CeluCuotas ofrece 3 y 6 cuotas y, optativo, 22 semanas; tarjeta sigue con 3, 6 y 12', () => {
+  assert.deepEqual(plazosDe('celucuotas'), [3, 6, 22]);
+  assert.deepEqual(plazosDe('tarjeta'), [3, 6, 12]);
+});
+
+test('22 semanas usa su propia tasa (70 % de entrada) y divide el total en 22 pagos', () => {
+  assert.equal(TASAS_INICIALES.semanas, 70);
+  const r = cotizar({ ...base, medio: 'celucuotas', plazos: [22] }, TASAS_INICIALES);
+  assert.ok(r.ok);
+  assert.deepEqual(r.planes.map((p) => [p.plazo, p.tasa, p.cuota, p.total]), [[22, 70, 61_800, 61_800 * 22]]);
+});
+
+test('22 semanas no pide elegir opción de tasa', () => {
+  const r = cotizar({ ...base, medio: 'celucuotas', plazos: [6, 22], opcionCelu: { 6: 1 } }, TASAS_INICIALES);
+  assert.ok(r.ok);
+  assert.deepEqual(r.planes.map((p) => p.plazo), [6, 22]);
+});
