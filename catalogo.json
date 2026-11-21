@@ -3798,6 +3798,19 @@
    "alta": "2026-11-21"
   },
   {
+   "rubro": "redes",
+   "sub": "Adaptadores Wi-Fi",
+   "nombre": "Placa Red USB Mercusys MW300UH 300MBPS 2 Antenas",
+   "det": "",
+   "precio": 24000,
+   "tag": null,
+   "foto": "fotos/a-9ba3b45def64db2d15c1a51cce1a78d6.jpg",
+   "id": "placa-red-usb-mercusys-mw300uh-300mbps-2-antenas",
+   "nuevo": false,
+   "tp": "TP00243",
+   "alta": "2026-11-21"
+  },
+  {
    "rubro": "accesorios",
    "sub": "Cables",
    "nombre": "Cable VGA A VGA 1.5 Mtr Con Filtro JG-VGA1.5M",
@@ -3821,6 +3834,19 @@
    "id": "cable-vga-a-vga-3-metros-con-filtro-jg-vga3m",
    "nuevo": false,
    "tp": "TP00245",
+   "alta": "2026-11-21"
+  },
+  {
+   "rubro": "redes",
+   "sub": "Routers",
+   "nombre": "Sistema Mesh Cudy M1200 AC1200 Pack X 2",
+   "det": "",
+   "precio": 108000,
+   "tag": null,
+   "foto": "fotos/a-4366bb7465b67a0e9e232c8ef5366342.jpg",
+   "id": "sistema-mesh-cudy-m1200-ac1200-pack-x-2",
+   "nuevo": false,
+   "tp": "TP00246",
    "alta": "2026-11-21"
   },
   {
