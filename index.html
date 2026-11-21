@@ -545,7 +545,8 @@ $('fab').href = wa('Hola TODO PC! Quería hacer una consulta.');
 const SIN = { ruter: 'router', ruters: 'router', wifi: 'router repetidor wifi', celu: 'celular', celus: 'celular', cel: 'celular', telefono: 'celular', compu: 'pc notebook', impresora: 'impresora', tinta: 'cartucho', toner: 'toner', auricular: 'auriculares', parlante: 'parlantes', cargador: 'cargador', caja: 'caja fuerte', billetes: 'contadora' };
 function dist(a, b) { if (Math.abs(a.length - b.length) > 1) return 2; const m = a.length, n = b.length; let prev = Array.from({ length: n + 1 }, (_, i) => i); for (let i = 1; i <= m; i++) { const cur = [i]; for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); prev = cur; } return prev[n]; }
 const palabras = t => norm(t).split(/\s+/).filter(Boolean);
-DATA.productos.forEach(p => { const r = RUBRO[p.rubro] || {}; p._n = palabras([p.nombre, p.det, p.sub, r.nombre].join(' ')); p._w = [...p._n, ...palabras(r.claves || '')]; });
+const indexar = p => { const r = RUBRO[p.rubro] || {}; p._n = palabras([p.nombre, p.det, p.sub, r.nombre].join(' ')); p._w = [...p._n, ...palabras(r.claves || '')]; };
+DATA.productos.forEach(indexar);
 // búsqueda específica: primero por nombre, detalle, subrubro y rubro; las palabras clave del rubro solo si así no aparece nada
 function buscarProductos(q) { const ps = DATA.productos.filter(p => coincide(p, q, '_n')); return ps.length ? ps : DATA.productos.filter(p => coincide(p, q, '_w')); }
 function coincide(p, q, campo = '_w') {
@@ -1091,7 +1092,7 @@ function mezclarCelulares(pub) {
   resto.splice(pos < 0 ? resto.length : pos, 0, ...nuevos);
   DATA.productos.splice(0, DATA.productos.length, ...resto);
   viejos.forEach(p => { delete BY_ID[p.id]; });
-  nuevos.forEach(p => { BY_ID[p.id] = p; });
+  nuevos.forEach(p => { indexar(p); BY_ID[p.id] = p; });   // el buscador necesita las palabras de cada equipo nuevo
   (DATA.portada || []).forEach(v => { if (v.rubro === 'celulares' && BY_ID[v.id]) v.precio = BY_ID[v.id].precio; });
   (DATA.marcas || []).forEach(m => { m.n = nuevos.filter(p => p.sub === m.sub).length; });
   return true;
