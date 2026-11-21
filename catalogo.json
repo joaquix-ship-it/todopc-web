@@ -795,7 +795,6 @@
    "foto": "fotos/cel-iphone-16-pro-128-gb-usado.jpg",
    "id": "iphone-16-pro-128-gb-usado",
    "nuevo": false,
-   "estado": "vendido",
    "alta": "2026-11-01",
    "specs": {
     "pantalla": "6,3\"",
@@ -840,7 +839,6 @@
    "foto": "fotos/cel-iphone-17-256-gb-usado.jpg",
    "id": "iphone-17-256-gb-usado",
    "nuevo": true,
-   "estado": "vendido",
    "alta": "2026-11-21",
    "specs": {
     "pantalla": "6,3\"",
@@ -955,7 +953,7 @@
    "sub": "Pendrives",
    "nombre": "Pendrive Philips Snow 32 GB",
    "det": "USB 2.0",
-   "precio": 22000,
+   "precio": 25000,
    "tag": null,
    "foto": "fotos/a-c35a8640ad05cbe5fe442d3ef9c43c0f.jpg",
    "id": "pendrive-philips-snow-32-gb",
@@ -3938,6 +3936,19 @@
    "id": "parlante-bluetooth-soul-pets-toro-azul-negro-rojo",
    "nuevo": false,
    "tp": "TP00252",
+   "alta": "2026-11-21"
+  },
+  {
+   "rubro": "comercio",
+   "sub": "Lectores de código",
+   "nombre": "Lector Netmak NM-LC605 1D/2D/QR USB Black",
+   "det": "",
+   "precio": 89000,
+   "tag": null,
+   "foto": "fotos/a-94c7c589799466acbe92880d8802073d.jpg",
+   "id": "lector-netmak-nm-lc605-1d-2d-qr-usb-black",
+   "nuevo": false,
+   "tp": "TP00253",
    "alta": "2026-11-21"
   }
  ]
