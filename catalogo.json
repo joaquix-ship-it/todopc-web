@@ -3694,6 +3694,45 @@
    "nuevo": false,
    "tp": "TP00236",
    "alta": "2026-11-21"
+  },
+  {
+   "rubro": "parlantes",
+   "sub": "Portátiles",
+   "nombre": "Parlante Bluetooth Soul Pets Dog (blanco/Azul/Rosa)",
+   "det": "",
+   "precio": 41000,
+   "tag": null,
+   "foto": "fotos/a-32fca83f7cec801dad067b843a8c5ce1.jpg",
+   "id": "parlante-bluetooth-soul-pets-dog-blanco-azul-rosa",
+   "nuevo": false,
+   "tp": "TP00249",
+   "alta": "2026-11-21"
+  },
+  {
+   "rubro": "parlantes",
+   "sub": "Portátiles",
+   "nombre": "Parlante Bluetooth Soul Pets Oso (marron/Rosa/Verde)",
+   "det": "",
+   "precio": 41000,
+   "tag": null,
+   "foto": "fotos/a-063ba2ad5ec49c805d4181f528fb1667.jpg",
+   "id": "parlante-bluetooth-soul-pets-oso-marron-rosa-verde",
+   "nuevo": false,
+   "tp": "TP00251",
+   "alta": "2026-11-21"
+  },
+  {
+   "rubro": "parlantes",
+   "sub": "Portátiles",
+   "nombre": "Parlante Bluetooth Soul Pets Toro (azul/Negro/Rojo)",
+   "det": "",
+   "precio": 41000,
+   "tag": null,
+   "foto": "fotos/a-7dc2e7ba04a5e99dc0a857be3923d885.jpg",
+   "id": "parlante-bluetooth-soul-pets-toro-azul-negro-rojo",
+   "nuevo": false,
+   "tp": "TP00252",
+   "alta": "2026-11-21"
   }
  ]
 }
