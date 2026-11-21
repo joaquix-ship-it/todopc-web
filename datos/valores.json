@@ -1,11 +1,11 @@
 {
- "generado": "2026-11-18T10:48:17",
+ "generado": "2026-11-21T13:41:39",
  "origen": "Precios App",
- "dolar": 1570,
+ "dolar": 1670,
  "tarjeta": {
   "3": 25,
   "6": 45,
-  "12": 85
+  "12": 90
  },
  "redondeo_cuota": 100
 }
