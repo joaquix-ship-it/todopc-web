@@ -1304,6 +1304,19 @@
   {
    "rubro": "comercio",
    "sub": "Lectores de código",
+   "nombre": "Lector de código de barras y QR Netmak",
+   "det": "USB · Lee códigos en pantalla de celular",
+   "precio": 80000,
+   "tag": null,
+   "foto": "fotos/a-ade0f26f6f781e48f7c9000f3c580c6f.jpg",
+   "id": "lector-de-codigo-de-barras-y-qr-netmak",
+   "nuevo": false,
+   "tp": "TP00042",
+   "alta": "2026-11-21"
+  },
+  {
+   "rubro": "comercio",
+   "sub": "Lectores de código",
    "nombre": "Lector de código de barras inalámbrico Netmak",
    "det": "NM-LC502",
    "precio": 60000,
