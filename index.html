@@ -765,11 +765,13 @@ const tmOkCampo = k => k === 'bat' ? tmBatOk() : k === 'nombre' ? (TM.nombre || 
 const tmBan = () => (TM_SRV || setTimeout(() => tmCargarSrv('tomamos'), 1500), '') + `<a class="tm-ban" href="#tomamos"><span class="tm-ic" aria-hidden="true">🔄</span><span><b>Tomamos tu iPhone</b> como parte de pago</span><em>Cotizalo ${ico('chev', 14, 2.8)}</em></a>`;
 const tmSel = (k, ph, ops, val) => `<select class="tm-in${val ? '' : ' tm-vacio'}" data-k="${k}" aria-label="${esc(ph)}"><option value="">${ph}</option>${ops.map(o => { const [v, t] = Array.isArray(o) ? o : [o, o]; return `<option value="${esc(v)}" ${String(val) === String(v) ? 'selected' : ''}>${esc(t)}</option>`; }).join('')}</select>`;
 const tmOp = (k, lab) => `<label class="tm-f"><small>${lab}</small>${tmSel(k, 'Elegí', TM_OPC[k], TM[k])}</label>`;
-const tmCelusPs = () => DATA.productos.filter(p => p.rubro === 'celulares' && p.sub !== 'Usados' && !p.estado);
-const tmCelNom = p => p.nombre + (p.det ? ' ' + p.det.split('·')[0].trim() : '');
+// El cambio es iPhone por iPhone: nuevos y usados, nunca otras marcas.
+const tmCelusPs = () => DATA.productos.filter(p => p.rubro === 'celulares' && /^iphone/i.test(p.nombre) && !p.estado);
+const tmEsUsado = p => p.sub === 'Usados';
+const tmCelNom = p => tmEsUsado(p) ? `${p.nombre} ${p.det} · usado` : p.nombre + (p.det ? ' ' + p.det.split('·')[0].trim() : '');
 function tmCelus() {
-  const ps = tmCelusPs(), subs = [...new Set(ps.map(p => p.sub))];
-  return `<select class="tm-in${TM.quiere ? '' : ' tm-vacio'}" data-k="quiere" aria-label="Celu que te interesa"><option value="">¿Te interesa algún celu? (opcional)</option>${subs.map(s => `<optgroup label="${esc(s)}">${ps.filter(p => p.sub === s).map(p => { const v = tmCelNom(p); return `<option value="${esc(v)}" ${TM.quiere === v ? 'selected' : ''}>${esc(v)}</option>`; }).join('')}</optgroup>`).join('')}</select>`;
+  const ps = tmCelusPs(), grupos = [['iPhone nuevos', ps.filter(p => !tmEsUsado(p))], ['iPhone usados', ps.filter(tmEsUsado)]].filter(g => g[1].length);
+  return `<select class="tm-in${TM.quiere ? '' : ' tm-vacio'}" data-k="quiere" aria-label="iPhone que te interesa"><option value="">¿Qué iPhone te interesa? (opcional)</option>${grupos.map(([s, G]) => `<optgroup label="${s}">${G.map(p => { const v = tmCelNom(p); return `<option value="${esc(v)}" ${TM.quiere === v ? 'selected' : ''}>${esc(v)}</option>`; }).join('')}</optgroup>`).join('')}</select>`;
 }
 const tmCelPrecio = () => { const p = tmCelusPs().find(p => tmCelNom(p) === TM.quiere); return p && p.precio ? p.precio : 0; };
 function tmMensaje(tipo) {
