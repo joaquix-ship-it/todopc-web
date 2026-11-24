@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-23",
+ "fecha": "2026-11-24",
  "productos": [
   {
    "rubro": "celulares",
@@ -592,30 +592,14 @@
   {
    "rubro": "celulares",
    "sub": "Usados",
-   "nombre": "iPhone 13",
-   "det": "128 GB · Black · batería 88 %",
-   "precio": 689000,
+   "nombre": "iPhone 13 Pro",
+   "det": "128 GB · Oro · batería 100 % · Batería reemplazada por nosotros",
+   "precio": 889000,
    "tag": "usado",
-   "foto": "fotos/cel-iphone-13-128-gb-usado.jpg",
-   "id": "iphone-13-128-gb-usado",
-   "nuevo": false,
-   "alta": "2026-11-01",
-   "specs": {
-    "pantalla": "6,1\"",
-    "traseras": [
-     [
-      "12 MP",
-      "principal"
-     ],
-     [
-      "12 MP",
-      "ultra gran angular"
-     ]
-    ],
-    "frontal": "12 MP",
-    "bateria": "Hasta 19 h",
-    "bat_nota": "de video"
-   }
+   "foto": "fotos/cel-iphone-13-pro-128-gb-usado.jpg",
+   "id": "iphone-13-pro-128-gb-usado",
+   "nuevo": true,
+   "alta": "2026-11-24"
   },
   {
    "rubro": "celulares",
@@ -649,7 +633,7 @@
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 15",
-   "det": "128 GB · Celeste · batería 86 %",
+   "det": "128 GB · Black · batería 85 %",
    "precio": 899000,
    "tag": "usado",
    "foto": "fotos/cel-iphone-15-128-gb-usado-2.jpg",
@@ -676,37 +660,9 @@
   {
    "rubro": "celulares",
    "sub": "Usados",
-   "nombre": "iPhone 15",
-   "det": "128 GB · Black · batería 85 %",
-   "precio": 899000,
-   "tag": "usado",
-   "foto": "fotos/cel-iphone-15-128-gb-usado-3.jpg",
-   "id": "iphone-15-128-gb-usado-3",
-   "nuevo": false,
-   "alta": "2026-11-21",
-   "specs": {
-    "pantalla": "6,1\"",
-    "traseras": [
-     [
-      "48 MP",
-      "principal"
-     ],
-     [
-      "12 MP",
-      "ultra gran angular"
-     ]
-    ],
-    "frontal": "12 MP",
-    "bateria": "Hasta 20 h",
-    "bat_nota": "de video"
-   }
-  },
-  {
-   "rubro": "celulares",
-   "sub": "Usados",
    "nombre": "iPhone 16",
-   "det": "128 GB · Black · batería 87 %",
-   "precio": 1139000,
+   "det": "128 GB · Negro · batería 87 % · Sin caja original",
+   "precio": 1129000,
    "tag": "usado",
    "foto": "fotos/cel-iphone-16-128-gb-usado.jpg",
    "id": "iphone-16-128-gb-usado",
@@ -733,8 +689,8 @@
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 16",
-   "det": "128 GB · White · batería 92 %",
-   "precio": 1169000,
+   "det": "128 GB · Blanco · batería 92 %",
+   "precio": 1199000,
    "tag": "usado",
    "foto": "fotos/cel-iphone-16-128-gb-usado-2.jpg",
    "id": "iphone-16-128-gb-usado-2",
@@ -761,8 +717,8 @@
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 16",
-   "det": "128 GB · White · batería 91 %",
-   "precio": 1169000,
+   "det": "128 GB · Blanco · batería 91 %",
+   "precio": 1199000,
    "tag": "usado",
    "foto": "fotos/cel-iphone-16-128-gb-usado-3.jpg",
    "id": "iphone-16-128-gb-usado-3",
@@ -788,9 +744,37 @@
   {
    "rubro": "celulares",
    "sub": "Usados",
+   "nombre": "iPhone 16",
+   "det": "128 GB · Negro · batería 100 % · 5 meses de uso - aun garantia oficial",
+   "precio": 1289000,
+   "tag": "usado",
+   "foto": "fotos/cel-iphone-16-128-gb-usado-4.jpg",
+   "id": "iphone-16-128-gb-usado-4",
+   "nuevo": true,
+   "alta": "2026-11-24",
+   "specs": {
+    "pantalla": "6,1\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "12 MP",
+      "ultra gran angular"
+     ]
+    ],
+    "frontal": "12 MP",
+    "bateria": "Hasta 22 h",
+    "bat_nota": "de video"
+   }
+  },
+  {
+   "rubro": "celulares",
+   "sub": "Usados",
    "nombre": "iPhone 16 Pro",
-   "det": "128 GB · Desert · batería 89 %",
-   "precio": 1379000,
+   "det": "128 GB · Titanio Del Desierto · batería 89 %",
+   "precio": 1399000,
    "tag": "usado",
    "foto": "fotos/cel-iphone-16-pro-128-gb-usado.jpg",
    "id": "iphone-16-pro-128-gb-usado",
@@ -820,18 +804,6 @@
   {
    "rubro": "celulares",
    "sub": "Usados",
-   "nombre": "iPhone 16 Pro Max",
-   "det": "256 GB · Natural Titanium · batería 90 %",
-   "precio": 1569000,
-   "tag": "usado",
-   "foto": "fotos/cel-iphone-16-pro-max-256-gb-usado.jpg",
-   "id": "iphone-16-pro-max-256-gb-usado",
-   "nuevo": true,
-   "alta": "2026-11-21"
-  },
-  {
-   "rubro": "celulares",
-   "sub": "Usados",
    "nombre": "iPhone 17",
    "det": "256 GB · Verde · batería 99 %",
    "precio": 1569000,
@@ -856,6 +828,18 @@
     "bateria": "Hasta 30 h",
     "bat_nota": "de video"
    }
+  },
+  {
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 16 Pro Max",
+   "det": "256 GB · Titanio Natural · batería 90 %",
+   "precio": 1589000,
+   "tag": "usado",
+   "foto": "fotos/cel-iphone-16-pro-max-256-gb-usado.jpg",
+   "id": "iphone-16-pro-max-256-gb-usado",
+   "nuevo": true,
+   "alta": "2026-11-21"
   },
   {
    "rubro": "mouses",
