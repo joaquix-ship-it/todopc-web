@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-23T17:24:18",
+ "generado": "2026-11-26T14:25:03",
  "origen": "Precios App",
  "productos": [
   {
@@ -245,17 +245,6 @@
    "ingreso": "2026-07-10 21:35:45"
   },
   {
-   "id": "iphone-13-pro-128-gb-usado",
-   "rubro": "celulares",
-   "sub": "Usados",
-   "nombre": "iPhone 13 Pro",
-   "det": "128 GB · Oro · batería 100 % · Batería reemplazada por nosotros",
-   "precio": 889000,
-   "tag": "usado",
-   "foto": null,
-   "ingreso": "2026-11-23 20:00:21"
-  },
-  {
    "id": "iphone-15-128-gb-usado",
    "rubro": "celulares",
    "sub": "Usados",
@@ -353,6 +342,17 @@
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-11-18 12:58:45"
+  },
+  {
+   "id": "iphone-17-pro-max-256-gb-usado",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 17 Pro Max",
+   "det": "256 GB · Plata · batería 100 % · 2 meses de uso 56 ciclos",
+   "precio": 2269000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-26 17:22:57"
   }
  ]
 }
