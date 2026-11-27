@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-26",
+ "fecha": "2026-11-27",
  "productos": [
   {
    "rubro": "celulares",
@@ -592,18 +592,6 @@
   {
    "rubro": "celulares",
    "sub": "Usados",
-   "nombre": "iPhone 13 Pro",
-   "det": "128 GB · Oro · batería 100 % · Batería reemplazada por nosotros",
-   "precio": 889000,
-   "tag": "usado",
-   "foto": "fotos/cel-iphone-13-pro-128-gb-usado.jpg",
-   "id": "iphone-13-pro-128-gb-usado",
-   "nuevo": true,
-   "alta": "2026-11-24"
-  },
-  {
-   "rubro": "celulares",
-   "sub": "Usados",
    "nombre": "iPhone 15",
    "det": "128 GB · Black · batería 86 %",
    "precio": 899000,
@@ -840,6 +828,38 @@
    "id": "iphone-16-pro-max-256-gb-usado",
    "nuevo": true,
    "alta": "2026-11-21"
+  },
+  {
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 17 Pro Max",
+   "det": "256 GB · Plata · batería 100 % · 2 meses de uso 56 ciclos",
+   "precio": 2299000,
+   "tag": "usado",
+   "foto": "fotos/cel-iphone-17-pro-max-256-gb-usado.jpg",
+   "id": "iphone-17-pro-max-256-gb-usado",
+   "nuevo": true,
+   "alta": "2026-11-27",
+   "specs": {
+    "pantalla": "6,9\"",
+    "traseras": [
+     [
+      "48 MP",
+      "principal"
+     ],
+     [
+      "48 MP",
+      "ultra gran angular"
+     ],
+     [
+      "48 MP",
+      "teleobjetivo 4x"
+     ]
+    ],
+    "frontal": "18 MP",
+    "bateria": "Hasta 37 h",
+    "bat_nota": "de video"
+   }
   },
   {
    "rubro": "mouses",
@@ -3730,19 +3750,6 @@
   {
    "rubro": "accesorios",
    "sub": "Cables",
-   "nombre": "Cable JG Patch Cord 2MT CAT6 JG-PACH2MCAT6",
-   "det": "",
-   "precio": 4000,
-   "tag": null,
-   "foto": "fotos/a-b365374d3d06f3da44e8dd26ea226b4c.jpg",
-   "id": "cable-jg-patch-cord-2mt-cat6-jg-pach2mcat6",
-   "nuevo": false,
-   "tp": "TP00238",
-   "alta": "2026-11-21"
-  },
-  {
-   "rubro": "accesorios",
-   "sub": "Cables",
    "nombre": "Cable JG Patch Cord 5MT CAT6 JG-PACH5MCAT6",
    "det": "",
    "precio": 11000,
@@ -3899,15 +3906,15 @@
   {
    "rubro": "parlantes",
    "sub": "Portátiles",
-   "nombre": "Parlante Bluetooth Soul Pets Oso (marron/Rosa/Verde)",
+   "nombre": "Parlante Bluetooth Soul Pets Oso (rosa/Verde/Marron)",
    "det": "",
    "precio": 41000,
    "tag": null,
    "foto": "fotos/a-063ba2ad5ec49c805d4181f528fb1667.jpg",
-   "id": "parlante-bluetooth-soul-pets-oso-marron-rosa-verde",
+   "id": "parlante-bluetooth-soul-pets-oso-rosa-verde-marron",
    "nuevo": false,
    "tp": "TP00251",
-   "alta": "2026-11-21"
+   "alta": "2026-11-27"
   },
   {
    "rubro": "parlantes",
