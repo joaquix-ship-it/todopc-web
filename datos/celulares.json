@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-26T14:27:51",
+ "generado": "2026-11-27T18:45:25",
  "origen": "Precios App",
  "productos": [
   {
@@ -19,7 +19,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 15",
    "det": "128 GB · Nuevo sellado",
-   "precio": 1339000,
+   "precio": 1349000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-08-03 00:08:48"
@@ -30,7 +30,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 16",
    "det": "128 GB · Nuevo sellado",
-   "precio": 1539000,
+   "precio": 1549000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-08-03 00:10:36"
@@ -41,7 +41,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 17",
    "det": "256 GB · Nuevo sellado",
-   "precio": 1789000,
+   "precio": 1799000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -52,7 +52,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 17 Pro",
    "det": "256 GB · Nuevo sellado",
-   "precio": 2249000,
+   "precio": 2259000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -63,7 +63,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 18 Pro",
    "det": "256 GB · Nuevo sellado",
-   "precio": 2389000,
+   "precio": 2399000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-10-08 11:27:30"
@@ -74,7 +74,7 @@
    "sub": "iPhone",
    "nombre": "iPhone 18 Pro Max",
    "det": "256 GB · Nuevo sellado",
-   "precio": 2789000,
+   "precio": 2799000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-10-19 12:43:24"
@@ -85,7 +85,7 @@
    "sub": "Samsung",
    "nombre": "Galaxy A07",
    "det": "64 GB",
-   "precio": 279000,
+   "precio": 289000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -135,12 +135,12 @@
    "ingreso": "2026-06-26 14:10:26"
   },
   {
-   "id": "galaxy-s26-ultra-512-gb",
+   "id": "galaxy-s26-ultra-256-gb",
    "rubro": "celulares",
    "sub": "Samsung",
    "nombre": "Galaxy S26 Ultra",
-   "det": "512 GB · 12 GB RAM",
-   "precio": 2050000,
+   "det": "256 GB · 12 GB RAM",
+   "precio": 1950000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-11-18 11:24:41"
@@ -201,15 +201,37 @@
    "ingreso": "2026-07-10 21:32:30"
   },
   {
+   "id": "moto-g86-256-gb",
+   "rubro": "celulares",
+   "sub": "Motorola",
+   "nombre": "Moto G86",
+   "det": "256 GB",
+   "precio": 599000,
+   "tag": null,
+   "foto": null,
+   "ingreso": "2026-11-27 21:11:04"
+  },
+  {
    "id": "redmi-a5-poco-c71-64-gb",
    "rubro": "celulares",
    "sub": "Xiaomi",
    "nombre": "Redmi A5 / POCO C71",
    "det": "64 GB · 3 GB RAM · a elección",
-   "precio": 249000,
+   "precio": 259000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
+  },
+  {
+   "id": "redmi-a7-pro-64-gb",
+   "rubro": "celulares",
+   "sub": "Xiaomi",
+   "nombre": "Redmi A7 Pro",
+   "det": "64 GB",
+   "precio": 269000,
+   "tag": null,
+   "foto": null,
+   "ingreso": "2026-11-27 21:15:41"
   },
   {
    "id": "redmi-a5-poco-c71-128-gb",
@@ -221,6 +243,17 @@
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
+  },
+  {
+   "id": "redmi-a7-pro-128-gb",
+   "rubro": "celulares",
+   "sub": "Xiaomi",
+   "nombre": "Redmi A7 Pro",
+   "det": "128 GB",
+   "precio": 299000,
+   "tag": null,
+   "foto": null,
+   "ingreso": "2026-11-27 21:16:33"
   },
   {
    "id": "redmi-15c-256-gb",
@@ -239,32 +272,65 @@
    "sub": "Xiaomi",
    "nombre": "Redmi Note 17",
    "det": "256 GB",
-   "precio": 519000,
+   "precio": 529000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-07-10 21:35:45"
+  },
+  {
+   "id": "redmi-note-17-pro-256-gb",
+   "rubro": "celulares",
+   "sub": "Xiaomi",
+   "nombre": "Redmi Note 17 Pro",
+   "det": "256 GB · 8 GB RAM",
+   "precio": 719000,
+   "tag": null,
+   "foto": null,
+   "ingreso": "2026-11-27 21:13:52"
   },
   {
    "id": "iphone-15-128-gb-usado",
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 15",
-   "det": "128 GB · Black · batería 86 %",
-   "precio": 899000,
+   "det": "128 GB · Negro · batería 85 %",
+   "precio": 929000,
    "tag": "usado",
    "foto": null,
-   "ingreso": "2026-10-08 11:23:58"
+   "ingreso": "2026-09-15 12:21:56"
   },
   {
    "id": "iphone-15-128-gb-usado-2",
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 15",
-   "det": "128 GB · Black · batería 85 %",
-   "precio": 899000,
+   "det": "128 GB · Rosa · batería 87 %",
+   "precio": 949000,
    "tag": "usado",
    "foto": null,
-   "ingreso": "2026-09-15 12:21:56"
+   "ingreso": "2026-11-27 21:19:56"
+  },
+  {
+   "id": "iphone-15-128-gb-usado-3",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 15",
+   "det": "128 GB · Negro · batería 86 %",
+   "precio": 949000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-10-08 11:23:58"
+  },
+  {
+   "id": "iphone-15-pro-128-gb-usado",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 15 Pro",
+   "det": "128 GB · Titanio Azul · batería 86 %",
+   "precio": 1129000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-27 21:23:49"
   },
   {
    "id": "iphone-16-128-gb-usado",
@@ -315,18 +381,40 @@
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 16 Pro",
+   "det": "128 GB · Titanio Negro · batería 90 %",
+   "precio": 1389000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-27 21:26:45"
+  },
+  {
+   "id": "iphone-16-pro-128-gb-usado-2",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 16 Pro",
    "det": "128 GB · Titanio Del Desierto · batería 89 %",
-   "precio": 1399000,
+   "precio": 1389000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-10-19 13:13:52"
+  },
+  {
+   "id": "iphone-16-pro-128-gb-usado-3",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 16 Pro",
+   "det": "128 GB · Titanio Blanco · batería 92 %",
+   "precio": 1399000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-27 21:24:59"
   },
   {
    "id": "iphone-17-256-gb-usado",
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 17",
-   "det": "256 GB · Verde · batería 99 %",
+   "det": "256 GB · Salvia · batería 99 %",
    "precio": 1569000,
    "tag": "usado",
    "foto": null,
@@ -338,18 +426,40 @@
    "sub": "Usados",
    "nombre": "iPhone 16 Pro Max",
    "det": "256 GB · Titanio Natural · batería 90 %",
-   "precio": 1589000,
+   "precio": 1609000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-11-18 12:58:45"
+  },
+  {
+   "id": "iphone-17-pro-256-gb-usado",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 17 Pro",
+   "det": "256 GB · Plata · batería 92 %",
+   "precio": 1899000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-27 21:28:26"
   },
   {
    "id": "iphone-17-pro-max-256-gb-usado",
    "rubro": "celulares",
    "sub": "Usados",
    "nombre": "iPhone 17 Pro Max",
+   "det": "256 GB · Naranja Cósmico · batería 99 %",
+   "precio": 2199000,
+   "tag": "usado",
+   "foto": null,
+   "ingreso": "2026-11-27 21:29:28"
+  },
+  {
+   "id": "iphone-17-pro-max-256-gb-usado-2",
+   "rubro": "celulares",
+   "sub": "Usados",
+   "nombre": "iPhone 17 Pro Max",
    "det": "256 GB · Plata · batería 100 % · 2 meses de uso 56 ciclos",
-   "precio": 2299000,
+   "precio": 2249000,
    "tag": "usado",
    "foto": null,
    "ingreso": "2026-11-26 17:22:57"
