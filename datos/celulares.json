@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-27T18:45:25",
+ "generado": "2026-11-27T18:53:06",
  "origen": "Precios App",
  "productos": [
   {
@@ -107,7 +107,7 @@
    "sub": "Samsung",
    "nombre": "Galaxy A17",
    "det": "128 GB · 6 GB RAM",
-   "precio": 369000,
+   "precio": 379000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
@@ -118,7 +118,7 @@
    "sub": "Samsung",
    "nombre": "Galaxy A37",
    "det": "256 GB",
-   "precio": 719000,
+   "precio": 779000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-08-31 12:47:32"
@@ -129,7 +129,7 @@
    "sub": "Samsung",
    "nombre": "Galaxy A57",
    "det": "256 GB",
-   "precio": 819000,
+   "precio": 889000,
    "tag": null,
    "foto": null,
    "ingreso": "2026-06-26 14:10:26"
